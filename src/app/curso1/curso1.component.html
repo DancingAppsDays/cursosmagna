@@ -1,0 +1,113 @@
+<!--<p>curso1 works!</p>
+
+<button [routerLink]="['one']">XXXX</button>
+<button [routerLink]="['two']">XXXX</button>
+
+
+<button (click)='Previous()'> < </button>
+<span>{{currentpage}}  >  {{maxpage}}</span>
+<button (click)='Next()'> ></button>-->
+
+<body>
+
+    <p>Timer : {{currenttimer }}</p>
+
+  <p>Recorrer a la derecha con la scroll whheel o con flecha arriba/abajo</p>
+    <section class="section external">
+        <div class="horizontal-scroll-wrapper">
+          <div class="slide slide-wrapper">
+            <img src="../../../../assets/montamaqueta/MAGNA CELAYA MAqueta_page-0001.jpg">
+        </div>
+        <div class="slide slide-wrapper">
+          <img src="../../../../assets/montamaqueta/MAGNA CELAYA MAqueta_page-0002.jpg">
+      </div>
+      <div class="slide slide-wrapper">
+        <img src="../../../../assets/montamaqueta/MAGNA CELAYA MAqueta_page-0003.jpg">
+    </div>
+    <div class="slide slide-wrapper">
+      <img src="../../../../assets/montamaqueta/MAGNA CELAYA MAqueta_page-0004.jpg">
+  </div>
+    <div id="page1" class="slide-wrapper slower vertical">
+
+        <div class ="slidetext">
+        <h2>Hacia un Futuro Más Seguro 1</h2>
+        <h6>La plataforma de e-learning revoluciona la formación en seguridad industrial.
+            Aumento significativo en la retención de conocimientos.</h6>
+            <h6>La plataforma de e-learning revoluciona la formación en seguridad industrial.
+                Aumento significativo en la retención de conocimientos.</h6>
+                <h6>La plataforma de e-learning revoluciona la formación en seguridad industrial.
+                    Aumento significativo en la retención de conocimientos.</h6>
+                    <h6>La plataforma de e-learning revoluciona la formación en seguridad industrial.
+                        Aumento significativo en la retención de conocimientos.</h6>
+           
+      
+
+        
+     
+      </div></div>
+
+
+      <div id="page2" class="slide-wrapper slower vertical">
+        <div class ="slidetext">
+        <h2> Más Allá del Aula Virtual</h2>
+        <h6>Biblioteca digital con recursos adicionales.
+            Webinars y seminarios en vivo.
+            Comunidad en línea para intercambio de experiencias y mejores prácticas.</h6>
+        <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/yVPSXBLhcVg?modestbranding=1&controls=0&amp;" frameborder="2" allowfullscreen></iframe>
+      </div>
+      </div>
+        <div class="slideparalax" >     
+            <h2> Más Allá del Aula Virtual</h2>
+            <h6>Biblioteca digital con recursos adicionales.
+                Webinars y seminarios en vivo.
+                Comunidad en línea para intercambio de experiencias y mejores prácticas.</h6>
+       <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/windowshopclock.jpg" alt=""></div>
+      </div>
+
+      <div id="page1" class="slide-wrapper slower vertical">
+
+        <div class ="slidetext">
+        <h2>Hacia un Futuro Más Seguro 1</h2>
+        <h6>La plataforma de e-learning revoluciona la formación en seguridad industrial.
+            Aumento significativo en la retención de conocimientos.
+            La plataforma de e-learning revoluciona la formación en seguridad industrial.</h6>
+            <h6>   Aumento significativo en la retención de conocimientos.
+               Aumento del 30% en la aplicación práctica de conocimientos adquiridos.
+                    Reducción del 20% en accidentes laborales reportados.
+                    Encuestas de satisfacción indican un 95% de aprobación.</h6>
+           
+      
+
+        
+     
+      </div>   <img class="slideparalax" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/windowshopclock.jpg" alt="">
+    </div>
+
+
+
+
+      <div class="slide-wrapper slower vertical">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/windowshopclock.jpg" alt="">
+        
+      </div>
+
+      <div class="slide-wrapper slower vertical">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/windowshopclock.jpg" alt="">
+       
+      </div>
+
+      <div class="slide-wrapper slower last">
+       
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/shop-window-reflection.jpg" alt="">
+     
+      </div>
+
+ </div>
+ </section>
+</body>
+
+
+<div [@triggerName]="prepareRoute(outlet2)">
+<router-outlet #outlet2="outlet"></router-outlet>
+

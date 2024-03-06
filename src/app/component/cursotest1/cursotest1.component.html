@@ -1,0 +1,24 @@
+<body>
+    <h3>Curso  de concientizacion de seguridad</h3>
+<p>Tiempo transcurrido : {{currenttimer }}</p>
+
+<div class="slideselectorbox" id="rewbutton">
+<button class="roundbut"(click)='Previous()'> < </button>
+<h2>{{currentslide}}  /  {{maxpage}}</h2>
+
+</div>
+
+<div [@triggerName]="prepareRoute(outlet2)" class="slidescontainer"> <!-- style="margin:1rem; min-height: 90vh;">-->
+    <router-outlet #outlet2="outlet"></router-outlet>
+    
+   
+</div>    
+
+<div class="slideselectorbox">        
+    <h2>{{currentslide}}  /  {{maxpage}}</h2>
+    <button class="roundbut"(click)='Next()'> ></button>
+    </div>
+
+    
+
+    </body>

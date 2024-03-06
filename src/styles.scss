@@ -1,1 +1,132 @@
 /* You can add global styles to this file, and also import other style files */
+
+.slidescontainer{
+   /* display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;*/
+
+}
+
+.containertest{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+.slidexxx{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95dvw;
+    width: 95vw;
+
+    height: 95dvh;
+    height: 95vh;
+
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.slides{
+
+    
+    position: relative; //im using this because i want to use absolute positioning teh stack of imgaes, stilldidntwork tou, maybe clearfix
+
+   // margin:12rem ridge rgba(211, 220, 50, .6);
+   // ma
+    //background-color: orange;
+    display: block;// //worked, flex messes up in mobile but had eerie leftmargin.
+    align-items: center;  //was center , testing for mobile
+    justify-content: center;
+   
+    width: 90dvw;
+    width: 90vw;
+    //max-width: 25dvw;
+    //max-width: 15vw;
+
+    //height: 175dvh;
+    //height: 175vh;
+   // padding-top: 56.25%; /* 1080 / 1920 = 0.5625 */
+   // overflow: hidden; /* to contain the absolutely positioned images */
+
+}
+.slides img{
+   // float:left;
+    justify-self: center;
+   display: block;
+    width: 90dvw;
+    width: 90vw;
+}
+
+
+.slide{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 95dvw;
+    max-width: 95vw;
+
+    //height: 175dvh;
+    //height: 175vh;
+
+}
+
+
+.slide img{
+    justify-self: center;
+ //   width: 90dvw;
+   // width: 90vw;
+}
+
+.slideselectorbox{
+   
+    
+    margin: 1rem;
+
+     //it gets inside the child component two
+ 
+   /*  position: absolute;   //fixed is immune to scroll
+    left: 50%;   
+   transform: translate(-50%,200%);
+    bottom:0;*/
+
+    //otra opcion de centering
+   margin-left: auto;
+    margin-right: auto;
+
+
+    display: flex;
+
+    justify-content:space-around;
+
+    align-content: center;
+    align-items: center; //child vertical center
+    background-color: lightgrey;
+    border-radius: 14%/50%;
+    min-width:18rem;
+    min-height:4rem;
+    max-width: 18rem;
+}
+
+.slideselectorbox>*{
+    
+   
+    margin:.2rem;
+}
+
+
+.roundbut{
+    border-radius: 50%;
+   
+}
+
+.navbar{
+    background-color: rgb(190, 2, 2);
+    color:purple;
+}
