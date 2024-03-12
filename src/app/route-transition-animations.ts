@@ -2,7 +2,7 @@ import { trigger, transition, style, query, animateChild, group, animate } from 
 
 export const routeTransitionAnimations = trigger('triggerName', [
 	//transition('* <=> *' ,[//'One => Two, Two => Three, One => Three', [
-		transition('One => Two, Two => Three, One => Three',[//* <=> *' , [
+		transition('One => Two, Two => Three, One => Three, undefined <=> *' , [
 		style({ position: 'relative' }),
 		query(':enter, :leave', [
 			style({

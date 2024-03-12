@@ -1,5 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 
+p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.pdf-viewer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    width:50%;
+    transform: translate(10%, 10%);
+  }
+
+.fondo{
+    position: absolute;
+
+}
 .slidescontainer{
    /* display: flex;
     flex-direction: column;
@@ -32,28 +52,49 @@
     clear: both;
 }
 
+.slidesvideoXXX {
+    display: grid;
+    grid-template-rows: auto 1fr; // Adjust this as needed
+    height: 90vh;
+    width: 90vw;
+   // background-color: red
+   border: 1px solid black;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slidesvideo{
+    
+    background-image: url('assets/maqueta11/MAGNA\ Diapositiva\ 1_\ elemento\ 1.png');
+    background-size: cover; background-repeat: no-repeat;
+    display: block;// //worked, flex messes up in mobile but had eerie leftmargin.
+    align-items: center;  //was center , testing for mobile
+    justify-content: center;
+    height: 75vh;
+    width: 90vw;
+   // background-color: red
+   border: 1px solid black;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
 .slides{
 
     
     position: relative; //im using this because i want to use absolute positioning teh stack of imgaes, stilldidntwork tou, maybe clearfix
 
-   // margin:12rem ridge rgba(211, 220, 50, .6);
-   // ma
-    //background-color: orange;
     display: block;// //worked, flex messes up in mobile but had eerie leftmargin.
     align-items: center;  //was center , testing for mobile
     justify-content: center;
    
     width: 90dvw;
     width: 90vw;
-    //max-width: 25dvw;
-    //max-width: 15vw;
-
-    //height: 175dvh;
-    //height: 175vh;
-   // padding-top: 56.25%; /* 1080 / 1920 = 0.5625 */
-   // overflow: hidden; /* to contain the absolutely positioned images */
-
+   
+    //height: 90dvh;
+    //height: 90vh;
+   
 }
 .slides img{
    // float:left;
@@ -125,8 +166,518 @@
     border-radius: 50%;
    
 }
+.roundbut.disabled {
+    background-color: #ccc; /* color for disabled button */
+    cursor: not-allowed; /* cursor style for disabled button */
+  }
 
 .navbar{
     background-color: rgb(190, 2, 2);
     color:purple;
 }
+
+.slidesiframe {
+   // grid-row: 1; // Adjust this as needed
+    position: relative;
+    //width: 80%;
+    height: 80%;
+
+    //top: 50%;
+   // left: 50%;
+   // transform: translate(-50%, -50%);
+}
+
+.slidesiframeWorking {
+    // grid-row: 1; // Adjust this as needed
+     position: relative;
+     width: 80%;
+     height: 80%;
+ 
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+ }
+
+
+.slidesiframe iframe {
+    position: relative;
+   z-index: 200;
+   // top: 50%;
+   // left: 50%;
+    width: 100%;
+    height: 100%;
+   
+}
+
+.slidesiframe.loading {
+    position: relative;
+  }
+  
+  /*
+  .slidesiframe.loading::before {
+    content: "Loading...";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000;
+    color: #f3ebeb;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }*/
+  .slidesiframe.loading::before {
+    content: "Loading";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0 0 -30px;
+    border: 6px dotted #f3ebeb;
+    border-radius: 50%;
+    border-top-color: #ee05a8;
+    border-bottom-color: #007bff;
+    border-left-color: #00ffc8;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+
+
+.slidetitle{
+    position: absolute;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+   // margin:5%;
+    text-align: center;
+
+
+}
+
+.slidesubtitle{
+   
+   margin:1%;
+    text-align: center;
+    font-size: 2.4vw;
+//z-index: 9999;
+
+}
+.slidesubtitle>*{
+   
+    margin:1%;
+     text-align: center;
+     font-size: 2.4vw;
+ //z-index: 9999;
+ 
+ }
+
+
+
+
+
+
+
+
+.enterleft{
+    position: absolute; //keeps them in place
+    animation: enterleftanim 1s ease-in-out forwards;
+    transform: translateX(-100%); /* Set initial position */
+    opacity: 0; /* Set initial opacity */
+   // animation-play-state: paused;
+
+}
+
+.enteright{
+    position: absolute;
+    animation: enterrightanim 1s ease-in-out forwards;
+    transform: translateX(+100%); /* Set initial position */
+    opacity: 0; /* Set initial opacity */
+    //animation-play-state: paused;
+
+}
+
+.f1 {
+    animation-delay: .1s; /* Delay for the first image */
+}
+
+.f2 {
+    animation-delay: .6s; /* Delay for the second image */
+}
+
+.f3 {
+    animation-delay: .8s; /* Delay for the third image */
+}
+
+.f4 {
+    animation-delay: 1s; /* Delay for the third image */
+}
+
+@keyframes enterleftanim {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes enterrightanim {
+    from {
+        transform: translateX(+100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+
+
+
+
+
+
+
+.text-red{
+   color: red;
+}
+
+.text-grey{
+    color: rgb(48, 48, 48);
+ }
+
+.modulotitle{
+    text-align: center;
+}
+
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .download-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+  }
+
+
+
+
+
+
+
+
+
+
+///intropages slides
+/// 
+/// 
+.absolute{
+    position: absolute;
+   /// top: 50%;
+   // left: 50%;
+   // transform: translate(-50%,-50%);
+
+}
+
+
+.bordered-box {
+    z-index: 5; // 
+ 
+
+position: absolute;
+
+top: 50%;
+left: 10%;
+//left: 10vw; // use vw here
+transform: translateY(-50%);
+//border: 1px solid black;
+width: 40%; /* adjust as needed */
+height: 40%; /* adjust as needed */
+
+//width: 40vw; // use vw here
+//height: 40vh; // use vh here
+
+display: flex; /* add this */
+
+
+justify-content: center; /* add this */
+//align-items: center; /* add this */
+flex-direction: column; /* add this */
+
+
+}
+.bigbox{
+    
+    align-items: center;
+    width: 80%; /* adjust as needed */
+height: 80%;
+overflow: auto;//create scrollbar
+}
+
+
+
+.bordered-box > p {
+
+    
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+
+    position:relative;
+    display: block;
+
+
+    font-size: 1.5vw; //only for p
+    animation: slideInFromBottom 1s ease-out forwards;
+    animation-delay: 1.5s;
+
+    //init state
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.bordered-box >h3 {
+        color: white;
+    font-family: 'Montserrat', sans-serif;
+
+    position:relative;
+    display: block;
+
+
+    font-size: 2.1vw; //only for p
+    animation: slideInFromBottom 1s ease-out forwards;
+    animation-delay: 1.5s;
+
+    //init state
+    transform: translateY(100%);
+    opacity: 0;
+} 
+.bordered-box > h5 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+
+    position:relative;
+    display: block;
+
+
+    font-size: 1.6vw; //only for p
+    animation: slideInFromBottom 1s ease-out forwards;
+    animation-delay: 1.5s;
+
+    //init state
+    transform: translateY(100%);
+    opacity: 0;
+}
+.bordered-box > h4 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+
+    position:relative;
+    display: block;
+
+
+    font-size: 1.8vw; //only for p
+    animation: slideInFromBottom 1s ease-out forwards;
+    animation-delay: 1.5s;
+
+    //init state
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+
+.bordered-box > *:nth-child(1) {
+    animation-delay:  1.5s; /* adjust as needed */
+}
+
+.bordered-box > *:nth-child(2) {
+    animation-delay:  1.8s; /* adjust as needed */
+}
+
+.bordered-box > *:nth-child(3) {
+    animation-delay:  2.1s; /* adjust as needed */
+}
+.bordered-box > *:nth-child(4) {
+    animation-delay:  2.4s; /* adjust as needed */
+}
+.bordered-box > *:nth-child(5) {
+    animation-delay:  2.6s; /* adjust as needed */
+}
+.bordered-box > *:nth-child(6) {
+    animation-delay:  2.8s; /* adjust as needed */
+}
+
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.bigbox>p,.bigbox>h1,.bigbox>h2,.bigbox>h3,.bigbox>h4,.bigbox>h5,.bigbox>h6 {
+    color:red;
+    text-align: center; 
+    padding: 0 1vw;
+    margin: 0;
+    margin-bottom: 1vw;
+}
+
+//intropages slides
+
+
+
+.slidertext{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, -50%);
+   // border: 1px solid black;
+    //width: 40%; /* adjust as needed */
+    //height: 40%; /* adjust as needed */
+    
+    width: 60%;// 40vw; // use vw here
+    height: 90%;//40vh; // use vh here
+    
+    display: flex; /* add this */
+    
+    
+    justify-content: center; /* add this */
+    align-items: center; /* add this */
+    flex-direction: column; /* add this */
+    
+
+
+}
+.slidertext > h6{
+    margin: 2%;
+
+   // color: white;
+    font-family: 'Montserrat', sans-serif;
+
+    position:relative;
+    display: block;
+
+
+    font-size: 1.5vw; //only for p
+    animation: slideInFromBottom 1s ease-out forwards;
+    animation-delay: 1.5s;
+
+}
+
+.slidertext > h3{
+    margin: 2%;
+
+    //color: white;
+    font-family: 'Montserrat', sans-serif;
+
+    position:relative;
+    display: block;
+
+
+    font-size: 2.5vw; //only for p
+    animation: slideInFromBottom 1s ease-out forwards;
+    animation-delay: .3s;
+
+    transform: translateY(100%);
+    opacity: 0;
+
+}
+
+.slidertext > h4{
+    margin: 2%;
+
+    //color: white;
+    font-family: 'Montserrat', sans-serif;
+
+    position:relative;
+    display: block;
+
+
+    font-size: 2.2vw; //only for p
+    animation: slideInFromBottom 1s ease-out forwards;
+    animation-delay: 1.5s;
+
+}
+
+.slidertext > p{
+    margin: 2%;
+
+    //color: white;
+    font-family: 'Montserrat', sans-serif;
+
+    position:relative;
+    display: block;
+
+
+    font-size: 1.3vw; //only for p
+    opacity: 0;
+    animation: slideInFromBottom 1s ease-out forwards;
+    animation-delay: 1.5s;
+
+}
+
+.slidertext > *:nth-child(1) {
+    animation-delay:  1.3s; /* adjust as needed */
+}
+.slidertext > *:nth-child(2) {
+    animation-delay:  1.8s; /* adjust as needed */
+}
+
+.slidertext > *:nth-child(3) {
+    animation-delay:  2.1s; /* adjust as needed */
+}
+.slidertext > *:nth-child(4) {
+    animation-delay:  2.4s; /* adjust as needed */
+}
+.slidertext > *:nth-child(5) {
+    animation-delay:  2.6s; /* adjust as needed */
+}
+.slidertext > *:nth-child(6) {
+    animation-delay:  2.8s; /* adjust as needed */
+}
+.slidertext > *:nth-child(7) {
+    animation-delay:  3.0s; /* adjust as needed */
+}
+.slidertext > *:nth-child(8) {
+    animation-delay:  3.2s; /* adjust as needed */
+}
+
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+

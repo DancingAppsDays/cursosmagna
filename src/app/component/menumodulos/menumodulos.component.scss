@@ -1,10 +1,111 @@
-.moduloselector{
-    display:flex;
-    align-items: center;
-    //justify-items: left;
-
-    border: 1px solid black;
+.greyscale {
+  filter: grayscale(100%);
 }
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width:90%;
+  //height: 100%;
+  margin: 0 auto; // Add this line
+  //border: 1px solid black;
+}
+
+.button-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-column a {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin: 1vw 0;
+}
+
+ 
+  
+  .button-column img:hover {
+    //background-color: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+.button-column img {
+  width:55%;
+ // width: 20px; /* Adjust as needed */
+  //height: 20px; /* Adjust as needed */
+  margin-right: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+
+
+
+.disabled2 {
+  cursor: not-allowed !important;
+  opacity: 0.4;
+ // background-color: #ccc;
+
+  filter: grayscale(100%);
+}
+
+
+
+
+.btn.btn-success.disabled2 {
+  cursor: not-allowed !important;
+  opacity: 0.4;
+  background-color: #ccc;
+
+  filter: grayscale(100%);
+}
+
+.moduloselectorxxxxxxx {
+    display: flex;
+    align-items: center;
+   // border: 1px solid black;
+    justify-content: space-between; // This will distribute the buttons evenly across the horizontal axis
+  }
+
+  .moduloselector2 {
+    width: auto;
+    display: flex;
+    align-items: center;
+   // border: 1px solid black;
+   //flex-wrap: wrap; 
+    justify-content: space-between; // This will distribute the buttons evenly across the horizontal axis
+  }
+
+  @media (max-width: 900px) {
+    .moduloselector2 .btn {
+      font-size: 0.5em; // Adjust this value to change the size of the buttons
+      border-radius: 12px;
+      padding: 10px 20px;
+    }
+  }
+  
+  .line {
+    flex-grow: 1;
+    height: 1rem;
+    background-color: #ccc; /* default color */
+  }
+  
+  .line.active {
+    background-color: #f00; /* color for active stage */
+  }
+  .btn {
+    border-radius: 25px;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+  }
 
 .moduloselector >* >img{
     width:100%;

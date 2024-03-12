@@ -63,7 +63,7 @@
 
 
 
-.bordered-box {
+.bordered-boxxx {
     z-index: 5; // 
  
 
@@ -71,14 +71,14 @@ position: absolute;
 
 top: 50%;
 //left: 10%;
-left: 10vw; // use vw here
+left: 10%; // use vw here
 transform: translateY(-50%);
 //border: 1px solid black;
-//width: 40%; /* adjust as needed */
-//height: 40%; /* adjust as needed */
+width: 40%; /* adjust as needed */
+height: 40%; /* adjust as needed */
 
-width: 40vw; // use vw here
-height: 40vh; // use vh here
+//width: 40vw; // use vw here
+//height: 40vh; // use vh here
 
 display: flex; /* add this */
 
@@ -90,7 +90,7 @@ flex-direction: column; /* add this */
 
 }
 
-.bordered-box > p,h1,h2,h3,h4,h5,h6 {
+.bordered-box > p,.bordered-box > h1,.bordered-box >h2,.bordered-box >h3,.bordered-box >h4,.bordered-box >h5,.bordered-box >h6 {
     color: white;
     font-family: 'Montserrat', sans-serif;
 

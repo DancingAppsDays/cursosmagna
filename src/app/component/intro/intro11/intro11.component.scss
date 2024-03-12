@@ -1,0 +1,26 @@
+.bordered-boxxx {
+    z-index: 5; // 
+ 
+
+position: absolute;
+
+top: 50%;
+//left: 10%;
+left: 10%; // use vw here
+transform: translateY(-50%);
+//border: 1px solid black;
+width: 40%; /* adjust as needed */
+height: 40%; /* adjust as needed */
+
+//width: 40vw; // use vw here
+//height: 40vh; // use vh here
+
+display: flex; /* add this */
+
+
+justify-content: center; /* add this */
+//align-items: center; /* add this */
+flex-direction: column; /* add this */
+
+
+}

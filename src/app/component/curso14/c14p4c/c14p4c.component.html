@@ -1,0 +1,42 @@
+<body>
+    
+    <div class="containertest">
+       
+        <div class="slides" >
+        
+        
+            
+        
+            <!--<img class="fondo"src="../../../../assets/maqueta11/MAGNA Diapositiva 1_ fondo.png">-->
+        
+            <img class="enterleft f1" src="../../../../assets/maqueta11/MAGNA Diapositiva 3_ elemento 1.png">
+        
+            <img class="enterleft f2" src="../../../../assets/maqueta11/MAGNA Diapositiva 3_ elemento 2.png">
+        
+           
+        
+           
+          <div class="slidesubtitle">
+    <h4>Examen Unidad 1</h4>
+    </div>
+
+        <form  method="post" >
+
+            <div *ngFor="let question of questions; let i = index">
+                <p>{{question}}</p>
+                <input type="radio" id="true{{i}}" name="question{{i}}" value="true">
+                <label for="true{{i}}">{{answers[i][0]}}</label>
+                <br>
+                <input type="radio" id="false{{i}}" name="question{{i}}" value="false">
+                <label for="false{{i}}">{{answers[i][1]}}</label>
+                <br><br>
+              </div>
+            
+            <button type="submit" class="download-button"  ngbPopover="Examen Unidad 1" placement="top" triggers="mouseenter:mouseleave">Enviar</button>
+   
+         
+        </form>
+        </div>
+    </div>
+    
+    </body>

@@ -1,0 +1,27 @@
+<body>
+    <h3 class="modulotitle">Accidentes, incidentes: Riesgos de Trabajo</h3>
+<p>Tiempo transcurrido : {{currenttimer }}</p>
+
+<div class="slideselectorbox" id="rewbutton">
+<button class="roundbut"(click)='Previous()'> < </button>
+<h2>{{currentslide}}  /  {{maxpage}}</h2>
+
+</div>
+
+
+<div [@triggerName]="prepareRoute(outlet)"  id="slidecontainer" class="slidescontainer"> <!-- style="margin:1rem; min-height: 90vh;">-->
+    <router-outlet #outlet="outlet"></router-outlet>
+    
+   
+</div>    
+
+@if(currentslide != maxpage && isnextready== true){
+<div class="slideselectorbox">        
+    <h2>{{currentslide}}  /  {{maxpage}}</h2>
+    <button class="roundbut"(click)='Next()'> ></button>
+    </div>
+}
+
+    
+
+    </body>
