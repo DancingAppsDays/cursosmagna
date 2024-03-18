@@ -1,7 +1,7 @@
 export class Constants {
 
     //public static URL =  "https://schoolaravel.dancingapps.org/api/";
-    // public static URL =  "https://laravel.cietmexico.com.mx/api/";
+    
      public static URL ="http://localhost:8000/api/"
  
      public static usertype= "empty";

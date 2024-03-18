@@ -1,21 +1,21 @@
-.slidertext{
+/*.slidertext{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-20%, -50%);
    // border: 1px solid black;
-    //width: 40%; /* adjust as needed */
-    //height: 40%; /* adjust as needed */
+    //width: 40%; 
+    //height: 40%;
     
     width: 60%;// 40vw; // use vw here
     height: 90%;//40vh; // use vh here
     
-    display: flex; /* add this */
+    display: flex; 
     
     
-    justify-content: center; /* add this */
-    align-items: center; /* add this */
-    flex-direction: column; /* add this */
+    justify-content: center; 
+    align-items: center
+    flex-direction: column;
     
 
 
@@ -80,4 +80,4 @@
         transform: translateY(0);
         opacity: 1;
     }
-}
+}*/

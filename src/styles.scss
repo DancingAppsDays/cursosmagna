@@ -1,5 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
+.bannertop{
+   max-width: 100vw;
+    max-height: 10vh; 
+    object-fit: contain;
+   // align-self: center;
+   margin: auto; // Add this line
+   cursor: pointer;
+}
+
 p, h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
@@ -12,8 +21,13 @@ p, h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     height: 90%;
-    width:50%;
-    transform: translate(10%, 10%);
+    //width:50%;
+    //transform: translate(10%, 10%);
+    width:80%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    //margin:auto
   }
 
 .fondo{
@@ -66,19 +80,149 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .slidesvideo{
     
-    background-image: url('assets/maqueta11/MAGNA\ Diapositiva\ 1_\ elemento\ 1.png');
+    background-image: url('assets/maqueta11/MAGNA\ Diapositiva\ 3_\ elemento\ 1.png');
     background-size: cover; background-repeat: no-repeat;
     display: block;// //worked, flex messes up in mobile but had eerie leftmargin.
     align-items: center;  //was center , testing for mobile
     justify-content: center;
-    height: 75vh;
+    //height: 80vh;
     width: 90vw;
    // background-color: red
-   border: 1px solid black;
+   //border: 1px solid black;
     position: relative;
     margin: 0 auto;
     overflow: hidden;
 }
+
+.slidesiframe5555 {
+    // grid-row: 1; // Adjust this as needed
+     position: relative;
+     width: 100%;
+     height: 100%;
+    padding-top: 39vh;//39.25%; /* 70% * 9 / 16 = 39.25% */
+    //overflow-y: hidden;//overflow: hidden;
+    //max-width: 100%;
+   // max-height: 100%;
+     top: 50%;
+    // left: 50%;
+     transform: translate(0%, -50%);
+    border: 2px solid black;
+ }
+
+ .slidesiframe {
+    position: absolute;
+    width: 100%; // Or any other value
+    height: 80vh;
+    padding-top: 56.25%; // 16:9 aspect ratio
+   
+    //overflow: hidden;
+    // Other styles...
+    // border: 2px solid blueviolet;
+}
+
+
+.slidesiframexxwer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56.25%;//100%;
+    z-index: 200;
+}
+
+.slidesiframe iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  // This will maintain the aspect ratio and remove black borders
+    z-index: 200;
+}
+
+ 
+ .slidesiframeWorking { //OLDD
+     // grid-row: 1; // Adjust this as needed
+      position: relative;
+      width: 80%;
+      height: 80%;
+  
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+ 
+ 
+ .slidesiframeLEGAC iframe {
+     position: relative;
+    z-index: 200;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+ 
+ 
+     width: 70%;
+     height: 90%;
+    
+ }
+ 
+ .slidesiframesss iframe {
+     position: absolute;
+     top: 0;
+     left: 50%;
+     transform: translate(-50%, 0%);
+     width: 100vw;// 69.8%;
+    height: 100vh;
+     z-index: 200;
+   }
+
+ 
+ 
+ .slidesiframe.loading {
+     position: relative;
+   }
+   
+   /*
+   .slidesiframe.loading::before {
+     content: "Loading...";
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: #000000;
+     color: #f3ebeb;
+     font-size: 2rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 1;
+   }*/
+   .slidesiframe.loading::before {
+     content: "Loading";
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     width: 60px;
+     height: 60px;
+     margin: -30px 0 0 -30px;
+     border: 6px dotted #f3ebeb;
+     border-radius: 50%;
+     border-top-color: #ee05a8;
+     border-bottom-color: #007bff;
+     border-left-color: #00ffc8;
+     animation: spin 1s linear infinite;
+   }
+   
+   @keyframes spin {
+     to { transform: rotate(360deg); }
+   }
+ 
+
+   
+
+
+
 
 .slides{
 
@@ -148,19 +292,46 @@ p, h1, h2, h3, h4, h5, h6 {
 
     align-content: center;
     align-items: center; //child vertical center
-    background-color: lightgrey;
+    background-color: rgb(233, 175, 175);
     border-radius: 14%/50%;
     min-width:18rem;
     min-height:4rem;
     max-width: 18rem;
 }
 
-.slideselectorbox>*{
+.slideselectorbox>h2{
     
    
     margin:.2rem;
+    color:white;
+    font-weight: bold;
+}
+.slideselectorbox img{
+    
+   
+    margin:.2rem;
+    color:white;
+    width:25%;
+    height:25%;
 }
 
+img.roundbut {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.05);
+      
+      border: 2px solid black
+    }
+  
+    &:active {
+        border: 2px solid black;
+      transform: scale(0.9);
+      filter: brightness(0.8);// sepia(1) hue-rotate(180deg);
+      //background-color: #f00; 
+    }
+  }
 
 .roundbut{
     border-radius: 50%;
@@ -171,84 +342,15 @@ p, h1, h2, h3, h4, h5, h6 {
     cursor: not-allowed; /* cursor style for disabled button */
   }
 
+  .disabled {
+    background-color: #202020; /* color for disabled button */
+    cursor: not-allowed; /* cursor style for disabled button */
+  }
+
 .navbar{
     background-color: rgb(190, 2, 2);
     color:purple;
 }
-
-.slidesiframe {
-   // grid-row: 1; // Adjust this as needed
-    position: relative;
-    //width: 80%;
-    height: 80%;
-
-    //top: 50%;
-   // left: 50%;
-   // transform: translate(-50%, -50%);
-}
-
-.slidesiframeWorking {
-    // grid-row: 1; // Adjust this as needed
-     position: relative;
-     width: 80%;
-     height: 80%;
- 
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
- }
-
-
-.slidesiframe iframe {
-    position: relative;
-   z-index: 200;
-   // top: 50%;
-   // left: 50%;
-    width: 100%;
-    height: 100%;
-   
-}
-
-.slidesiframe.loading {
-    position: relative;
-  }
-  
-  /*
-  .slidesiframe.loading::before {
-    content: "Loading...";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #000000;
-    color: #f3ebeb;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-  }*/
-  .slidesiframe.loading::before {
-    content: "Loading";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 60px;
-    height: 60px;
-    margin: -30px 0 0 -30px;
-    border: 6px dotted #f3ebeb;
-    border-radius: 50%;
-    border-top-color: #ee05a8;
-    border-bottom-color: #007bff;
-    border-left-color: #00ffc8;
-    animation: spin 1s linear infinite;
-  }
-  
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
-
 
 
 .slidetitle{
@@ -304,6 +406,15 @@ p, h1, h2, h3, h4, h5, h6 {
 
 }
 
+.enterbottom{
+    position: absolute;
+    animation: slideInFromBottom 1s ease-in-out forwards;
+    transform: translateY(+100%); /* Set initial position */
+    opacity: 0; /* Set initial opacity */
+    //animation-play-state: paused;
+
+}
+
 .f1 {
     animation-delay: .1s; /* Delay for the first image */
 }
@@ -351,7 +462,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 .text-red{
-   color: red;
+   color: rgb(48, 48, 48);
 }
 
 .text-grey{
@@ -542,7 +653,7 @@ overflow: auto;//create scrollbar
 }
 
 .bigbox>p,.bigbox>h1,.bigbox>h2,.bigbox>h3,.bigbox>h4,.bigbox>h5,.bigbox>h6 {
-    color:red;
+    color:rgb(95, 95, 95);
     text-align: center; 
     padding: 0 1vw;
     margin: 0;

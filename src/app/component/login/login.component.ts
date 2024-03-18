@@ -50,12 +50,12 @@ export class LoginComponent implements OnInit {
 
   onLoginSubmit(logindata:any) { 
    
-
+    console.log(logindata);
     return this.htt.post(Constants.URL+"Login", logindata).subscribe((res) => {
         this.successdata = res;
        // let resp:any = res;
 
-        //console.log(res);
+        console.log(res);
         
         if(this.successdata['status'] == "success")
         {
@@ -67,23 +67,25 @@ export class LoginComponent implements OnInit {
             sessionStorage.setItem("name",this.successdata['data']['name']);
           
               //console.log( this.successdata['payload'])
-            Constants.userId  = this.successdata['data']['userId'];
+            Constants.userId  = this.successdata['data']['id'];
             Constants.session = true;
-            Constants.usertype = this.successdata['data']['usertype'];
+            Constants.usertype = this.successdata['data']['type'];
 
-            console.log(Constants.usertype)
+            //console.log(Constants.usertype)
            // sessionStorage.setItem("session","true");                       //experimental sess
             //sessionStorage.setItem("usertype",this.successdata['payload']['usertype']); 
 
             //AppComponent.myapp.usertype = this.successdata['payload']['usertype'];
 
-            if(Constants.usertype == "Student"){
-              this.router.navigate(['KardexAlumno']);
-            }else   if(Constants.usertype == "Profesor"){
-            this.router.navigate(['ListaClaseMaestro']);
-              
-            }else if(Constants.usertype == "Admin"){
-              this.router.navigate(['/']);
+
+
+            if(Constants.usertype == "admin"){
+              sessionStorage.setItem('isGuest', 'false');
+              this.router.navigate(['/adminmenu'],);
+            }else{
+              //this.router.navigate(['/menumodulo']);
+              sessionStorage.setItem('isGuest', 'false');
+              this.router.navigate(['/menumodulo']);
             }
            // console.log(Constants.usertype)
             
@@ -110,6 +112,12 @@ export class LoginComponent implements OnInit {
         console.log(error);}
     
     );
+  }
+
+  EntrarGuest(){
+    sessionStorage.setItem('isGuest', 'true');
+    this.router.navigate(['/menumodulo']);
+
   }
 
 }

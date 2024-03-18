@@ -1,4 +1,10 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
+import { Constants } from 'src/app/constants';
+import { NextslideService } from 'src/app/service/nextslide.service';
 
 @Component({
   selector: 'app-c14p4c',
@@ -20,9 +26,97 @@ export class C14p4cComponent implements OnInit {
     a4=["Acto inseguro", "Condición Insegura"];
     a5=["Acto inseguro", "Condición Insegura"];
     answers = [this.a1, this.a2, this.a3, this.a4, this.a5];
-  constructor() { }
+
+
+    formu: FormGroup;
+    successdata: any;
+    isdone: boolean = false;
+
+  constructor( private formBuilder: FormBuilder ,private router: Router,  private http :HttpClient,private nextslide: NextslideService) {
+
+    this.formu = this.formBuilder.group({});
+    for (let i = 1; i <= this.questions.length; i++) {
+      this.formu.addControl(`a${i}`, new FormControl('', Validators.required));
+    }
+    this.nextslide.changeIsNextReady(false);
+   }
 
   ngOnInit(): void {
+
+    
+    /*
+    this.formu = this.formBuilder.group({
+      //id:'',
+      a1:['',[Validators.required,]],
+      a2:['',[Validators.required,]],
+      a3:['',[Validators.required,]],
+      a4:['',[Validators.required,]],
+      a5:['',[Validators.required,]],
+      */
+
+      //this.nextslide.changeIsNextReady(false);//cause error expresion changed after it was checked
+
+      //todo check with id in quiz1 is already done
+      
+
+      if(this.isdone){
+        setTimeout(() => {
+          this.nextslide.changeIsNextReady(true);
+        });
+      }
+  
   }
 
+  incrementIndex(index: number) {
+    return index + 1;
+  }
+
+   getScore(formu: any):number{
+
+    //TODO compare with actual right answers istead of to 1;
+
+    let score = 0;
+    for (let i = 1; i <= this.questions.length; i++) {
+      if (formu[`a${i}`] =="1") {
+        score += 1;
+      }
+    }
+    return score;
+
+  }
+
+    onSubmit(formu: any){
+
+      console.log("Submitted");
+      console.log(formu);
+
+        //formu.value.idalumno = Constants.userId;
+      formu['idalumno'] = Constants.userId;
+      formu['nombrealumno'] = sessionStorage.getItem("name");// "erasefromodel";
+
+      formu['score']= this.getScore(formu);
+
+
+      this.http.post(Constants.URL+ "quiz1", formu).subscribe({
+       next: res=> 
+       {
+        console.log(res);
+        this.successdata = res;
+        this.successdata = this.successdata['data'];
+        console.log(this.successdata);
+
+        window.alert("Quiz completado");
+        this.nextslide.changeIsNextReady(true);
+
+        //
+        //todo open siguiente diapositiva...
+       },
+       error: error=> 
+       {
+        window.alert("Error al enviar datos, intente de nuevo.");
+        console.log(error)
+       }
+    });
+
+    }
 }

@@ -1,12 +1,16 @@
 @for (toast of toastService.toasts; track toast) {
-    <ngb-toast class="text-white " style="  background:  linear-gradient(270deg, #3615f0 , #2937fa); box-shadow: 10px 5px 5px rgba(31, 30, 30, 0.562); margin-top:1%"
+    <ngb-toast class="text-white " style="  background:  linear-gradient(270deg, #e6342c , #f09697); box-shadow: 10px 5px 5px rgba(31, 30, 30, 0.562); margin-top:1%"
       [header]="toast.header" [autohide]="true" [delay]="toast.delay || 5000"
       (hidden)="toastService.remove(toast)"
     >
-    
-    {{ toast.body }}
+    <p class="d-flex justify-content-center"> {{ toast.body }}</p>
+   
+    <br>
+    <div class="d-flex justify-content-center">
+    <img src="../../../../assets/Felicitaciones/MAGNA-felicitación1.png" alt="progress" style="width:40%; height: 40%;">
+    </div>
     <!--<ngb-progressbar class="mb-12"  [showValue]="true" [value]="90" [max]="200" [striped]="true" [animated]="true" > <b>2 of 4</b>...</ngb-progressbar>-->
-    <ngb-progressbar class="mb-3"  [showValue]="true" [value]="90" [max]="200" [striped]="true" [animated]="true" ></ngb-progressbar>
+    <ngb-progressbar class="mb-3"  [showValue]="true" [value]="toast.progress" [max]="100" [striped]="true" [animated]="true" ></ngb-progressbar>
   
   </ngb-toast>
   }

@@ -4,6 +4,7 @@ import { ToastProgressComponent } from '../component/toast-progress/toast-progre
 export interface ToastInfo {
   header: string;
   body: string;
+  progress: number;
   delay?: number;
 }
 
@@ -16,9 +17,9 @@ export class ToastServiceService {
 
 
   //constructor() { }
-show(header:string, body:string){
+show(header:string, body:string,progress:number){
   console.log(header + " " + body)
-  this.toasts.push({header,body})
+  this.toasts.push({header,body,progress})
   console.log("pushedd");
 }
 

@@ -20,7 +20,7 @@ export class Cursotest1Component implements OnInit {
   currenttimer!: string;
 
   currentslide=1;
-  maxpage=5;
+  maxpage=11;
   audio = new Audio();
 
   isnextready=true;
@@ -70,6 +70,7 @@ export class Cursotest1Component implements OnInit {
 
 
   Previous(){
+    console.log(this.currentslide);
 
     this.nextslideService.changeIsNextReady(true);
     if(this.currentslide<=1)return;
@@ -90,18 +91,42 @@ export class Cursotest1Component implements OnInit {
       case 4:
         this.routeToChild("four")
       break;
+      case 5:
+        this.routeToChild("five")
+      break;
+      case 6:
+        this.routeToChild("six")
+      break;
+      case 7:
+        this.routeToChild("seven")
+      break;
+      case 8:
+        this.routeToChild("eight")
+      break;
+      case 9:
+        this.routeToChild("nine")
+      break;
+      case 10:
+        this.routeToChild("ten")
+      break;
+      case 11:
+        this.routeToChild("eleven")
+      break;
     }
 
     //window.scrollTo(0, 0);
-    document.getElementById('revbutton')?.scrollIntoView();
+   // document.getElementById('revbutton')?.scrollIntoView();
 
   }
   Next(){
+    console.log(this.currentslide);
     //this.router.navigate(["menumodulo"], { skipLocationChange: true});
     if(!this.isnextready) {
       return;
     }
     if(this.currentslide>=this.maxpage){
+
+      console.log("END of slides")
      // this.router.navigate(['../curso1.2'], {relativeTo:this.route, skipLocationChange: true});
      this.router.navigate(["menumodulo"], { skipLocationChange: true});
      return;
@@ -126,9 +151,29 @@ export class Cursotest1Component implements OnInit {
       case 5:
         this.routeToChild("five")
       break;
+      case 6:
+        this.routeToChild("six")
+      break;
+      case 7:
+        this.routeToChild("seven")
+      break;
+      case 8:
+        this.routeToChild("eight")
+      break;
+      case 9:
+        this.routeToChild("nine")
+      break;
+      case 10:
+        this.routeToChild("ten")
+      break;
+      case 11:
+        this.routeToChild("eleven")
+      break;
     }
+
+    console.log("end of enxt")
     //window.scrollTo(0, 0);
-    document.getElementById('revbutton')?.scrollIntoView();
+   // document.getElementById('revbutton')?.scrollIntoView();
   }
 
 

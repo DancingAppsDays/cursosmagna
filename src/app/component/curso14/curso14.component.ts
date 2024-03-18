@@ -16,7 +16,7 @@ export class Curso14Component implements OnInit {
   currenttimer!: string;
 
   currentslide=1;
-  maxpage=4;
+  maxpage=17;
   audio = new Audio();
 
   isnextready=true;
@@ -86,6 +86,45 @@ export class Curso14Component implements OnInit {
       case 4:
         this.routeToChild("four")
       break;
+      case 5:
+        this.routeToChild("five")
+      break;
+      case 6:
+        this.routeToChild("six")
+      break;
+      case 7:
+        this.routeToChild("seven")
+      break;
+      case 8:
+        this.routeToChild("eight")
+      break;
+      case 9:
+        this.routeToChild("nine")
+      break;
+      case 10:
+        this.routeToChild("ten")
+      break;
+      case 11:
+        this.routeToChild("eleven")
+      break;
+      case 12:
+        this.routeToChild("twelve")
+      break;
+      case 13:
+        this.routeToChild("thirteen")
+      break;
+      case 14:
+        this.routeToChild("fourteen")
+      break;
+      case 15:
+        this.routeToChild("fifteen")
+      break;
+      case 16:
+        this.routeToChild("sixteen")
+      break;
+      case 17:
+        this.routeToChild("seventeen")
+      break;
     }
 
     //window.scrollTo(0, 0);
@@ -121,6 +160,42 @@ export class Curso14Component implements OnInit {
       break;
       case 5:
         this.routeToChild("five")
+      break;
+      case 6:
+        this.routeToChild("six")
+      break;
+      case 7:
+        this.routeToChild("seven")
+      break;
+      case 8:
+        this.routeToChild("eight")
+      break;
+      case 9:
+        this.routeToChild("nine")
+      break;
+      case 10:
+        this.routeToChild("ten")
+      break;
+      case 11:
+        this.routeToChild("eleven")
+      break;
+      case 12:
+        this.routeToChild("twelve")
+      break;
+      case 13:
+        this.routeToChild("thirteen")
+      break;
+      case 14:
+        this.routeToChild("fourteen")
+      break;
+      case 15:
+        this.routeToChild("fifteen")
+      break;
+      case 16:
+        this.routeToChild("sixteen")
+      break;
+      case 17:
+        this.routeToChild("seventeen")
       break;
     }
     //window.scrollTo(0, 0);

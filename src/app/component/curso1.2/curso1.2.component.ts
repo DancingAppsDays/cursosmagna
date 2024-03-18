@@ -19,7 +19,7 @@ export class Curso12Component implements OnInit {
   currenttimer!: string;
 
   currentslide=1;
-  maxpage=3;
+  maxpage=9;
   audio = new Audio();
 
   isnextready=true;
@@ -74,9 +74,33 @@ export class Curso12Component implements OnInit {
       break;
       case 3:
         this.routeToChild("three")
-      break;
+      break;     
       case 4:
         this.routeToChild("four")
+      break;
+      case 5:
+        this.routeToChild("five")
+      break;
+      case 6:
+        this.routeToChild("six")
+      break;
+      case 7:
+        this.routeToChild("seven")
+      break;
+      case 8:
+        this.routeToChild("eight")
+      break;
+      case 9:
+        this.routeToChild("nine")
+      break;
+      case 10:
+        this.routeToChild("ten")
+      break;
+      case 11:
+        this.routeToChild("eleven")
+      break;
+      case 12:
+        this.routeToChild("twelve")
       break;
     }
 
@@ -104,8 +128,32 @@ export class Curso12Component implements OnInit {
       case 4:
         this.routeToChild("four")
       break;
+      case 4:
+        this.routeToChild("four")
+      break;
       case 5:
         this.routeToChild("five")
+      break;
+      case 6:
+        this.routeToChild("six")
+      break;
+      case 7:
+        this.routeToChild("seven")
+      break;
+      case 8:
+        this.routeToChild("eight")
+      break;
+      case 9:
+        this.routeToChild("nine")
+      break;
+      case 10:
+        this.routeToChild("ten")
+      break;
+      case 11:
+        this.routeToChild("eleven")
+      break;
+      case 12:
+        this.routeToChild("twelve")
       break;
     }
     //window.scrollTo(0, 0);

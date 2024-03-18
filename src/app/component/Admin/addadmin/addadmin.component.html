@@ -1,0 +1,49 @@
+<div class="container">
+   
+    <div class="col-sm text-center">
+      <h4  class="d-block" style="background-color: #f09697; color:#fff; margin: 15px;">Registrar Administrador</h4>
+     
+    </div>
+  
+
+
+<form    [formGroup] ="formu"  (ngSubmit)="onSubmit(formu.value)" >
+
+    <!--
+    <p>                                               
+        <input type="number" readonly   name="idss" class="form-control" formControlName="id"  >
+        <strong>ID: </strong> 
+    </p>
+    -->
+  <p>                                                
+      <input type="text" class="form-control" formControlName="name"  >
+      <strong>Nombre: </strong> 
+  </p>
+ 
+  <p>
+    <input type="email"  class="form-control" formControlName="email" email >
+    <strong>Emaild: </strong> 
+</p>
+    <!--<div *ngIf="formu.controls['email'].invalid && (formu.controls['email'].dirty || formu.controls['email'].touched)"  class="alert alert-primary">
+        <div *ngIf="formu.controls['email'].errors?.['required']">  Ingresa un email válido</div></div>-->
+          
+
+        <div *ngIf="formu.controls['email'].invalid && (formu.controls['email'].dirty || formu.controls['email'].touched)"  class="alert alert-info">
+             Ingresa un email válido</div>
+
+           
+  
+   
+   <p>
+    <input type="text"  class="form-control" formControlName="password"  minlength="6">
+    <strong>Password: </strong> 
+   </p>
+   <div *ngIf="formu.controls['password'].invalid && (formu.controls['password'].dirty || formu.controls['password'].touched)"  class="alert alert-info">
+    Ingresa un password de 6 digitos</div>
+
+  
+ 
+  
+<button class ="btn btn-success" type ="submit"   [disabled]="formu.invalid">Registrar</button>
+
+</form>

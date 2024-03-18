@@ -1,0 +1,88 @@
+ <div class="container">
+
+  <p>                                                
+    <input type="text" class="form-control"  readonly [value]="datarouted.name" >
+    <strong>Nombre: </strong> 
+</p>
+
+<p>
+  <input type="email"  class="form-control" readonly [value]="datarouted.email" email >
+  <strong>Email: </strong> 
+</p>
+
+<br>
+
+
+  <table class="table" *ngIf="data  && data.length > 0" >
+    <thead>
+      <tr>
+        <th scope="col">Cuestionario</th>
+        <th scope="col">fecha entrega</th>
+        <th scope="col">Calificacion</th>
+        <th scope="col">Respuesta1</th>
+        <th scope="col">Respuesta2</th>
+        <th scope="col">Respuesta3</th>
+        <th scope="col">Respuesta4</th>
+        <th scope="col">Respuesta5</th>
+        <th scope="col">Ver Cuestionario</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ems of data | filterpipe: searchterm | paginate: { itemsPerPage: 50, currentPage: page } let i=index">
+        <th scope="row">Quiz{{i+1}}</th>
+        <td>{{ ems.created_at.substring(0, 16).replace('T', ' ') }}</td>
+        <td>{{ ems.score}}</td>
+        <td *ngIf="ems.a1">{{ ems.a1 }}</td>
+  <td *ngIf="ems.a2">{{ ems.a2 }}</td>
+  <td *ngIf="ems.a3">{{ ems.a3 }}</td>
+  <td *ngIf="ems.a4">{{ ems.a4 }}</td>
+  <td *ngIf="ems.a5">{{ ems.a5 }}</td>    
+        <td> 
+            <button type="button" class="btn  btn-outline-primary" title="Ver Resultados" (click)="verRes(i)">Ver Resultados</button>  
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+  <form class="dropdown-content" [formGroup]="form1data" [style.maxHeight]="form1active ? '700px' : '0'" >
+    <div class="slidesubtitle">
+      <h4>Examen Unidad 1</h4>
+    </div>
+    
+    <div *ngFor="let question of questions; let i = index">
+        <p>{{question}}</p>
+        <input class="no-click" formControlName="a{{incrementIndex(i) }}" type="radio" id="true{{i}}" value="1" [checked]="form1data.get('a' + incrementIndex(i))?.value == 1" > <!--[attr.disabled]="radiosDisabled ? '' : null">-->
+        <label>{{answers[i][0]}}</label>
+        <br>
+        <input class="no-click"formControlName="a{{incrementIndex(i) }}" type="radio" id="false{{i}}"  value="2" [checked]="form1data.get('a' + incrementIndex(i))?.value == 2" >
+        <label >{{answers[i][1]}}</label>
+        <br><br>
+      </div>
+
+     
+    </form>
+
+   
+  <form class="dropdown-content" [formGroup]="form2data" [style.maxHeight]="form2active ? '700px' : '0'" >
+    <div class="slidesubtitle">
+      <h4>Examen Unidad 2</h4>
+    </div>
+    
+    <div *ngFor="let question of questions; let i = index">
+        <p>{{question}}</p>
+        <input class="no-click" formControlName="a{{incrementIndex(i) }}" type="radio" id="true{{i}}" value="1" [checked]="form2data.get('a' + incrementIndex(i))?.value == 1" > <!--[attr.disabled]="radiosDisabled ? '' : null">-->
+        <label>{{answers[i][0]}}</label>
+        <br>
+        <input class="no-click"formControlName="a{{incrementIndex(i) }}" type="radio" id="false{{i}}"  value="2" [checked]="form2data.get('a' + incrementIndex(i))?.value == 2" >
+        <label >{{answers[i][1]}}</label>
+        <br><br>
+      </div>
+
+     
+    </form>
+ 
+
+
+ </div>

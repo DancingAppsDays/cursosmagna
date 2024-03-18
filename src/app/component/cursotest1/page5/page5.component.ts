@@ -12,7 +12,7 @@ export class Page5Component implements OnInit {
 
   ngOnInit(): void {
 
-    this.toastSerive.show('Progreso', "Continua así para completar el curso");
+    this.toastSerive.show('Progreso', "Continua así para completar el curso",10);
   }
 
 }

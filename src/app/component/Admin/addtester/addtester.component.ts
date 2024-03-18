@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Constants } from 'src/app/constants';
 
 @Component({
   selector: 'app-addtester',
@@ -24,7 +25,7 @@ export class AddtesterComponent implements OnInit {
     //this should be taken from entity
     this.formu = this.formBuilder.group({
         //id:'',
-        fullName:['',[Validators.required,]],
+        name:['',[Validators.required,]],
         //birthday:"2000-01-15",
         email:['',[Validators.required,]],
         password:['',[Validators.required,]],
@@ -72,9 +73,10 @@ export class AddtesterComponent implements OnInit {
     postuser(customerData :any)
  {
   //var data:Responsetype;
+  customerData['type']="user";
  
   //Constants.URL
-   this.http.post("Constants.URL"+"RegistroA",customerData/*,  { headers: { Authorization:localStorage.getItem('token') } }*/).subscribe({
+   this.http.post(Constants.URL+"alumno",customerData/*,  { headers: { Authorization:localStorage.getItem('token') } }*/).subscribe({
     next: data =>
       {//console.log(data);
         //window.alert("Elemento modificado correctamente");
@@ -83,7 +85,7 @@ export class AddtesterComponent implements OnInit {
 
         if(this.successdata['status']=='success'){
 
-        window.alert("Elemento modificado correctamente");
+        window.alert("Usuario agregado correctamente");
         }else{
           //console.log(this.successdata)
           window.alert("  Registro falló, revisa que el correo no sea repetido");

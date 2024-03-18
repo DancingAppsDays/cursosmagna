@@ -4,23 +4,26 @@
     <div class="slides">
        
         <img class="absolute" style="z-index: -10;" src="../../../assets/maqueta11/MAGNA Diapositiva 3_ elemento 1.png">
-        <img class="absolute" style="z-index: -10;" src="../../../assets/maqueta11/MAGNA Diapositiva 3_ elemento 2.png">
-       <h3 class="slidesubtitle text-grey" style="padding: 7%;">CONTENIDO <span  style="font-weight: bold;  font-size: 2.4vw;">TEMÁTICO</span></h3>
+        <img class="absolute" style="z-index: -10;" src="../../../assets/MAGNA-fondo_general.png">
+       <h3 class="slidesubtitle text-grey" style="padding: 2%;">CONTENIDO <span  style="font-weight: bold;  font-size: 2.4vw;">TEMÁTICO</span></h3>
 
        <div class="button-container">
         <div class="button-column">
          
-          <a [routerLink]="getRouterLink(1, '/cursotest/one')"><img [ngClass]="{'disabled2': currentStage < 1}" src="../../../assets/Contenidotematicobotones/MAGNA-modulo1.1.png" alt="Button Image"></a>
-          <a [routerLink]="getRouterLink(2, '/curso1.2/one')"><img [ngClass]="{'disabled2': currentStage < 2}" src="../../../assets/Contenidotematicobotones/MAGNA-modulo1.2.png" alt="Button Image"></a>
-          <a [routerLink]="getRouterLink(3, '/curso1.3/one')"><img [ngClass]="{'disabled2': currentStage < 3}" src="../../../assets/Contenidotematicobotones/MAGNA-modulo1.3.png" alt="Button Image"></a>
-          <a [routerLink]="getRouterLink(4, '/curso1.4/one')"><img [ngClass]="{'disabled2': currentStage < 4}" src="../../../assets/Contenidotematicobotones/MAGNA-modulo1.4.png" alt="Button Image"></a>
+            <img (mouseenter)="playSound()" (click)="getRouterLink(0, '/intro/one')"  src="../../../assets/Contenidotematicobotones/MAGNA-modulo1.1.png" alt="Button Image">
+         
+            <img (mouseenter)="playSound()" (click)="getRouterLink(1, '/cursotest/one')" [ngClass]="{'disabled2': currentStage < 1}" src="../../../assets/Contenidotematicobotones/MAGNA-modulo1.1.png" alt="Button Image">
+         <img (mouseenter)="playSound()" (click)="getRouterLink(2, '/curso1.2/one')" [ngClass]="{'disabled2': currentStage < 2}" src="../../../assets/Contenidotematicobotones/MAGNA-modulo1.2.png" alt="Button Image">
+         <img (mouseenter)="playSound()" (click)="getRouterLink(3, '/curso1.3/one')" [ngClass]="{'disabled2': currentStage < 3}" src="../../../assets/Contenidotematicobotones/MAGNA-modulo1.3.png" alt="Button Image">
+          <img (mouseenter)="playSound()" (click)="getRouterLink(4, '/curso1.4/one')"[ngClass]="{'disabled2': currentStage < 4}" src="../../../assets/Contenidotematicobotones/MAGNA-modulo1.4.png" alt="Button Image">
           <!-- Add more buttons as needed -->
         </div>
         <div class="button-column">
-            <a [routerLink]="getRouterLink(5, '/curso1.2/one')"><img [ngClass]="{'disabled2': currentStage < 5}" src="../../../assets/Contenidotematicobotones/MAGNA-modulo2.1.png" alt="Button Image"></a>
-            <a [routerLink]="getRouterLink(6, '/curso1.3/one')"><img [ngClass]="{'disabled2': currentStage < 6}" src="../../../assets/Contenidotematicobotones/MAGNA-modulo3.1.png" alt="Button Image"></a>
-            <a [routerLink]="getRouterLink(7, '/curso1.4/one')"><img [ngClass]="{'disabled2': currentStage < 7}" src="../../../assets/Contenidotematicobotones/MAGNA-modulo3.2.png" alt="Button Image"></a>
-            <a [routerLink]="getRouterLink(8, '/curso1.4/one')"><img [ngClass]="{'disabled2': currentStage < 8}" src="../../../assets/Contenidotematicobotones/MAGNA-modulo4.1.png" alt="Button Image"></a>
+           <img (mouseenter)="playSound()" (click)="getRouterLink(5, '/curso2/one')"[ngClass]="{'disabled2': currentStage < 5}" src="../../../assets/Contenidotematicobotones/MAGNA-modulo2.1.png" alt="Button Image">
+            <img (mouseenter)="playSound()" (click)="getRouterLink(6, '/curso1.3/one')"[ngClass]="{'disabled2': currentStage < 6}" src="../../../assets/Contenidotematicobotones/MAGNA-modulo3.1.png" alt="Button Image">
+            <img (mouseenter)="playSound()" (click)="getRouterLink(7, '/curso1.4/one')"[ngClass]="{'disabled2': currentStage < 7}" src="../../../assets/Contenidotematicobotones/MAGNA-modulo3.2.png" alt="Button Image">
+           <img (mouseenter)="playSound()" (click)="getRouterLink(8, '/curso1.4/one')"[ngClass]="{'disabled2': currentStage < 8}" src="../../../assets/Contenidotematicobotones/MAGNA-modulo4.1.png" alt="Button Image">
+           <img (mouseenter)="playSound()" (click)="getRouterLink(9, '/curso1.4/one')"[ngClass]="{'disabled2': currentStage < 9}" src="../../../assets/Contenidotematicobotones/MAGNA-modulo4.2.png" alt="Button Image">
             
         </div>
       </div>

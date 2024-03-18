@@ -22,7 +22,7 @@ export class Page3Component implements OnInit {
 
 
   ngOnInit(): void {
-    this.nextSlideService.changeIsNextReady(false);
+    //this.nextSlideService.changeIsNextReady(false);
     this.text = ' Es importante recordar:';
     setTimeout(() => {
       this.text = ' Políticas de cero tolerancia MAGNA.';

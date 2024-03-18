@@ -19,7 +19,7 @@ export class C14p2Component implements OnInit {
 
 
   ngOnInit(): void {
-    this.nextSlideService.changeIsNextReady(false);
+   // this.nextSlideService.changeIsNextReady(false);
     this.text = " En esta planta, la preferencia la tiene el montacarguista. <br> <br>    Queda estrictamente prohibido el uso de montacargas sin entrenamiento previo.";
     setTimeout(() => {
       this.text = this.text1;

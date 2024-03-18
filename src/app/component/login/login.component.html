@@ -1,7 +1,7 @@
 <div class="container">
     <div class="form-group row">
       <div class="col-sm text-center">
-        <h4 class="d-block" style="background-color: #34495E; color:#fff; margin: 15px;">Ingresa como Usuario</h4>
+        <h4 class="d-block" style="background-color: #87161c; color:#fff; margin: 15px;">Ingresa como Usuario</h4>
       </div>
     </div>
     <!--<h1 class="mt-5 mb-5 text-center" style=" background: #fa4444; color: #fff; padding: 10px 0; ">Angular 10 Laravel 7 User Login</h1>-->
@@ -9,7 +9,7 @@
       <form [formGroup]="ff" (ngSubmit)="onLoginSubmit(ff.value)">
         <p>
           <input type="email"  class="form-control" formControlName="email" email >
-          <strong>Emaild: </strong> 
+          <strong>Email: </strong> 
       </p>   
           <div *ngIf="ff.controls['email'].invalid && (ff.controls['email'].dirty || ff.controls['email'].touched)"  class="alert alert-info">
                    Ingresa un email válido</div>
@@ -27,13 +27,21 @@
           <input class="form-check-input" type="checkbox" name="remember"> Remember me
         </label>
       </div>-->
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-secondary" style="background-color: #f09697;">Enviar</button>
     </form>
     </div>
+
+
+
+ 
+<br>
+<h4  style="margin-top: 15px;">Ingresa como invitado</h4>
+ 
+    <button type="button" (click)="EntrarGuest()"class="btn btn-secondary" style="background-color: #f09697;">Entrar</button>
+   
   </div>
-  <div class="container">
     <!--
     <form name="logoutForm" (ngSubmit)="onLogoutSubmit()" >
     <button type="submit" class="btn btn-primary">Cerrar sesión</button>
   </form>-->
-    </div>
+   

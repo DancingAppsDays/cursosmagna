@@ -11,7 +11,7 @@ export class C13p3Component implements OnInit {
   constructor(private data: NextslideService) { }
 
   ngOnInit() {
-    this.data.changeIsNextReady(false);
+   // this.data.changeIsNextReady(false);
     document.getElementById('downloadButton')?.addEventListener('click', () => {
       console.log('File downloaded');
       this.data.changeIsNextReady(true);

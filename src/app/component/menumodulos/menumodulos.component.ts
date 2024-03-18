@@ -18,11 +18,17 @@ export class MenumodulosComponent implements OnInit {
   
   currentStage=0;
 
+  audio = new Audio();
+ 
+
   ngOnInit(): void {
+
+    this.audio.src = "../../assets/audio/676302__rubberduck9999__droid-beep-01.flac";
+    this.audio.load();
 
     //this.cookieService.set('currentStage', '0');
   //this.cookieValue = this.cookieService.get('Test');
-    this.currentStage= this.cookieService.get('currentStage')?parseInt(this.cookieService.get('currentStage')):4;
+    this.currentStage= this.cookieService.get('currentStage')?parseInt(this.cookieService.get('currentStage')):5;
 
     if(this.currentStage==0){
       this.router.navigate(["intro/one"], { skipLocationChange: true});
@@ -36,7 +42,13 @@ export class MenumodulosComponent implements OnInit {
   }
 
   getRouterLink(requiredStage: number, link: string) {
-    return this.currentStage < requiredStage ? null : link;
+    //return this.currentStage < requiredStage ? null : link;
+    this.currentStage < requiredStage ? null : this.router.navigate([link], { skipLocationChange: true});
+  }
+
+  playSound(){
+    console.log('play sound')
+    this.audio.play();
   }
 
 }

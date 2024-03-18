@@ -1,11 +1,15 @@
 <body>
-    <h3 class="modulotitle">Generalidades Seguridad e Higiene</h3>
+   
 <p>Tiempo transcurrido : {{currenttimer }}</p>
 
 <div class="slideselectorbox" id="rewbutton">
-<button class="roundbut"(click)='Previous()'> < </button>
+
+<img class="roundbut"(click)='Previous()' src="../../../../assets/MAGNA-retroceder.png" alt="rewind">
+
 <h2>{{currentslide}}  /  {{maxpage}}</h2>
-<button class="roundbut" [ngClass]="{'disabled': currentslide > maxpage || !isnextready}" (click)='Next()'> ></button>
+
+    <img class="roundbut"(click)='Next()' [ngClass]="{'disabled': currentslide > maxpage || !isnextready}" src="../../../../assets/MAGNA_avanzar.png" alt="rewind">
+
 
 </div>
 
