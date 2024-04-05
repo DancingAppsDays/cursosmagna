@@ -1,1 +1,26 @@
-<p>curso3 works!</p>
+<body>
+   
+    <p>Tiempo transcurrido : {{currenttimer }}</p>
+    
+    <div class="slideselectorbox" id="rewbutton">
+    
+        <img class="roundbut"(click)='Previous()' src="../../../../assets/MAGNA-retroceder.png" alt="rewind">
+        
+        <h2>{{currentslide}}  /  {{maxpage}}</h2>
+        
+            <img class="roundbut"(click)='Next()' [ngClass]="{'disabled': currentslide > maxpage || !isnextready}" src="../../../../assets/MAGNA_avanzar.png" alt="rewind">
+        
+        
+        </div>
+    
+    
+    <div [@triggerName]="prepareRoute(outlet)"  id="slidecontainer" class="slidescontainer"> <!-- style="margin:1rem; min-height: 90vh;">-->
+        <router-outlet #outlet="outlet"></router-outlet>
+        
+       
+    </div>    
+  
+    
+        
+    
+        </body>

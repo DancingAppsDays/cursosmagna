@@ -19,7 +19,7 @@ export class Curso12Component implements OnInit {
   currenttimer!: string;
 
   currentslide=1;
-  maxpage=9;
+  maxpage=8;
   audio = new Audio();
 
   isnextready=true;
@@ -110,10 +110,17 @@ export class Curso12Component implements OnInit {
   }
   Next(){
 
-    if(this.currentslide>=this.maxpage)return;
+    if(!this.isnextready) {
+      return;
+    }
+
+    if(this.currentslide>=this.maxpage){
+     this.router.navigate(["menumodulo"], { skipLocationChange: true});
+      return;
+     };
    
     this.currentslide++;
-    this.audio.play();
+    //this.audio.play();
 
     switch(this.currentslide){
       case 1:

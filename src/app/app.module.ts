@@ -8,6 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+//import { NgChartsModule } from 'ng2-charts';
+//import { ChartsModule } from 'ng2-charts';
+import { BaseChartDirective, withDefaultRegisterables } from 'ng2-charts';
+import { provideCharts, } from 'ng2-charts';
+
+import { Chart } from 'chart.js';
+
+
 /*
 import {VgCoreModule} from '@videogular/ngx-videogular/core';
 import {VgControlsModule} from '@videogular/ngx-videogular/controls';
@@ -28,7 +36,7 @@ import { Page5Component } from './component/cursotest1/page5/page5.component';
 
 import { Cursotest1Component } from './component/cursotest1/cursotest1.component';
 
-import { Page1Component, Page1Component  as p1} from './component/cursotest1/page1/page1.component';
+import { Page1Component, Page1Component as p1 } from './component/cursotest1/page1/page1.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule, NgTemplateOutlet } from '@angular/common';
 import { Page5cuestComponent } from './component/cursotest1/page5cuest/page5cuest.component';
@@ -43,8 +51,8 @@ import { Intro12Component } from './component/intro/intro12/intro12.component';
 import { Intro13Component } from './component/intro/intro13/intro13.component';
 import { Curso12Component } from './component/curso1.2/curso1.2.component';
 import { CookieService } from 'ngx-cookie-service';
-import { Page1Component  as  c2p1} from './component/curso1.2/page1/page1.component';
-import { Page2Component as  c2p2} from './component/curso1.2/page2/page2.component';
+import { Page1Component as c2p1 } from './component/curso1.2/page1/page1.component';
+import { Page2Component as c2p2 } from './component/curso1.2/page2/page2.component';
 import { Page2Component } from './component/cursotest1/page2/page2.component';
 import { Curso13Component } from './component/curso13/curso13.component';
 import { C13p1Component } from './component/curso13/c13p1/c13p1.component';
@@ -139,12 +147,64 @@ import { C03p09Component } from './component/curso3/c03p09/c03p09.component';
 import { C03p10Component } from './component/curso3/c03p10/c03p10.component';
 import { C02p6endComponent } from './component/curso2/c02p6end/c02p6end.component';
 import { VergrafComponent } from './component/Admin/vergraf/vergraf.component';
+import { BarController, Colors, Legend } from 'chart.js';
+import { RegisterComponent } from './register/register.component';
+import { C03cuestComponent } from './component/curso03/c03cuest/c03cuest.component';
+import { Curso03Component } from './component/curso03/curso03.component';
+
+import { C032endComponent } from './component/curso03/c03.2end/c03.2end.component';
+//import { C032cuesComponent } from './component/curso03/c03.2cues/c03.2cues.component';
+import { C032titleComponent } from './component/curso03/c03.2title/c03.2title.component';
+import { C032vidComponent } from './component/curso03/c03.2vid/c03.2vid.component';
+import { Curso4Component } from './component/curso4/curso4.component';
+import { Curso42Component } from './component/curso4.2/curso4.2.component';
+import { C04introComponent } from './component/curso4/c04intro/c04intro.component';
+import { C04videoComponent } from './component/curso4/c04video/c04video.component';
+import { C04p01Component } from './component/curso4/c04p01/c04p01.component';
+import { C04p02Component } from './component/curso4/c04p02/c04p02.component';
+import { C04p03Component } from './component/curso4/c04p03/c04p03.component';
+import { C04descarComponent } from './component/curso4/c04descar/c04descar.component';
+import { C04endComponent } from './component/curso4/c04end/c04end.component';
+import { C042introComponent } from './component/curso4.2/c042intro/c042intro.component';
+import { C042vidComponent } from './component/curso4.2/c042vid/c042vid.component';
+import { C042p01Component } from './component/curso4.2/c042p01/c042p01.component';
+import { C042p02Component } from './component/curso4.2/c042p02/c042p02.component';
+import { C042p03Component } from './component/curso4.2/c042p03/c042p03.component';
+
+import { C04p04Component } from './component/curso4/c04p04/c04p04.component';
+import { C042CComponent } from './component/curso4.2/c042-c/c042-c.component';
+import { C042endComponent } from './component/curso4.2/c042end/c042end.component';
+import { C13pp12Component } from './component/curso1.3/c13pp12/c13pp12.component';
+import { C13pp13Component } from './component/curso1.3/c13pp13/c13pp13.component';
+import { C13pp14Component } from './component/curso1.3/c13pp14/c13pp14.component';
+import { C14pp10Component } from './component/curso14/c14pp10/c14pp10.component';
+import { Curso5Component } from './component/curso5/curso5.component';
+import { Curso5pp1Component } from './component/curso5/curso5pp1/curso5pp1.component';
+import { Curso5pp2Component } from './component/curso5/curso5pp2/curso5pp2.component';
+import { VideoComponent } from './component/curso5/video/video.component';
+import { Curso5introComponent } from './component/curso5/curso5intro/curso5intro.component';
+import { Curso5videoComponent } from './component/curso5/curso5video/curso5video.component';
+import { Curso5endComponent } from './component/curso5/curso5end/curso5end.component';
+import { Curso6Component } from './component/curso6/curso6.component';
+import { Curso6pp1Component } from './component/curso6/curso6pp1/curso6pp1.component';
+import { Curso6pp2Component } from './component/curso6/curso6pp2/curso6pp2.component';
+import { Curso6introComponent } from './component/curso6/curso6intro/curso6intro.component';
+import { Curso6videoComponent } from './component/curso6/curso6video/curso6video.component';
+import { Curso6endComponent } from './component/curso6/curso6end/curso6end.component';
+import { Curso5cComponent } from './component/curso5/curso5c/curso5c.component';
+import { Curso6cComponent } from './component/curso6/curso6c/curso6c.component';
+
+import { RecoverpassComponent } from './recoverpass/recoverpass.component';
+import { ResetpassComponent } from './resetpass/resetpass.component';
+
 //import { Chart } from 'chart.js';
 
 
 @NgModule({
   declarations: [
-   AppComponent,
+
+    RecoverpassComponent, ResetpassComponent,
+    AppComponent,
     Epp1Component,
     Epp2Component,
     SelectcourseComponent,
@@ -153,10 +213,10 @@ import { VergrafComponent } from './component/Admin/vergraf/vergraf.component';
     Page2Component,
     Page3Component,
     Page4Component,
-   
+
 
     p1,
-   
+
     Page5cuestComponent,
     AddtesterComponent,
     TestingmagnaComponent,
@@ -165,34 +225,48 @@ import { VergrafComponent } from './component/Admin/vergraf/vergraf.component';
     IntroComponent,
     Intro12Component,
     Intro13Component,
-    
-    
-    Cursotest1Component,
-              Page5Component,
-              Curso12Component,
-              c2p2,c2p1, Curso13Component, C13p1Component, C13p2Component, C13p3Component, Curso14Component, C14p1Component, C14p2Component, C14p3Component, C14p4cComponent, LoginComponent, C12p3Component, C12p0Component, Curso2Component, C02p1Component, C02p2Component, C02p3Component, C02p4Component, C02p5cComponent, C13p0Component, C13p4Component, C14p0Component, C14p5Component, C1p3Component, C1p4Component, C1p5Component, C1p6Component, C1p7Component, C1p8Component, C1p9Component, C12p1Component, C12p2Component, C12p33Component, C12p4Component, C13pp1Component, C13pp02Component, C13pp03Component, C13pp04Component, C13pp05Component, C13pp06Component, C13pp07Component, C13pp08Component, C13pp09Component, C13pp10Component, C13pp11Component, AdminmenuComponent, ListaestudiantesComponent, VerestudianteComponent, AddadminComponent, FilterpipePipe, C14pp1Component, C14pp2Component, C14pp3Component, C14pp4Component, C14pp5Component, C14pp6Component, C14pp7Component, C14pp8Component, C14pp9Component, C14ppaComponent, C12p2preComponent, C14pp22p2Component, C14pp22p3Component, C02p01Component, C02p02Component, C02p03Component, C02p04Component, C02p05Component, C02p06Component, C02p07Component, C02p08Component, C02p09Component, C02p10Component, C02p11Component, C02p12Component, Curso3Component, C03titleComponent, C03vidComponent, C03descaComponent, C03endComponent, C03p01Component, C03p02Component, C03p03Component, C03p04Component, C03p05Component, C03p06Component, C03p07Component, C03p08Component, C03p09Component, C03p10Component, C02p6endComponent, VergrafComponent, 
 
+
+    Cursotest1Component,
+    Page5Component,
+    Curso12Component,
+    c2p2, c2p1, Curso13Component, C13p1Component, C13p2Component, C13p3Component, Curso14Component, C14p1Component, C14p2Component, C14p3Component, C14p4cComponent, LoginComponent, C12p3Component, C12p0Component, Curso2Component, C02p1Component, C02p2Component, C02p3Component, C02p4Component, C02p5cComponent, C13p0Component, C13p4Component, C14p0Component, C14p5Component, C1p3Component, C1p4Component, C1p5Component, C1p6Component, C1p7Component, C1p8Component, C1p9Component, C12p1Component, C12p2Component, C12p33Component, C12p4Component, C13pp1Component, C13pp02Component, C13pp03Component, C13pp04Component, C13pp05Component, C13pp06Component, C13pp07Component, C13pp08Component, C13pp09Component, C13pp10Component, C13pp11Component, AdminmenuComponent, ListaestudiantesComponent, VerestudianteComponent, AddadminComponent, FilterpipePipe, C14pp1Component, C14pp2Component, C14pp3Component, C14pp4Component, C14pp5Component, C14pp6Component, C14pp7Component, C14pp8Component, C14pp9Component, C14ppaComponent, C12p2preComponent, C14pp22p2Component, C14pp22p3Component, C02p01Component, C02p02Component, C02p03Component, C02p04Component, C02p05Component, C02p06Component, C02p07Component, C02p08Component, C02p09Component, C02p10Component, C02p11Component, C02p12Component, Curso3Component, C03titleComponent, C03vidComponent, C03descaComponent, C03endComponent, C03p01Component, C03p02Component, C03p03Component, C03p04Component, C03p05Component, C03p06Component, C03p07Component, C03p08Component, C03p09Component, C03p10Component, C02p6endComponent,
+    VergrafComponent, RegisterComponent, C03cuestComponent, Curso03Component, C032endComponent, C03cuestComponent, C032titleComponent, C032vidComponent,
+    Curso4Component, Curso42Component, C04introComponent, C04videoComponent, C04p01Component, C04p02Component, C04p03Component, C04descarComponent, C04endComponent, C042introComponent, C042vidComponent, C042p01Component, C042p02Component, C042p03Component, C04p04Component, C042CComponent, C042endComponent, C13pp12Component, C13pp13Component, C13pp14Component, C14pp10Component, Curso5Component, Curso5pp1Component, Curso5pp2Component, VideoComponent, Curso5introComponent, Curso5videoComponent, Curso5endComponent, Curso6Component, Curso6pp1Component, Curso6pp2Component, Curso6introComponent, Curso6videoComponent, Curso6endComponent, Curso5cComponent, Curso6cComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-   
+
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     NgxPaginationModule,
-    //ChartsModule,
-    
+
+
+    // VergrafComponent, 
+
+    // Chart,
+
+    //NgChartsModule,
+    BaseChartDirective,
+
+
+
     NgbModule,// NgbToast, NgTemplateOutlet,NgbTooltipModule,
 
-   // VgCoreModule,
+    // VgCoreModule,
     //VgControlsModule,
-   // VgOverlayPlayModule,
-   // VgBufferingModule
+    // VgOverlayPlayModule,
+    // VgBufferingModule
   ],
-  providers: [CookieService],
+  providers: [CookieService,
+    provideCharts(withDefaultRegisterables())
+    //minimal configuration/ DONT WORK!
+    //provideCharts({ registerables: [BarController, Legend, Colors] })
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

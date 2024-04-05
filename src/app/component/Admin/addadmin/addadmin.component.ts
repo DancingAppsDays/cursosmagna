@@ -20,6 +20,11 @@ export class AddadminComponent implements OnInit {
 
   ngOnInit(): void {
 
+    if(Constants.usertype!="admin" && Constants.usertype != "superadmin"){
+      this.router.navigate(['/'])
+      return
+    }
+
     //if(Constants.usertype!="Admin")this.router.navigate(['/'])
 
     //this should be taken from entity
@@ -84,7 +89,7 @@ export class AddadminComponent implements OnInit {
         this.successdata= data;
 
         if(this.successdata['status']=='success'){
-
+          this.formu.reset();
         window.alert("Usuario agregado correctamente");
         }else{
           //console.log(this.successdata)

@@ -1,47 +1,64 @@
 <div class="container">
-    <div class="form-group row">
-      <div class="col-sm text-center">
-        <h4 class="d-block" style="background-color: #87161c; color:#fff; margin: 15px;">Ingresa como Usuario</h4>
-      </div>
+  <div class="form-group row">
+    <div class="col-sm text-center">
+      <h4 class="d-block" style="background-color: #87161c; color:#fff; margin: 15px;">Ingresa como Usuario</h4>
     </div>
-    <!--<h1 class="mt-5 mb-5 text-center" style=" background: #fa4444; color: #fff; padding: 10px 0; ">Angular 10 Laravel 7 User Login</h1>-->
-    <div style="padding: 10px;border: 2px solid hsl(0, 0%, 93%);">
-      <form [formGroup]="ff" (ngSubmit)="onLoginSubmit(ff.value)">
-        <p>
-          <input type="email"  class="form-control" formControlName="email" email >
-          <strong>Email: </strong> 
-      </p>   
-          <div *ngIf="ff.controls['email'].invalid && (ff.controls['email'].dirty || ff.controls['email'].touched)"  class="alert alert-info">
-                   Ingresa un email válido</div>
-        <div class="form-group">
-           
-            <input type="password" formControlName="password" name="password" autocomplete="on" class="form-control" [ngClass]="{ 'is-invalid': loginsubmitted && ff.get('password')?.errors }" />
-            <strong>Password</strong>
-            <div *ngIf="ff.controls['password'].invalid && (ff.controls['password'].dirty || ff.controls['password'].touched)"  class="alert alert-info">
-              Ingresa un password de 6 digitos</div>               
-            </div>
-          
-          <!--
+  </div>
+  <!--<h1 class="mt-5 mb-5 text-center" style=" background: #fa4444; color: #fff; padding: 10px 0; ">Angular 10 Laravel 7 User Login</h1>-->
+  <div style="padding: 10px;border: 2px solid hsl(0, 0%, 93%);">
+    <form [formGroup]="ff" (ngSubmit)="onLoginSubmit(ff.value)">
+      <p>
+        <strong>Email: </strong>
+        <input type="email" class="form-control" formControlName="email" email>
+
+      </p>
+      <div *ngIf="ff.controls['email'].invalid && (ff.controls['email'].dirty || ff.controls['email'].touched)"
+        class="alert alert-info">
+        Ingresa un email válido</div>
+      <div class="form-group">
+        <strong>Password</strong>
+        <input type="password" formControlName="password" name="password" autocomplete="on" class="form-control"
+          [ngClass]="{ 'is-invalid': loginsubmitted && ff.get('password')?.errors }" />
+
+        <div
+          *ngIf="ff.controls['password'].invalid && (ff.controls['password'].dirty || ff.controls['password'].touched)"
+          class="alert alert-info">
+          Ingresa un password de 6 digitos</div>
+      </div>
+      <br>
+      <!--
       <div class="form-group form-check">
         <label class="form-check-label">
           <input class="form-check-input" type="checkbox" name="remember"> Remember me
         </label>
       </div>-->
-      <button type="submit" class="btn btn-secondary" style="background-color: #f09697;">Enviar</button>
+      <button type="submit" [disabled]="ff.invalid" class="btn btn-secondary"
+        style="background-color: #f09697;">Enviar</button>
+
+
     </form>
-    </div>
+  </div>
+  <h6 style="margin-top: 15px;">¿Olvidaste tu contraseña?</h6>
+
+  <button type="button" (click)="GotoRecover()" class="btn btn-secondary"
+    style="background-color: #f09697;">Recuperar</button>
 
 
 
- 
-<br>
+  <br>
+  <h4 style="margin-top: 15px;">¿Es tu primera vez?</h4>
+
+  <button type="button" (click)="GotoRegister()" class="btn btn-secondary"
+    style="background-color: #f09697;">Registrarse</button>
+
+
+  <!--
 <h4  style="margin-top: 15px;">Ingresa como invitado</h4>
  
     <button type="button" (click)="EntrarGuest()"class="btn btn-secondary" style="background-color: #f09697;">Entrar</button>
-   
-  </div>
-    <!--
+ -->
+</div>
+<!--
     <form name="logoutForm" (ngSubmit)="onLogoutSubmit()" >
     <button type="submit" class="btn btn-primary">Cerrar sesión</button>
   </form>-->
-   

@@ -10,6 +10,7 @@ export class Intro13Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    localStorage.setItem("cursos","0");
   }
 
 }

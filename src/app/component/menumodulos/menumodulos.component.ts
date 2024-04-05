@@ -28,9 +28,10 @@ export class MenumodulosComponent implements OnInit {
 
     //this.cookieService.set('currentStage', '0');
   //this.cookieValue = this.cookieService.get('Test');
-    this.currentStage= this.cookieService.get('currentStage')?parseInt(this.cookieService.get('currentStage')):5;
 
-    if(this.currentStage==0){
+    //this.currentStage= this.cookieService.get('currentStage')?parseInt(this.cookieService.get('currentStage')):5;
+    this.currentStage= localStorage.getItem('cursos')?parseInt(localStorage.getItem('cursos')!):-1;
+    if(this.currentStage==-1){
       this.router.navigate(["intro/one"], { skipLocationChange: true});
     }
 
@@ -43,11 +44,11 @@ export class MenumodulosComponent implements OnInit {
 
   getRouterLink(requiredStage: number, link: string) {
     //return this.currentStage < requiredStage ? null : link;
-    this.currentStage < requiredStage ? null : this.router.navigate([link], { skipLocationChange: true});
+    this.currentStage < requiredStage-1 ? null : this.router.navigate([link], { skipLocationChange: true});
   }
 
   playSound(){
-    console.log('play sound')
+   // console.log('play sound')
     this.audio.play();
   }
 

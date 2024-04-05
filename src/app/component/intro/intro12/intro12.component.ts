@@ -7,17 +7,18 @@ import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 })
 export class Intro12Component implements OnInit {
   @HostListener('window:resize', ['$event'])
-  onResize(event:any) {
+  onResize(event: any) {
     this.adjustIframeSize();
   }
-  constructor(private el: ElementRef) { 
-   
+  constructor(private el: ElementRef) {
+
   }
   ngAfterViewInit(): void {
     this.adjustIframeSize();
   }
 
   ngOnInit(): void {
+    localStorage.setItem("cursos", "0");
   }
 
   adjustIframeSize() {

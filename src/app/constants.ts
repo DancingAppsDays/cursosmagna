@@ -1,8 +1,10 @@
+import { environment } from '../environments/environment';
+
 export class Constants {
 
-    //public static URL =  "https://schoolaravel.dancingapps.org/api/";
+    //public static URL =  "https://scho.dancingapps.org/api/";
     
-     public static URL ="http://localhost:8000/api/"
+     public static URL =  environment.databaseURL ;// "http://localhost:8000/api/"
  
      public static usertype= "empty";
      public static session= false;

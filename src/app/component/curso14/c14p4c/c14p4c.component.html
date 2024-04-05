@@ -1,24 +1,24 @@
 <body>
-    
-    <div class="containertest">
-       
-        <div class="slides" >
-        
-        
-            
-        
-           
-        
-            <img class="enterleft f1" src="../../../../assets/maqueta11/MAGNA Diapositiva 3_ elemento 1.png">
-        
-            <img class="enterleft f2" src="../../../../assets/MAGNA-fondo_general.png">
-        
-           
-        
-           
-        
 
-    <!--
+  <div class="containertest">
+
+    <div class="slides">
+
+
+
+
+
+
+
+
+      <img class="enterleft f2" src="../../../../assets/MAGNA-fondo_examenes.png">
+
+
+
+
+
+
+      <!--
         <div class="slidesubtitle">
     <h4>Examen Unidad 1</h4>
   </div>
@@ -39,28 +39,28 @@
          
         </form>
         -->
-       
-        <form class="form-container" [formGroup]="formu" (ngSubmit)="onSubmit(formu.value)">
-          <div class="slidesubtitle">
-            <h4>Examen Unidad 1</h4>
-          </div>
-          
-          <div *ngFor="let question of questions; let i = index">
-              <p>{{question}}</p>
-              <input formControlName="a{{incrementIndex(i) }}" type="radio" id="true{{i}}" value="1">
-              <label for="true{{i}}">{{answers[i][0]}}</label>
-              <br>
-              <input formControlName="a{{incrementIndex(i) }}" type="radio" id="false{{i}}"  value="2">
-              <label for="false{{i}}">{{answers[i][1]}}</label>
-              <br><br>
-            </div>
 
-            <button *ngIf="!isdone" [disabled]="formu.invalid"  type="submit" class="btn btn-primary">Enviar</button>
-   
-          </form>
-       
-          <img src="../../../../assets/maqueta11//MAGNA fondo transparente.png">
+      <form class="form-container" [formGroup]="formu" (ngSubmit)="onSubmit(formu.value)">
+        <div class="slidesubtitle">
+          <h4>Examen Unidad 1</h4>
         </div>
+
+        <div *ngFor="let question of questions; let i = index">
+          <p>{{question}}</p>
+          <input formControlName="a{{incrementIndex(i) }}" type="radio" id="true{{i}}" value="1">
+          <label for="true{{i}}">{{answers[i][0]}}</label>
+          <br>
+          <input formControlName="a{{incrementIndex(i) }}" type="radio" id="false{{i}}" value="2">
+          <label for="false{{i}}">{{answers[i][1]}}</label>
+          <br><br>
+        </div>
+
+        <button *ngIf="!isdone" [disabled]="formu.invalid" type="submit" class="btn btn-primary">Enviar</button>
+
+      </form>
+
+      <img src="../../../../assets/maqueta11//MAGNA fondo transparente.png">
     </div>
-    
-    </body>
+  </div>
+
+</body>

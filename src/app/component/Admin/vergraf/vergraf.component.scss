@@ -1,0 +1,13 @@
+.chart-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .chart-wrapper {
+    //flex: 50%;
+    flex: calc(50% - 20px);  // Subtract double the margin (10px on each side)
+    margin: 10px;
+
+    //This makes the width of the element include the padding and border, but not the margin:
+    box-sizing: border-box;
+  }

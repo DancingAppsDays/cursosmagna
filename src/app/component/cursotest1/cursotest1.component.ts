@@ -5,6 +5,7 @@ import { timer } from 'rxjs';
 import { routeTransitionAnimations } from 'src/app/route-transition-animations';
 import { NextslideService } from 'src/app/service/nextslide.service';
 import { NgbModule, NgbPopover, NgbTooltip} from '@ng-bootstrap/ng-bootstrap';
+import { TimersService } from 'src/app/service/timers.service';
 
 @Component({
   selector: 'app-cursotest1',
@@ -25,7 +26,7 @@ export class Cursotest1Component implements OnInit {
 
   isnextready=true;
 
-  constructor(private route: ActivatedRoute, private router: Router,private nextslideService: NextslideService) { 
+  constructor(private route: ActivatedRoute, private router: Router,private nextslideService: NextslideService,private timerservice:TimersService) { 
 
     this.audio.src = "../../../assets/audio/676302__rubberduck9999__droid-beep-01.flac";
     this.audio.load();
@@ -40,7 +41,12 @@ export class Cursotest1Component implements OnInit {
 
     const source = timer(1000, 1000);
  
-     source.subscribe(n => { this.currenttimer = new Date(n * 1000).toISOString().slice(11, 19)});
+     source.subscribe(n => { 
+      this.currenttimer = new Date(n * 1000).toISOString().slice(11, 19)
+   
+    
+      this.timerservice.changeTimer(this.currenttimer);
+    });
     
      this.nextslideService.currentIsNextReady.subscribe(isNextReady => {this.isnextready = isNextReady; document.getElementById('slidecontainer')?.scrollIntoView();  console.log("CHANgeDDD")});
      this.nextslideService.changeIsNextReady(true);
@@ -133,7 +139,7 @@ export class Cursotest1Component implements OnInit {
     };
    
     this.currentslide++;
-    this.audio.play();
+    //this.audio.play();
 
     switch(this.currentslide){
       case 1:

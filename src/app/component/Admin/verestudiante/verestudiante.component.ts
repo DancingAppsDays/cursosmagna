@@ -40,8 +40,11 @@ export class VerestudianteComponent implements OnInit {
   form1data: FormGroup;
   form2data: FormGroup;
   form3data: FormGroup;
+  form4data: FormGroup;
   form1active: boolean = false;
   form2active: boolean = false;
+  form3active: boolean = false;
+  form4active: boolean = false;
 
 
 
@@ -63,7 +66,17 @@ export class VerestudianteComponent implements OnInit {
       this.form2data.addControl(`a${i}`, new FormControl('', Validators.required));
     }
 
-    if(Constants.usertype!="admin") { 
+    this.form3data = this.formBuilder.group({});
+    for (let i = 1; i <= this.questions.length; i++) {
+      this.form3data.addControl(`a${i}`, new FormControl('', Validators.required));
+    }
+
+    this.form4data = this.formBuilder.group({});
+    for (let i = 1; i <= this.questions.length; i++) {
+      this.form4data.addControl(`a${i}`, new FormControl('', Validators.required));
+    }
+
+    if(Constants.usertype!="admin" && Constants.usertype != "superadmin") { 
     this.router.navigate(['/'])
     return
 
@@ -92,7 +105,10 @@ export class VerestudianteComponent implements OnInit {
     this.http.get(Constants.URL+"quiz1/"+datarouted.id).pipe(catchError(error => {console.log("error retrieving quiz1"); return "error"}) ),
     this.http.get(Constants.URL+"quiz2/"+datarouted.id).pipe(catchError(error => {console.log("error retrieving quiz2"); return "error"}) ),
     this.http.get(Constants.URL+"quiz3/"+datarouted.id).pipe(catchError(error => {console.log("error retrieving quiz3"); return "error"}) ),
-      ]
+    this.http.get(Constants.URL+"quiz4/"+datarouted.id).pipe(catchError(error => {console.log("error retrieving quiz4"); return "error"}) ),
+   
+  
+  ]
     //);
 
 
@@ -129,9 +145,13 @@ export class VerestudianteComponent implements OnInit {
         this.patchform2(this.partialdata['data']);
         //this.form2data = this.partialdata['data'];
       } else if (index === 2) {
-        this.patchform2(this.partialdata['data']);
+        this.patchform3(this.partialdata['data']);
         //this.form3data = this.partialdata['data'];
       }
+     else if (index === 3) {
+      this.patchform4(this.partialdata['data']);
+      //this.form3data = this.partialdata['data'];
+    }
           //console.log(this.data);
         }
       });
@@ -163,6 +183,28 @@ export class VerestudianteComponent implements OnInit {
 
   }
 
+  patchform3(formdata: any) {
+    this.form3data.setValue({
+      a1: formdata.a1,
+      a2: formdata.a2,
+      a3: formdata.a3,
+      a4: formdata.a4,
+      a5: formdata.a5
+    });
+
+  }
+
+  patchform4(formdata: any) {
+    this.form4data.setValue({
+      a1: formdata.a1,
+      a2: formdata.a2,
+      a3: formdata.a3,
+      a4: formdata.a4,
+      a5: formdata.a5
+    });
+
+  }
+
 
 
 
@@ -178,18 +220,40 @@ export class VerestudianteComponent implements OnInit {
     }else{
       this.form1active=true;
        this.form2active=false;
-       //this.form3active=false;
-       //this.form3active=false;
+       this.form3active=false;
+       this.form4active=false;
     }
-  } else if (index === 1) {
+  } else if (index === 2) {
+    if(this.form3active){
+      this.form3active=false;
+     
+    }else{
+      this.form3active=true;
+       this.form1active=false;
+       this.form2active=false;
+       this.form4active=false;
+    }
+
+  }else if (index === 3) {
+    if(this.form4active){
+      this.form4active=false;
+     
+    }else{
+      this.form4active=true;
+       this.form1active=false;
+       this.form3active=false;
+       this.form2active=false;
+    }
+
+  }else if (index === 1) {
     if(this.form2active){
       this.form2active=false;
      
     }else{
       this.form2active=true;
        this.form1active=false;
-       //this.form3active=false;
-       //this.form3active=false;
+       this.form3active=false;
+       this.form4active=false;
     }
 
   }

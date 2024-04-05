@@ -16,7 +16,7 @@ export class Curso13Component implements OnInit {
   currenttimer!: string;
 
   currentslide=1;
-  maxpage=19;
+  maxpage=17;
   audio = new Audio();
 
   isnextready=true;
@@ -149,7 +149,7 @@ export class Curso13Component implements OnInit {
     };
    
     this.currentslide++;
-    this.audio.play();
+    //this.audio.play();
 
     switch(this.currentslide){
       case 1:

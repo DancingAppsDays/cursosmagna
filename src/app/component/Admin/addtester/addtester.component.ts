@@ -20,6 +20,10 @@ export class AddtesterComponent implements OnInit {
 
   ngOnInit(): void {
 
+    if(Constants.usertype!="admin" && Constants.usertype != "superadmin"){
+      this.router.navigate(['/'])
+      return
+    }
     //if(Constants.usertype!="Admin")this.router.navigate(['/'])
 
     //this should be taken from entity
@@ -29,7 +33,7 @@ export class AddtesterComponent implements OnInit {
         //birthday:"2000-01-15",
         email:['',[Validators.required,]],
         password:['',[Validators.required,]],
-        area:''
+        //area:''//this didnt crashed the system
     });
   }
 
@@ -86,6 +90,8 @@ export class AddtesterComponent implements OnInit {
         if(this.successdata['status']=='success'){
 
         window.alert("Usuario agregado correctamente");
+            this.formu.reset();
+
         }else{
           //console.log(this.successdata)
           window.alert("  Registro falló, revisa que el correo no sea repetido");

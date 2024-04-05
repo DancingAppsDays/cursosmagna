@@ -21,7 +21,7 @@ export class ListaestudiantesComponent implements OnInit {
   ngOnInit(): void {
 
     
-    if(Constants.usertype!="admin"){
+    if(Constants.usertype!="admin" && Constants.usertype != "superadmin"){
       this.router.navigate(['/'])
       return
     }

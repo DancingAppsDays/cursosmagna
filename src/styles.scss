@@ -1,15 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 
-.bannertop{
-   max-width: 100vw;
-    max-height: 10vh; 
+.bannertop {
+    max-width: 100vw;
+    max-height: 10vh;
     object-fit: contain;
-   // align-self: center;
-   margin: auto; // Add this line
-   cursor: pointer;
+    // align-self: center;
+    margin: auto; // Add this line
+    cursor: pointer;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -23,33 +29,34 @@ p, h1, h2, h3, h4, h5, h6 {
     height: 90%;
     //width:50%;
     //transform: translate(10%, 10%);
-    width:80%;
-    top:50%;
-    left:50%;
+    width: 80%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     //margin:auto
-  }
+}
 
-.fondo{
+.fondo {
     position: absolute;
 
 }
-.slidescontainer{
-   /* display: flex;
+
+.slidescontainer {
+    /* display: flex;
     flex-direction: column;
     align-items:center;
     justify-content: center;*/
 
 }
 
-.containertest{
+.containertest {
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     justify-content: center;
 }
 
-.slidexxx{
+.slidexxx {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,6 +67,7 @@ p, h1, h2, h3, h4, h5, h6 {
     height: 95vh;
 
 }
+
 .clearfix::after {
     content: "";
     display: table;
@@ -71,24 +79,25 @@ p, h1, h2, h3, h4, h5, h6 {
     grid-template-rows: auto 1fr; // Adjust this as needed
     height: 90vh;
     width: 90vw;
-   // background-color: red
-   border: 1px solid black;
+    // background-color: red
+    border: 1px solid black;
     position: relative;
     margin: 0 auto;
     overflow: hidden;
 }
 
-.slidesvideo{
-    
+.slidesvideo {
+
     background-image: url('assets/maqueta11/MAGNA\ Diapositiva\ 3_\ elemento\ 1.png');
-    background-size: cover; background-repeat: no-repeat;
-    display: block;// //worked, flex messes up in mobile but had eerie leftmargin.
-    align-items: center;  //was center , testing for mobile
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block; // //worked, flex messes up in mobile but had eerie leftmargin.
+    align-items: center; //was center , testing for mobile
     justify-content: center;
     //height: 80vh;
     width: 90vw;
-   // background-color: red
-   //border: 1px solid black;
+    // background-color: red
+    //border: 1px solid black;
     position: relative;
     margin: 0 auto;
     overflow: hidden;
@@ -96,25 +105,25 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .slidesiframe5555 {
     // grid-row: 1; // Adjust this as needed
-     position: relative;
-     width: 100%;
-     height: 100%;
-    padding-top: 39vh;//39.25%; /* 70% * 9 / 16 = 39.25% */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 39vh; //39.25%; /* 70% * 9 / 16 = 39.25% */
     //overflow-y: hidden;//overflow: hidden;
     //max-width: 100%;
-   // max-height: 100%;
-     top: 50%;
+    // max-height: 100%;
+    top: 50%;
     // left: 50%;
-     transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
     border: 2px solid black;
- }
+}
 
- .slidesiframe {
+.slidesiframe {
     position: absolute;
     width: 100%; // Or any other value
     height: 80vh;
     padding-top: 56.25%; // 16:9 aspect ratio
-   
+
     //overflow: hidden;
     // Other styles...
     // border: 2px solid blueviolet;
@@ -126,63 +135,64 @@ p, h1, h2, h3, h4, h5, h6 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 56.25%;//100%;
+    height: 56.25%; //100%;
     z-index: 200;
 }
 
-.slidesiframe iframe{
+.slidesiframe iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;  // This will maintain the aspect ratio and remove black borders
+    object-fit: cover; // This will maintain the aspect ratio and remove black borders
     z-index: 200;
 }
 
- 
- .slidesiframeWorking { //OLDD
-     // grid-row: 1; // Adjust this as needed
-      position: relative;
-      width: 80%;
-      height: 80%;
-  
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-  }
- 
- 
- .slidesiframeLEGAC iframe {
-     position: relative;
-    z-index: 200;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
- 
- 
-     width: 70%;
-     height: 90%;
-    
- }
- 
- .slidesiframesss iframe {
-     position: absolute;
-     top: 0;
-     left: 50%;
-     transform: translate(-50%, 0%);
-     width: 100vw;// 69.8%;
-    height: 100vh;
-     z-index: 200;
-   }
 
- 
- 
- .slidesiframe.loading {
-     position: relative;
-   }
-   
-   /*
+.slidesiframeWorking {
+    //OLDD
+    // grid-row: 1; // Adjust this as needed
+    position: relative;
+    width: 80%;
+    height: 80%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.slidesiframeLEGAC iframe {
+    position: relative;
+    z-index: 200;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    width: 70%;
+    height: 90%;
+
+}
+
+.slidesiframesss iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100vw; // 69.8%;
+    height: 100vh;
+    z-index: 200;
+}
+
+
+
+.slidesiframe.loading {
+    position: relative;
+}
+
+/*
    .slidesiframe.loading::before {
      content: "Loading...";
      position: absolute;
@@ -198,58 +208,61 @@ p, h1, h2, h3, h4, h5, h6 {
      justify-content: center;
      z-index: 1;
    }*/
-   .slidesiframe.loading::before {
-     content: "Loading";
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     width: 60px;
-     height: 60px;
-     margin: -30px 0 0 -30px;
-     border: 6px dotted #f3ebeb;
-     border-radius: 50%;
-     border-top-color: #ee05a8;
-     border-bottom-color: #007bff;
-     border-left-color: #00ffc8;
-     animation: spin 1s linear infinite;
-   }
-   
-   @keyframes spin {
-     to { transform: rotate(360deg); }
-   }
- 
+.slidesiframe.loading::before {
+    content: "Loading";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0 0 -30px;
+    border: 6px dotted #f3ebeb;
+    border-radius: 50%;
+    border-top-color: #ee05a8;
+    border-bottom-color: #007bff;
+    border-left-color: #00ffc8;
+    animation: spin 1s linear infinite;
+}
 
-   
-
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 
 
-.slides{
 
-    
+
+
+
+.slides {
+
+
     position: relative; //im using this because i want to use absolute positioning teh stack of imgaes, stilldidntwork tou, maybe clearfix
 
-    display: block;// //worked, flex messes up in mobile but had eerie leftmargin.
-    align-items: center;  //was center , testing for mobile
+    display: block; // //worked, flex messes up in mobile but had eerie leftmargin.
+    align-items: center; //was center , testing for mobile
     justify-content: center;
-   
+
     width: 90dvw;
     width: 90vw;
-   
+
     //height: 90dvh;
     //height: 90vh;
-   
+
 }
-.slides img{
-   // float:left;
+
+.slides img {
+    // float:left;
     justify-self: center;
-   display: block;
+    display: block;
     width: 90dvw;
     width: 90vw;
 }
 
 
-.slide{
+.slide {
 
     display: flex;
     align-items: center;
@@ -263,123 +276,130 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 
-.slide img{
+.slide img {
     justify-self: center;
- //   width: 90dvw;
-   // width: 90vw;
+    //   width: 90dvw;
+    // width: 90vw;
 }
 
-.slideselectorbox{
-   
-    
+.slideselectorbox {
+
+
     margin: 1rem;
 
-     //it gets inside the child component two
- 
-   /*  position: absolute;   //fixed is immune to scroll
+    //it gets inside the child component two
+
+    /*  position: absolute;   //fixed is immune to scroll
     left: 50%;   
    transform: translate(-50%,200%);
     bottom:0;*/
 
     //otra opcion de centering
-   margin-left: auto;
+    margin-left: auto;
     margin-right: auto;
 
 
     display: flex;
 
-    justify-content:space-around;
+    justify-content: space-around;
 
     align-content: center;
     align-items: center; //child vertical center
     background-color: rgb(233, 175, 175);
     border-radius: 14%/50%;
-    min-width:18rem;
-    min-height:4rem;
+    min-width: 18rem;
+    min-height: 4rem;
     max-width: 18rem;
 }
 
-.slideselectorbox>h2{
-    
-   
-    margin:.2rem;
-    color:white;
+.slideselectorbox>h2 {
+
+
+    margin: .2rem;
+    color: white;
     font-weight: bold;
 }
-.slideselectorbox img{
-    
-   
-    margin:.2rem;
-    color:white;
-    width:25%;
-    height:25%;
+
+.slideselectorbox img {
+
+
+    margin: .2rem;
+    color: white;
+    width: 25%;
+    height: 25%;
 }
 
 img.roundbut {
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
-  
+
     &:hover {
-      transform: scale(1.05);
-      
-      border: 2px solid black
+        transform: scale(1.05);
+
+        border: 2px solid black
     }
-  
+
     &:active {
         border: 2px solid black;
-      transform: scale(0.9);
-      filter: brightness(0.8);// sepia(1) hue-rotate(180deg);
-      //background-color: #f00; 
+        transform: scale(0.9);
+        filter: brightness(0.8); // sepia(1) hue-rotate(180deg);
+        //background-color: #f00; 
     }
-  }
+}
 
-.roundbut{
+.roundbut {
     border-radius: 50%;
-   
+
 }
+
 .roundbut.disabled {
-    background-color: #ccc; /* color for disabled button */
-    cursor: not-allowed; /* cursor style for disabled button */
-  }
+    background-color: #ccc;
+    /* color for disabled button */
+    cursor: not-allowed;
+    /* cursor style for disabled button */
+}
 
-  .disabled {
-    background-color: #202020; /* color for disabled button */
-    cursor: not-allowed; /* cursor style for disabled button */
-  }
+.disabled {
+    background-color: #202020;
+    /* color for disabled button */
+    cursor: not-allowed;
+    /* cursor style for disabled button */
+}
 
-.navbar{
+.navbar {
     background-color: rgb(190, 2, 2);
-    color:purple;
+    color: purple;
 }
 
 
-.slidetitle{
+.slidetitle {
     position: absolute;
     top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-   // margin:5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // margin:5%;
     text-align: center;
 
 
 }
 
-.slidesubtitle{
-   
-   margin:1%;
+.slidesubtitle {
+
+    margin: 1%;
     text-align: center;
     font-size: 2.4vw;
-//z-index: 9999;
+    //z-index: 9999;
 
 }
-.slidesubtitle>*{
-   
-    margin:1%;
-     text-align: center;
-     font-size: 2.4vw;
- //z-index: 9999;
- 
- }
+
+.slidesubtitle>* {
+
+    margin: 1%;
+    text-align: center;
+    font-size: 2.4vw;
+    //z-index: 9999;
+
+}
 
 
 
@@ -388,59 +408,69 @@ img.roundbut {
 
 
 
-.enterleft{
+.enterleft {
     position: absolute; //keeps them in place
     animation: enterleftanim 1s ease-in-out forwards;
-    transform: translateX(-100%); /* Set initial position */
-    opacity: 0; /* Set initial opacity */
-   // animation-play-state: paused;
+    // transform: translateX(-100%); /* Set initial position */
+    opacity: 0;
+    /* Set initial opacity */
+    // animation-play-state: paused;
 
 }
 
-.enteright{
+.enteright {
     position: absolute;
     animation: enterrightanim 1s ease-in-out forwards;
-    transform: translateX(+100%); /* Set initial position */
-    opacity: 0; /* Set initial opacity */
+    transform: translateX(+100%);
+    /* Set initial position */
+    opacity: 0;
+    /* Set initial opacity */
     //animation-play-state: paused;
 
 }
 
-.enterbottom{
+.enterbottom {
     position: absolute;
     animation: slideInFromBottom 1s ease-in-out forwards;
-    transform: translateY(+100%); /* Set initial position */
-    opacity: 0; /* Set initial opacity */
+    transform: translateY(+100%);
+    /* Set initial position */
+    opacity: 0;
+    /* Set initial opacity */
     //animation-play-state: paused;
 
 }
 
 .f1 {
-    animation-delay: .1s; /* Delay for the first image */
+    animation-delay: .1s;
+    /* Delay for the first image */
 }
 
 .f2 {
-    animation-delay: .6s; /* Delay for the second image */
+    animation-delay: .2s;
+    /* Delay for the second image */
 }
 
 .f3 {
-    animation-delay: .8s; /* Delay for the third image */
+    animation-delay: .4s;
+    /* Delay for the third image */
 }
 
 .f4 {
-    animation-delay: 1s; /* Delay for the third image */
+    animation-delay: 1s;
+    /* Delay for the third image */
 }
 
 @keyframes enterleftanim {
     from {
-        transform: translateX(-100%);
+        //transform: translateX(-100%);
         opacity: 0;
     }
+
     to {
-        transform: translateX(0);
+        // transform: translateX(0);
         opacity: 1;
     }
-    
+
 }
 
 @keyframes enterrightanim {
@@ -448,11 +478,12 @@ img.roundbut {
         transform: translateX(+100%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
     }
-    
+
 }
 
 
@@ -461,15 +492,15 @@ img.roundbut {
 
 
 
-.text-red{
-   color: rgb(48, 48, 48);
-}
-
-.text-grey{
+.text-red {
     color: rgb(48, 48, 48);
- }
+}
 
-.modulotitle{
+.text-grey {
+    color: rgb(48, 48, 48);
+}
+
+.modulotitle {
     text-align: center;
 }
 
@@ -486,12 +517,12 @@ img.roundbut {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .download-button:hover {
+}
+
+.download-button:hover {
     background-color: #0056b3;
     transform: scale(1.1);
-  }
+}
 
 
 
@@ -505,58 +536,65 @@ img.roundbut {
 ///intropages slides
 /// 
 /// 
-.absolute{
+.absolute {
     position: absolute;
-   /// top: 50%;
-   // left: 50%;
-   // transform: translate(-50%,-50%);
+    /// top: 50%;
+    // left: 50%;
+    // transform: translate(-50%,-50%);
 
 }
 
 
 .bordered-box {
     z-index: 5; // 
- 
-
-position: absolute;
-
-top: 50%;
-left: 10%;
-//left: 10vw; // use vw here
-transform: translateY(-50%);
-//border: 1px solid black;
-width: 40%; /* adjust as needed */
-height: 40%; /* adjust as needed */
-
-//width: 40vw; // use vw here
-//height: 40vh; // use vh here
-
-display: flex; /* add this */
 
 
-justify-content: center; /* add this */
-//align-items: center; /* add this */
-flex-direction: column; /* add this */
+    position: absolute;
+
+    top: 50%;
+    left: 10%;
+    //left: 10vw; // use vw here
+    transform: translateY(-50%);
+    //border: 1px solid black;
+    width: 40%;
+    /* adjust as needed */
+    height: 40%;
+    /* adjust as needed */
+
+    //width: 40vw; // use vw here
+    //height: 40vh; // use vh here
+
+    display: flex;
+    /* add this */
+
+
+    justify-content: center;
+    /* add this */
+    //align-items: center; /* add this */
+    flex-direction: column;
+    /* add this */
 
 
 }
-.bigbox{
-    
+
+.bigbox {
+
     align-items: center;
-    width: 80%; /* adjust as needed */
-height: 80%;
-overflow: auto;//create scrollbar
+    width: 80%;
+    /* adjust as needed */
+    height: 80%;
+    overflow: auto; //create scrollbar
 }
 
 
 
-.bordered-box > p {
+.bordered-box>p {
 
-    
+
     color: white;
     font-family: 'Montserrat', sans-serif;
 
-    position:relative;
+    position: relative;
     display: block;
 
 
@@ -569,11 +607,11 @@ overflow: auto;//create scrollbar
     opacity: 0;
 }
 
-.bordered-box >h3 {
-        color: white;
+.bordered-box>h3 {
+    color: white;
     font-family: 'Montserrat', sans-serif;
 
-    position:relative;
+    position: relative;
     display: block;
 
 
@@ -584,12 +622,13 @@ overflow: auto;//create scrollbar
     //init state
     transform: translateY(100%);
     opacity: 0;
-} 
-.bordered-box > h5 {
+}
+
+.bordered-box>h5 {
     color: white;
     font-family: 'Montserrat', sans-serif;
 
-    position:relative;
+    position: relative;
     display: block;
 
 
@@ -601,11 +640,12 @@ overflow: auto;//create scrollbar
     transform: translateY(100%);
     opacity: 0;
 }
-.bordered-box > h4 {
+
+.bordered-box>h4 {
     color: white;
     font-family: 'Montserrat', sans-serif;
 
-    position:relative;
+    position: relative;
     display: block;
 
 
@@ -619,25 +659,34 @@ overflow: auto;//create scrollbar
 }
 
 
-.bordered-box > *:nth-child(1) {
-    animation-delay:  1.5s; /* adjust as needed */
+.bordered-box>*:nth-child(1) {
+    animation-delay: 1.5s;
+    /* adjust as needed */
 }
 
-.bordered-box > *:nth-child(2) {
-    animation-delay:  1.8s; /* adjust as needed */
+.bordered-box>*:nth-child(2) {
+    animation-delay: 1.8s;
+    /* adjust as needed */
 }
 
-.bordered-box > *:nth-child(3) {
-    animation-delay:  2.1s; /* adjust as needed */
+.bordered-box>*:nth-child(3) {
+    animation-delay: 2.1s;
+    /* adjust as needed */
 }
-.bordered-box > *:nth-child(4) {
-    animation-delay:  2.4s; /* adjust as needed */
+
+.bordered-box>*:nth-child(4) {
+    animation-delay: 2.4s;
+    /* adjust as needed */
 }
-.bordered-box > *:nth-child(5) {
-    animation-delay:  2.6s; /* adjust as needed */
+
+.bordered-box>*:nth-child(5) {
+    animation-delay: 2.6s;
+    /* adjust as needed */
 }
-.bordered-box > *:nth-child(6) {
-    animation-delay:  2.8s; /* adjust as needed */
+
+.bordered-box>*:nth-child(6) {
+    animation-delay: 2.8s;
+    /* adjust as needed */
 }
 
 
@@ -646,15 +695,22 @@ overflow: auto;//create scrollbar
         transform: translateY(100%);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
     }
 }
 
-.bigbox>p,.bigbox>h1,.bigbox>h2,.bigbox>h3,.bigbox>h4,.bigbox>h5,.bigbox>h6 {
-    color:rgb(95, 95, 95);
-    text-align: center; 
+.bigbox>p,
+.bigbox>h1,
+.bigbox>h2,
+.bigbox>h3,
+.bigbox>h4,
+.bigbox>h5,
+.bigbox>h6 {
+    color: rgb(95, 95, 95);
+    text-align: center;
     padding: 0 1vw;
     margin: 0;
     margin-bottom: 1vw;
@@ -664,35 +720,40 @@ overflow: auto;//create scrollbar
 
 
 
-.slidertext{
+.slidertext {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-20%, -50%);
-   // border: 1px solid black;
+    // border: 1px solid black;
     //width: 40%; /* adjust as needed */
     //height: 40%; /* adjust as needed */
-    
-    width: 60%;// 40vw; // use vw here
-    height: 90%;//40vh; // use vh here
-    
-    display: flex; /* add this */
-    
-    
-    justify-content: center; /* add this */
-    align-items: center; /* add this */
-    flex-direction: column; /* add this */
-    
+
+    width: 60%; // 40vw; // use vw here
+    height: 90%; //40vh; // use vh here
+
+    display: flex;
+    /* add this */
+
+
+    justify-content: center;
+    /* add this */
+    align-items: center;
+    /* add this */
+    flex-direction: column;
+    /* add this */
+
 
 
 }
-.slidertext > h6{
+
+.slidertext>h6 {
     margin: 2%;
 
-   // color: white;
+    // color: white;
     font-family: 'Montserrat', sans-serif;
 
-    position:relative;
+    position: relative;
     display: block;
 
 
@@ -702,13 +763,13 @@ overflow: auto;//create scrollbar
 
 }
 
-.slidertext > h3{
+.slidertext>h3 {
     margin: 2%;
 
     //color: white;
     font-family: 'Montserrat', sans-serif;
 
-    position:relative;
+    position: relative;
     display: block;
 
 
@@ -721,13 +782,13 @@ overflow: auto;//create scrollbar
 
 }
 
-.slidertext > h4{
+.slidertext>h4 {
     margin: 2%;
 
     //color: white;
     font-family: 'Montserrat', sans-serif;
 
-    position:relative;
+    position: relative;
     display: block;
 
 
@@ -737,13 +798,13 @@ overflow: auto;//create scrollbar
 
 }
 
-.slidertext > p{
+.slidertext>p {
     margin: 2%;
 
     //color: white;
     font-family: 'Montserrat', sans-serif;
 
-    position:relative;
+    position: relative;
     display: block;
 
 
@@ -754,30 +815,44 @@ overflow: auto;//create scrollbar
 
 }
 
-.slidertext > *:nth-child(1) {
-    animation-delay:  1.3s; /* adjust as needed */
-}
-.slidertext > *:nth-child(2) {
-    animation-delay:  1.8s; /* adjust as needed */
+.slidertext>*:nth-child(1) {
+    animation-delay: 1.3s;
+    /* adjust as needed */
 }
 
-.slidertext > *:nth-child(3) {
-    animation-delay:  2.1s; /* adjust as needed */
+.slidertext>*:nth-child(2) {
+    animation-delay: 1.8s;
+    /* adjust as needed */
 }
-.slidertext > *:nth-child(4) {
-    animation-delay:  2.4s; /* adjust as needed */
+
+.slidertext>*:nth-child(3) {
+    animation-delay: 2.1s;
+    /* adjust as needed */
 }
-.slidertext > *:nth-child(5) {
-    animation-delay:  2.6s; /* adjust as needed */
+
+.slidertext>*:nth-child(4) {
+    animation-delay: 2.4s;
+    /* adjust as needed */
 }
-.slidertext > *:nth-child(6) {
-    animation-delay:  2.8s; /* adjust as needed */
+
+.slidertext>*:nth-child(5) {
+    animation-delay: 2.6s;
+    /* adjust as needed */
 }
-.slidertext > *:nth-child(7) {
-    animation-delay:  3.0s; /* adjust as needed */
+
+.slidertext>*:nth-child(6) {
+    animation-delay: 2.8s;
+    /* adjust as needed */
 }
-.slidertext > *:nth-child(8) {
-    animation-delay:  3.2s; /* adjust as needed */
+
+.slidertext>*:nth-child(7) {
+    animation-delay: 3.0s;
+    /* adjust as needed */
+}
+
+.slidertext>*:nth-child(8) {
+    animation-delay: 3.2s;
+    /* adjust as needed */
 }
 
 
@@ -786,9 +861,9 @@ overflow: auto;//create scrollbar
         transform: translateY(100%);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
     }
 }
-
