@@ -157,6 +157,56 @@ import { Curso6cComponent } from './component/curso6/curso6c/curso6c.component';
 import { Curso5cComponent } from './component/curso5/curso5c/curso5c.component';
 import { RecoverpassComponent } from './recoverpass/recoverpass.component';
 import { ResetpassComponent } from './resetpass/resetpass.component';
+import { C1pp01Component } from './component/cursotest1/c1pp01/c1pp01.component';
+import { C1pp02Component } from './component/cursotest1/c1pp02/c1pp02.component';
+import { C1pp03Component } from './component/cursotest1/c1pp03/c1pp03.component';
+import { C1pp04Component } from './component/cursotest1/c1pp04/c1pp04.component';
+import { C1pp05Component } from './component/cursotest1/c1pp05/c1pp05.component';
+import { C14pp1preComponent } from './component/curso14/c14pp1pre/c14pp1pre.component';
+import { C12f1Component } from './component/curso1.2/c12f1/c12f1.component';
+import { C12f2Component } from './component/curso1.2/c12f2/c12f2.component';
+import { C12f3Component } from './component/curso1.2/c12f3/c12f3.component';
+import { C12f4Component } from './component/curso1.2/c12f4/c12f4.component';
+import { C12f5Component } from './component/curso1.2/c12f5/c12f5.component';
+import { C12f6Component } from './component/curso1.2/c12f6/c12f6.component';
+import { C12f7Component } from './component/curso1.2/c12f7/c12f7.component';
+import { C12f8Component } from './component/curso1.2/c12f8/c12f8.component';
+import { C12f10Component } from './component/curso1.2/c12f10/c12f10.component';
+import { C12f9Component } from './component/curso1.2/c12f9/c12f9.component';
+import { C12f11Component } from './component/curso1.2/c12f11/c12f11.component';
+import { C12f12Component } from './component/curso1.2/c12f12/c12f12.component';
+import { C12f13Component } from './component/curso1.2/c12f13/c12f13.component';
+import { C12f14Component } from './component/curso1.2/c12f14/c12f14.component';
+import { C12f15Component } from './component/curso1.2/c12f15/c12f15.component';
+import { C02f1Component } from './component/curso2/c02f1/c02f1.component';
+import { C02f2Component } from './component/curso2/c02f2/c02f2.component';
+import { C02f3Component } from './component/curso2/c02f3/c02f3.component';
+import { C14f1Component } from './component/curso14/c14f1/c14f1.component';
+import { C14f2Component } from './component/curso14/c14f2/c14f2.component';
+import { C14f3Component } from './component/curso14/c14f3/c14f3.component';
+import { C14f4Component } from './component/curso14/c14f4/c14f4.component';
+import { C14f5Component } from './component/curso14/c14f5/c14f5.component';
+import { C14f6Component } from './component/curso14/c14f6/c14f6.component';
+import { C14f7Component } from './component/curso14/c14f7/c14f7.component';
+import { C14f8Component } from './component/curso14/c14f8/c14f8.component';
+import { C13f1Component } from './component/curso1.3/c13f1/c13f1.component';
+import { C13f2Component } from './component/curso1.3/c13f2/c13f2.component';
+import { C13f3Component } from './component/curso1.3/c13f3/c13f3.component';
+import { C13f4Component } from './component/curso1.3/c13f4/c13f4.component';
+import { C13f5Component } from './component/curso1.3/c13f5/c13f5.component';
+import { Curso5f1Component } from './component/curso5/curso5f1/curso5f1.component';
+import { Curso5f2Component } from './component/curso5/curso5f2/curso5f2.component';
+import { Curso6pp001Component } from './component/curso6/curso6pp001/curso6pp001.component';
+import { C12descComponent } from './component/curso1.2/c12desc/c12desc.component';
+import { Curso5descComponent } from './component/curso5/curso5desc/curso5desc.component';
+import { Curso6descComponent } from './component/curso6/curso6desc/curso6desc.component';
+import { C032f4Component } from './component/curso03/c032f4/c032f4.component';
+import { C032f5Component } from './component/curso03/c032f5/c032f5.component';
+import { C032f6Component } from './component/curso03/c032f6/c032f6.component';
+import { C032f7Component } from './component/curso03/c032f7/c032f7.component';
+import { C032f8Component } from './component/curso03/c032f8/c032f8.component';
+import { C03pf1Component } from './component/curso3/c03pf1/c03pf1.component';
+import { C04p05Component } from './component/curso4/c04p05/c04p05.component';
 
 
 const routes: Routes = [
@@ -259,16 +309,46 @@ const routes: Routes = [
         component: C1p9Component,
         data: { animationState: '9' }
       },
+
       {
         path: 'ten',
-        component: p4,
+        component: C1pp01Component,
         data: { animationState: '10' }
       },
       {
         path: 'eleven',
-        component: p5,
+        component: C1pp02Component,
         data: { animationState: '1' }
       },
+      {
+        path: 'twelve',
+        component: C1pp03Component,
+        data: { animationState: '2' }
+      },
+      {
+        path: 'thirteen',
+        component: C1pp04Component,
+        data: { animationState: '4' }
+      },
+      {
+        path: 'fourteen',
+        component: C1pp05Component,
+        data: { animationState: '5' }
+      },
+      {
+        path: 'fifteen',
+        component: p4,
+        data: { animationState: '6' }
+      },
+      {
+        path: 'sixteen',
+        component: p5,
+        data: { animationState: '7' }
+      },
+
+
+
+
       //{path: '**', redirectTo:''}
 
     ]
@@ -289,35 +369,110 @@ const routes: Routes = [
       },
       {
         path: 'three',
-        component: C12p2preComponent,
+        component: C12p1Component,
         data: { animationState: '3' }
       },
       {
         path: 'four',
-        component: C12p1Component,
+        component: C12p2Component,
         data: { animationState: '4' }
       },
       {
         path: 'five',
-        component: C12p2Component,
+        component: C12p33Component,
         data: { animationState: '5' }
       },
       {
         path: 'six',
-        component: C12p33Component,
+        component: C12f1Component,
         data: { animationState: '6' }
       },
       {
         path: 'seven',
-        component: C12p4Component,
+        component: C12f2Component,
         data: { animationState: '7' }
       },
       {
         path: 'eight',
-        component: C12p3Component,
+        component: C12f3Component,
         data: { animationState: '8' }
       },
+
+
+      {
+        path: 'nine',
+        component: C12f4Component,
+        data: { animationState: '9' }
+      },
+      {
+        path: 'ten',
+        component: C12f5Component,
+        data: { animationState: '10' }
+      },
+      {
+        path: 'eleven',
+        component: C12f6Component,
+        data: { animationState: '1' }
+      },
+      {
+        path: 'twelve',
+        component: C12f7Component,
+        data: { animationState: '2' }
+      },
+      {
+        path: 'thirteen',
+        component: C12f8Component,
+        data: { animationState: '3' }
+      },
+      {
+        path: 'fourteen',
+        component: C12f9Component,
+        data: { animationState: '4' }
+      },
+      {
+        path: 'fifteen',
+        component: C12f10Component,
+        data: { animationState: '5' }
+      },
+      {
+        path: 'sixteen',
+        component: C12f11Component,
+        data: { animationState: '6' }
+      },
+      {
+        path: 'seventeen',
+        component: C12f12Component,
+        data: { animationState: '7' }
+      },
+      {
+        path: 'eighteen',
+        component: C12f13Component,
+        data: { animationState: '8' }
+      },
+      {
+        path: 'nineteen',
+        component: C12f14Component,
+        data: { animationState: '9' }
+      },
+      {
+        path: 'twenty',
+        component: C12f15Component,
+        data: { animationState: '10' }
+      },
+      {
+        path: 'twentyone',
+        component: C12descComponent,
+        data: { animationState: '1' }
+      },
+      {
+        path: 'twentytwo',
+        component: C12p3Component,
+        data: { animationState: '2' }
+      }
+
       //{path: '**', redirectTo:''}
+
+
 
     ]
   },
@@ -400,15 +555,44 @@ const routes: Routes = [
         component: C13pp14Component,
         data: { animationState: '6' }
       },
+
+
       {
         path: 'sixteen',
-        component: C13p3Component,
-        data: { animationState: '7' }
+        component: C13f1Component,
+        data: { animationState: '6' }
       },
       {
         path: 'seventeen',
-        component: C13p4Component,
+        component: C13f2Component,
+        data: { animationState: '7' }
+      },
+      {
+        path: 'eighteen',
+        component: C13f3Component,
         data: { animationState: '8' }
+      },
+
+      {
+        path: 'nineteen',
+        component: C13f4Component,  //pdf
+        data: { animationState: '9' }
+      },
+      {
+        path: 'twenty',
+        component: C13f5Component,  //outro
+        data: { animationState: '10' }
+      },
+
+      {
+        path: 'twentyone',
+        component: C13p3Component,  //pdf
+        data: { animationState: '1' }
+      },
+      {
+        path: 'twentytwo',
+        component: C13p4Component,  //outro
+        data: { animationState: '2' }
       },
 
       //{path: '**', redirectTo:''}
@@ -432,79 +616,122 @@ const routes: Routes = [
       },
       {
         path: 'three',
-        component: C14pp1Component,
+        component: C14pp1preComponent,
         data: { animationState: '3' }
       },
       {
         path: 'four',
-        component: C14pp2Component,
+        component: C14pp1Component,
         data: { animationState: '4' }
       },
       {
         path: 'five',
-        component: C14pp22p2Component,
+        component: C14pp2Component,
         data: { animationState: '5' }
       },
       {
         path: 'six',
-        component: C14pp22p3Component,
+        component: C14pp22p2Component,
         data: { animationState: '6' }
       },
 
       {
         path: 'seven',
-        component: C14pp3Component,
+        component: C14pp22p3Component,
         data: { animationState: '7' }
       },
       {
         path: 'eight',
-        component: C14pp4Component,
+        component: C14pp3Component,
         data: { animationState: '8' }
       },
       {
         path: 'nine',
-        component: C14pp5Component,
+        component: C14pp4Component,
         data: { animationState: '9' }
       },
       {
         path: 'ten',
-        component: C14pp6Component,
+        component: C14pp5Component,
         data: { animationState: '10' }
       },
       {
         path: 'eleven',
-        component: C14pp7Component,
+        component: C14pp6Component,
         data: { animationState: '1' }
       },
       {
         path: 'twelve',
-        component: C14pp8Component,
+        component: C14pp7Component,
         data: { animationState: '2' }
       },
       {
         path: 'thirteen',
-        component: C14pp9Component,
+        component: C14pp8Component,
         data: { animationState: '3' }
       },
       {
         path: 'fourteen',
-        component: C14ppaComponent,
+        component: C14pp9Component,
         data: { animationState: '4' }
       },
       {
         path: 'fifteen',
-        component: C14p3Component,
+        component: C14ppaComponent,
         data: { animationState: '5' }
       },
+
+
+
+
+
+
       {
         path: 'sixteen',
-        component: C14p4cComponent,
+        component: C14f1Component,
+        data: { animationState: '6' }
+      },
+
+      {
+        path: 'seventeen',
+        component: C14f4Component,
+        data: { animationState: '9' }
+      },
+      {
+        path: 'eighteen',
+        component: C14f5Component,
+        data: { animationState: '10' }
+      },
+      {
+        path: 'nineteen',
+        component: C14f6Component,
+        data: { animationState: '1' }
+      },
+      {
+        path: 'twenty',
+        component: C14f7Component,
+        data: { animationState: '2' }
+      },
+      {
+        path: 'twentyone',
+        component: C14f8Component,
+        data: { animationState: '3' }
+      },
+      {
+        path: 'twentytwo',
+        component: C14p3Component,
         data: { animationState: '6' }
       },
       {
-        path: 'seventeen',
-        component: C14p5Component,
+        path: 'twentythree',
+        component: C14p4cComponent,
         data: { animationState: '7' }
+      },
+
+      {
+        path: 'twentyfour',
+        component: C14p5Component,
+        data: { animationState: '8' }
       },
 
     ]
@@ -580,26 +807,39 @@ const routes: Routes = [
         component: C02p12Component,
         data: { animationState: '3' }
       },
+
       {
         path: 'fourteen',
-        component: C02p4Component,
+        component: C02f1Component,
         data: { animationState: '4' }
       },
       {
         path: 'fifteen',
-        component: C02p5cComponent,
+        component: C02f2Component,
         data: { animationState: '5' }
       },
       {
         path: 'sixteen',
+        component: C02f3Component,
+        data: { animationState: '6' }
+      },
+
+      {
+        path: 'seventeen',
+        component: C02p4Component,//desc
+        data: { animationState: '4' }
+      },
+      {
+        path: 'eighteen',
+        component: C02p5cComponent,
+        data: { animationState: '5' }
+      },
+      {
+        path: 'nineteen',
         component: C02p6endComponent,
         data: { animationState: '6' }
       },
-      {
-        path: 'seventeen',
-        component: C02p6endComponent,
-        data: { animationState: '7' }
-      },
+
 
     ]
   },
@@ -641,61 +881,21 @@ const routes: Routes = [
 
       {
         path: 'seven',
-        component: C03descaComponent,
+        component: C03pf1Component,
         data: { animationState: '7' }
       },
+
       {
         path: 'eight',
-        component: C03endComponent,
+        component: C03descaComponent,
         data: { animationState: '8' }
       },
-
-
       {
         path: 'nine',
-        component: C02p07Component,
+        component: C03endComponent,
         data: { animationState: '9' }
       },
-      {
-        path: 'ten',
-        component: C02p08Component,
-        data: { animationState: '10' }
-      },
-      {
-        path: 'eleven',
-        component: C02p09Component,
-        data: { animationState: '1' }
-      },
-      {
-        path: 'twelve',
-        component: C02p10Component,
-        data: { animationState: '2' }
-      },
-      {
-        path: 'thirteen',
-        component: C02p11Component,
-        data: { animationState: '3' }
-      },
-      {
-        path: 'fourteen',
-        component: C02p12Component,
-        data: { animationState: '4' }
-      },
-      {
-        path: 'fifteen',
-        component: C02p4Component,
-        data: { animationState: '5' }
-      },
-      {
-        path: 'sixteen',
-        component: C02p5cComponent,
-        data: { animationState: '6' }
-      },
-      {
-        path: 'seventeen',
-        component: C02p6endComponent,
-        data: { animationState: '7' }
-      },
+
 
     ]
   },
@@ -744,20 +944,45 @@ const routes: Routes = [
       },
       {
         path: 'eight',
-        component: C03p10Component,
+        component: C032f4Component,
         data: { animationState: '8' }
       },
 
-
       {
         path: 'nine',
-        component: C03cuestComponent,
+        component: C032f5Component,
         data: { animationState: '9' }
       },
+
+
       {
         path: 'ten',
-        component: C032endComponent,
+        component: C032f6Component,
         data: { animationState: '10' }
+      },
+      {
+        path: 'eleven',
+        component: C032f7Component,
+        data: { animationState: '1' }
+      },
+      {
+        path: 'twelve',
+        component: C032f8Component,
+        data: { animationState: '2' }
+      },
+
+
+
+
+      {
+        path: 'thirteen',
+        component: C03cuestComponent,
+        data: { animationState: '3' }
+      },
+      {
+        path: 'fourteen',
+        component: C032endComponent,
+        data: { animationState: '4' }
       },
 
     ]
@@ -800,13 +1025,19 @@ const routes: Routes = [
 
       {
         path: 'seven',
-        component: C04descarComponent,
+        component: C04p05Component,
         data: { animationState: '7' }
       },
+
       {
         path: 'eight',
-        component: C04endComponent,
+        component: C04descarComponent,
         data: { animationState: '8' }
+      },
+      {
+        path: 'nine',
+        component: C04endComponent,
+        data: { animationState: '9' }
       },
 
 
@@ -842,6 +1073,7 @@ const routes: Routes = [
         component: C042p03Component,
         data: { animationState: '5' }
       },
+
       {
         path: 'six',
         component: C042CComponent,
@@ -852,7 +1084,10 @@ const routes: Routes = [
         path: 'seven',
         component: C042endComponent,
         data: { animationState: '7' }
-      }
+      },
+
+
+
 
 
 
@@ -885,14 +1120,30 @@ const routes: Routes = [
       },
       {
         path: 'five',
-        component: Curso5cComponent,
+        component: Curso5f1Component,
         data: { animationState: '5' }
       },
       {
         path: 'six',
-        component: Curso5endComponent,
+        component: Curso5f2Component,
         data: { animationState: '6' }
       },
+      {
+        path: 'seven',
+        component: Curso5descComponent,
+        data: { animationState: '7' }
+      },
+      {
+        path: 'eight',
+        component: Curso5cComponent,
+        data: { animationState: '8' }
+      },
+      {
+        path: 'nine',
+        component: Curso5endComponent,
+        data: { animationState: '9' }
+      },
+
     ]
   },
 
@@ -911,23 +1162,33 @@ const routes: Routes = [
       },
       {
         path: 'three',
-        component: Curso6pp1Component,
+        component: Curso6pp001Component,
         data: { animationState: '3' }
       },
       {
         path: 'four',
-        component: Curso6pp2Component,
+        component: Curso6pp1Component,
         data: { animationState: '4' }
       },
       {
         path: 'five',
-        component: Curso6cComponent,
+        component: Curso6pp2Component,
         data: { animationState: '5' }
       },
       {
         path: 'six',
-        component: Curso6endComponent,
+        component: Curso6descComponent,
         data: { animationState: '6' }
+      },
+      {
+        path: 'seven',
+        component: Curso6cComponent,
+        data: { animationState: '7' }
+      },
+      {
+        path: 'eight',
+        component: Curso6endComponent,
+        data: { animationState: '8' }
       },
     ]
   },

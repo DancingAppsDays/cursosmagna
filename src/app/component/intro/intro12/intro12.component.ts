@@ -18,7 +18,15 @@ export class Intro12Component implements OnInit {
   }
 
   ngOnInit(): void {
-    localStorage.setItem("cursos", "0");
+    let currentstage = localStorage.getItem('cursos') ? parseInt(localStorage.getItem('cursos')!) : -1;
+    if (currentstage < 0) {
+      localStorage.setItem("cursos", "0");
+
+
+      // this.setcurso();   
+
+
+    }
   }
 
   adjustIframeSize() {

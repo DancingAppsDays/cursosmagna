@@ -122,7 +122,7 @@ export class AppComponent {
           this.bannerImage = "/assets/Banners/MAGNA-banner1.2.png";
         } else if (event.urlAfterRedirects.startsWith('/curso1.3')) {
           //console.log("/curso1.2/*");
-          this.bannerImage = "/assets/Banners/MAGNA-banner1.3.png";
+          this.bannerImage = "/assets/newslides/MAGNA-modulo1.3ban.png";
         } else if (event.urlAfterRedirects.startsWith('/curso1.4')) {
           //console.log("/curso1.2/*");
           this.bannerImage = "/assets/Banners/MAGNA-banner1.4.png";

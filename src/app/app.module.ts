@@ -197,6 +197,60 @@ import { Curso6cComponent } from './component/curso6/curso6c/curso6c.component';
 import { RecoverpassComponent } from './recoverpass/recoverpass.component';
 import { ResetpassComponent } from './resetpass/resetpass.component';
 
+import { C1pp01Component } from './component/cursotest1/c1pp01/c1pp01.component';
+import { C1pp02Component } from './component/cursotest1/c1pp02/c1pp02.component';
+import { C1pp03Component } from './component/cursotest1/c1pp03/c1pp03.component';
+import { C1pp04Component } from './component/cursotest1/c1pp04/c1pp04.component';
+import { C1pp05Component } from './component/cursotest1/c1pp05/c1pp05.component';
+import { C14pp1preComponent } from './component/curso14/c14pp1pre/c14pp1pre.component';
+import { C12f1Component } from './component/curso1.2/c12f1/c12f1.component';
+import { C12f2Component } from './component/curso1.2/c12f2/c12f2.component';
+import { C12f3Component } from './component/curso1.2/c12f3/c12f3.component';
+import { C12f4Component } from './component/curso1.2/c12f4/c12f4.component';
+import { C12f5Component } from './component/curso1.2/c12f5/c12f5.component';
+import { C12f6Component } from './component/curso1.2/c12f6/c12f6.component';
+import { C12f7Component } from './component/curso1.2/c12f7/c12f7.component';
+import { C12f8Component } from './component/curso1.2/c12f8/c12f8.component';
+import { C12f9Component } from './component/curso1.2/c12f9/c12f9.component';
+import { C12f10Component } from './component/curso1.2/c12f10/c12f10.component';
+import { C12f11Component } from './component/curso1.2/c12f11/c12f11.component';
+import { C12f12Component } from './component/curso1.2/c12f12/c12f12.component';
+import { C12f13Component } from './component/curso1.2/c12f13/c12f13.component';
+import { C12f14Component } from './component/curso1.2/c12f14/c12f14.component';
+import { C12f15Component } from './component/curso1.2/c12f15/c12f15.component';
+import { C13f1Component } from './component/curso1.3/c13f1/c13f1.component';
+import { C13f2Component } from './component/curso1.3/c13f2/c13f2.component';
+import { C13f3Component } from './component/curso1.3/c13f3/c13f3.component';
+import { C14f1Component } from './component/curso14/c14f1/c14f1.component';
+import { C14f2Component } from './component/curso14/c14f2/c14f2.component';
+import { C14f3Component } from './component/curso14/c14f3/c14f3.component';
+import { C14f4Component } from './component/curso14/c14f4/c14f4.component';
+import { C14f5Component } from './component/curso14/c14f5/c14f5.component';
+import { C14f6Component } from './component/curso14/c14f6/c14f6.component';
+import { C14f7Component } from './component/curso14/c14f7/c14f7.component';
+import { C14f8Component } from './component/curso14/c14f8/c14f8.component';
+import { C02f1Component } from './component/curso2/c02f1/c02f1.component';
+import { C02f2Component } from './component/curso2/c02f2/c02f2.component';
+import { C02f3Component } from './component/curso2/c02f3/c02f3.component';
+import { C032f3Component } from './component/curso03/c032f3/c032f3.component';
+import { C032f4Component } from './component/curso03/c032f4/c032f4.component';
+import { C032f5Component } from './component/curso03/c032f5/c032f5.component';
+import { C032f6Component } from './component/curso03/c032f6/c032f6.component';
+import { C032f7Component } from './component/curso03/c032f7/c032f7.component';
+import { C032f8Component } from './component/curso03/c032f8/c032f8.component';
+import { C032f9Component } from './component/curso03/c032f9/c032f9.component';
+import { C13f4Component } from './component/curso1.3/c13f4/c13f4.component';
+import { C13f5Component } from './component/curso1.3/c13f5/c13f5.component';
+import { Curso5f1Component } from './component/curso5/curso5f1/curso5f1.component';
+import { Curso5f2Component } from './component/curso5/curso5f2/curso5f2.component';
+import { Curso6pp001Component } from './component/curso6/curso6pp001/curso6pp001.component';
+import { C12descComponent } from './component/curso1.2/c12desc/c12desc.component';
+import { Curso6descComponent } from './component/curso6/curso6desc/curso6desc.component';
+import { Curso5descComponent } from './component/curso5/curso5desc/curso5desc.component';
+import { C03pf1Component } from './component/curso3/c03pf1/c03pf1.component';
+import { C04p05Component } from './component/curso4/c04p05/c04p05.component';
+
+
 //import { Chart } from 'chart.js';
 
 
@@ -232,7 +286,7 @@ import { ResetpassComponent } from './resetpass/resetpass.component';
     Curso12Component,
     c2p2, c2p1, Curso13Component, C13p1Component, C13p2Component, C13p3Component, Curso14Component, C14p1Component, C14p2Component, C14p3Component, C14p4cComponent, LoginComponent, C12p3Component, C12p0Component, Curso2Component, C02p1Component, C02p2Component, C02p3Component, C02p4Component, C02p5cComponent, C13p0Component, C13p4Component, C14p0Component, C14p5Component, C1p3Component, C1p4Component, C1p5Component, C1p6Component, C1p7Component, C1p8Component, C1p9Component, C12p1Component, C12p2Component, C12p33Component, C12p4Component, C13pp1Component, C13pp02Component, C13pp03Component, C13pp04Component, C13pp05Component, C13pp06Component, C13pp07Component, C13pp08Component, C13pp09Component, C13pp10Component, C13pp11Component, AdminmenuComponent, ListaestudiantesComponent, VerestudianteComponent, AddadminComponent, FilterpipePipe, C14pp1Component, C14pp2Component, C14pp3Component, C14pp4Component, C14pp5Component, C14pp6Component, C14pp7Component, C14pp8Component, C14pp9Component, C14ppaComponent, C12p2preComponent, C14pp22p2Component, C14pp22p3Component, C02p01Component, C02p02Component, C02p03Component, C02p04Component, C02p05Component, C02p06Component, C02p07Component, C02p08Component, C02p09Component, C02p10Component, C02p11Component, C02p12Component, Curso3Component, C03titleComponent, C03vidComponent, C03descaComponent, C03endComponent, C03p01Component, C03p02Component, C03p03Component, C03p04Component, C03p05Component, C03p06Component, C03p07Component, C03p08Component, C03p09Component, C03p10Component, C02p6endComponent,
     VergrafComponent, RegisterComponent, C03cuestComponent, Curso03Component, C032endComponent, C03cuestComponent, C032titleComponent, C032vidComponent,
-    Curso4Component, Curso42Component, C04introComponent, C04videoComponent, C04p01Component, C04p02Component, C04p03Component, C04descarComponent, C04endComponent, C042introComponent, C042vidComponent, C042p01Component, C042p02Component, C042p03Component, C04p04Component, C042CComponent, C042endComponent, C13pp12Component, C13pp13Component, C13pp14Component, C14pp10Component, Curso5Component, Curso5pp1Component, Curso5pp2Component, VideoComponent, Curso5introComponent, Curso5videoComponent, Curso5endComponent, Curso6Component, Curso6pp1Component, Curso6pp2Component, Curso6introComponent, Curso6videoComponent, Curso6endComponent, Curso5cComponent, Curso6cComponent
+    Curso4Component, Curso42Component, C04introComponent, C04videoComponent, C04p01Component, C04p02Component, C04p03Component, C04descarComponent, C04endComponent, C042introComponent, C042vidComponent, C042p01Component, C042p02Component, C042p03Component, C04p04Component, C042CComponent, C042endComponent, C13pp12Component, C13pp13Component, C13pp14Component, C14pp10Component, Curso5Component, Curso5pp1Component, Curso5pp2Component, VideoComponent, Curso5introComponent, Curso5videoComponent, Curso5endComponent, Curso6Component, Curso6pp1Component, Curso6pp2Component, Curso6introComponent, Curso6videoComponent, Curso6endComponent, Curso5cComponent, Curso6cComponent, C1pp01Component, C1pp02Component, C1pp03Component, C1pp04Component, C1pp05Component, C14pp1preComponent, C12f1Component, C12f2Component, C12f3Component, C12f4Component, C12f5Component, C12f6Component, C12f7Component, C12f8Component, C12f9Component, C12f10Component, C12f11Component, C12f12Component, C12f13Component, C12f14Component, C12f15Component, C13f1Component, C13f2Component, C13f3Component, C14f1Component, C14f2Component, C14f3Component, C14f4Component, C14f5Component, C14f6Component, C14f7Component, C14f8Component, C02f1Component, C02f2Component, C02f3Component, C032f3Component, C032f4Component, C032f5Component, C032f6Component, C032f7Component, C032f8Component, C032f9Component, C13f4Component, C13f5Component, Curso5f1Component, Curso5f2Component, Curso6pp001Component, C12descComponent, Curso6descComponent, Curso5descComponent, C03pf1Component, C04p05Component,
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,7 @@ export class Curso6Component implements OnInit {
   currenttimer!: string;
 
   currentslide = 1;
-  maxpage = 6;
+  maxpage = 8;
   audio = new Audio();
 
 

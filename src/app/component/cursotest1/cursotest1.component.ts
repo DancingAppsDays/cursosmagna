@@ -4,7 +4,7 @@ import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 import { timer } from 'rxjs';
 import { routeTransitionAnimations } from 'src/app/route-transition-animations';
 import { NextslideService } from 'src/app/service/nextslide.service';
-import { NgbModule, NgbPopover, NgbTooltip} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbPopover, NgbTooltip } from '@ng-bootstrap/ng-bootstrap';
 import { TimersService } from 'src/app/service/timers.service';
 
 @Component({
@@ -20,13 +20,13 @@ export class Cursotest1Component implements OnInit {
 
   currenttimer!: string;
 
-  currentslide=1;
-  maxpage=11;
+  currentslide = 1;
+  maxpage = 16;
   audio = new Audio();
 
-  isnextready=true;
+  isnextready = true;
 
-  constructor(private route: ActivatedRoute, private router: Router,private nextslideService: NextslideService,private timerservice:TimersService) { 
+  constructor(private route: ActivatedRoute, private router: Router, private nextslideService: NextslideService, private timerservice: TimersService) {
 
     this.audio.src = "../../../assets/audio/676302__rubberduck9999__droid-beep-01.flac";
     this.audio.load();
@@ -34,33 +34,33 @@ export class Cursotest1Component implements OnInit {
 
   ngOnInit(): void {
 
-   
+
     //this.routeToChild("one")
 
 
 
     const source = timer(1000, 1000);
- 
-     source.subscribe(n => { 
+
+    source.subscribe(n => {
       this.currenttimer = new Date(n * 1000).toISOString().slice(11, 19)
-   
-    
+
+
       this.timerservice.changeTimer(this.currenttimer);
     });
-    
-     this.nextslideService.currentIsNextReady.subscribe(isNextReady => {this.isnextready = isNextReady; document.getElementById('slidecontainer')?.scrollIntoView();  console.log("CHANgeDDD")});
-     this.nextslideService.changeIsNextReady(true);
-    }
+
+    this.nextslideService.currentIsNextReady.subscribe(isNextReady => { this.isnextready = isNextReady; document.getElementById('slidecontainer')?.scrollIntoView(); console.log("CHANgeDDD") });
+    this.nextslideService.changeIsNextReady(true);
+  }
 
   prepareRoute(outlet: RouterOutlet) {
     //setTimeout(() => {
-      return outlet && 
-        outlet.activatedRouteData && 
-        outlet.activatedRouteData['animationState'];
-   // }, 110);
-   }
+    return outlet &&
+      outlet.activatedRouteData &&
+      outlet.activatedRouteData['animationState'];
+    // }, 110);
+  }
 
-   observableTimer() {
+  observableTimer() {
     const source = timer(1000, 2000);
     const abc = source.subscribe(val => {
       console.log(val, '-');
@@ -68,118 +68,154 @@ export class Cursotest1Component implements OnInit {
     });
   }
 
-  routeToChild(route:string){
-   this.router.navigate([route], {relativeTo:this.route, skipLocationChange: true});
+  routeToChild(route: string) {
+    this.router.navigate([route], { relativeTo: this.route, skipLocationChange: true });
   }
 
 
 
 
-  Previous(){
+  Previous() {
     console.log(this.currentslide);
 
     this.nextslideService.changeIsNextReady(true);
-    if(this.currentslide<=1)return;
+    if (this.currentslide <= 1) return;
 
     this.currentslide--;
 
-    
-    switch(this.currentslide){
+
+    switch (this.currentslide) {
       case 1:
         this.routeToChild("one")
-      break;
+        break;
       case 2:
         this.routeToChild("two")
-      break;
+        break;
       case 3:
         this.routeToChild("three")
-      break;
+        break;
       case 4:
         this.routeToChild("four")
-      break;
+        break;
       case 5:
         this.routeToChild("five")
-      break;
+        break;
       case 6:
         this.routeToChild("six")
-      break;
+        break;
       case 7:
         this.routeToChild("seven")
-      break;
+        break;
       case 8:
         this.routeToChild("eight")
-      break;
+        break;
       case 9:
         this.routeToChild("nine")
-      break;
+        break;
       case 10:
         this.routeToChild("ten")
-      break;
+        break;
       case 11:
         this.routeToChild("eleven")
-      break;
+        break;
+      case 12:
+        this.routeToChild("twelve")
+        break;
+      case 13:
+        this.routeToChild("thirteen")
+        break;
+      case 14:
+        this.routeToChild("fourteen")
+        break;
+      case 15:
+        this.routeToChild("fifteen")
+        break;
+      case 16:
+        this.routeToChild("sixteen")
+        break;
+      case 17:
+        this.routeToChild("seventeen")
+        break;
     }
 
     //window.scrollTo(0, 0);
-   // document.getElementById('revbutton')?.scrollIntoView();
+    // document.getElementById('revbutton')?.scrollIntoView();
 
   }
-  Next(){
+  Next() {
     console.log(this.currentslide);
     //this.router.navigate(["menumodulo"], { skipLocationChange: true});
-    if(!this.isnextready) {
+    if (!this.isnextready) {
       return;
     }
-    if(this.currentslide>=this.maxpage){
+    if (this.currentslide >= this.maxpage) {
 
       console.log("END of slides")
-     // this.router.navigate(['../curso1.2'], {relativeTo:this.route, skipLocationChange: true});
-     this.router.navigate(["menumodulo"], { skipLocationChange: true});
-     return;
+      // this.router.navigate(['../curso1.2'], {relativeTo:this.route, skipLocationChange: true});
+      this.router.navigate(["menumodulo"], { skipLocationChange: true });
+      return;
     };
-   
+
     this.currentslide++;
     //this.audio.play();
 
-    switch(this.currentslide){
+    switch (this.currentslide) {
       case 1:
         this.routeToChild("one")
-      break;
+        break;
       case 2:
         this.routeToChild("two")
-      break;
+        break;
       case 3:
         this.routeToChild("three")
-      break;
+        break;
       case 4:
         this.routeToChild("four")
-      break;
+        break;
       case 5:
         this.routeToChild("five")
-      break;
+        break;
       case 6:
         this.routeToChild("six")
-      break;
+        break;
       case 7:
         this.routeToChild("seven")
-      break;
+        break;
       case 8:
         this.routeToChild("eight")
-      break;
+        break;
       case 9:
         this.routeToChild("nine")
-      break;
+        break;
       case 10:
         this.routeToChild("ten")
-      break;
+        break;
       case 11:
         this.routeToChild("eleven")
-      break;
+        break;
+      case 12:
+        this.routeToChild("twelve")
+        break;
+      case 13:
+        this.routeToChild("thirteen")
+        break;
+      case 14:
+        this.routeToChild("fourteen")
+        break;
+      case 15:
+        this.routeToChild("fifteen")
+        break;
+      case 16:
+        this.routeToChild("sixteen")
+        break;
+      case 17:
+        this.routeToChild("seventeen")
+        break;
     }
 
     console.log("end of enxt")
     //window.scrollTo(0, 0);
-   // document.getElementById('revbutton')?.scrollIntoView();
+    // document.getElementById('revbutton')?.scrollIntoView();
   }
 
 

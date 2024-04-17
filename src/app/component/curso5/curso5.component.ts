@@ -13,7 +13,7 @@ export class Curso5Component implements OnInit {
   currenttimer!: string;
 
   currentslide = 1;
-  maxpage = 6;
+  maxpage = 9;
   audio = new Audio();
 
 

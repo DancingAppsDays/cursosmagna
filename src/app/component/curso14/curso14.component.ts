@@ -16,7 +16,7 @@ export class Curso14Component implements OnInit {
   currenttimer!: string;
 
   currentslide = 1;
-  maxpage = 17;
+  maxpage = 24;
   audio = new Audio();
 
   isnextready = true;
@@ -126,6 +126,33 @@ export class Curso14Component implements OnInit {
       case 17:
         this.routeToChild("seventeen")
         break;
+      case 18:
+        this.routeToChild("eighteen")
+        break;
+      case 19:
+        this.routeToChild("nineteen")
+        break;
+      case 20:
+        this.routeToChild("twenty")
+        break;
+      case 21:
+        this.routeToChild("twentyone")
+        break;
+      case 22:
+        this.routeToChild("twentytwo")
+        break;
+      case 23:
+        this.routeToChild("twentythree")
+        break;
+      case 24:
+        this.routeToChild("twentyfour")
+        break;
+      case 25:
+        this.routeToChild("twentyfive")
+        break;
+      case 26:
+        this.routeToChild("twentysix")
+        break;
     }
 
     //window.scrollTo(0, 0);
@@ -197,6 +224,33 @@ export class Curso14Component implements OnInit {
         break;
       case 17:
         this.routeToChild("seventeen")
+        break;
+      case 18:
+        this.routeToChild("eighteen")
+        break;
+      case 19:
+        this.routeToChild("nineteen")
+        break;
+      case 20:
+        this.routeToChild("twenty")
+        break;
+      case 21:
+        this.routeToChild("twentyone")
+        break;
+      case 22:
+        this.routeToChild("twentytwo")
+        break;
+      case 23:
+        this.routeToChild("twentythree")
+        break;
+      case 24:
+        this.routeToChild("twentyfour")
+        break;
+      case 25:
+        this.routeToChild("twentyfive")
+        break;
+      case 26:
+        this.routeToChild("twentysix")
         break;
     }
     //window.scrollTo(0, 0);

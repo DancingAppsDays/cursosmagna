@@ -15,153 +15,217 @@ import { timer } from 'rxjs';
 })
 export class Curso12Component implements OnInit {
 
- 
+
   currenttimer!: string;
 
-  currentslide=1;
-  maxpage=8;
+  currentslide = 1;
+  maxpage = 22;
   audio = new Audio();
 
-  isnextready=true;
+  isnextready = true;
 
-  constructor(private route: ActivatedRoute, private router: Router,private nextslideService: NextslideService) { 
+  constructor(private route: ActivatedRoute, private router: Router, private nextslideService: NextslideService) {
 
     this.audio.src = "../../../assets/audio/676302__rubberduck9999__droid-beep-01.flac";
     this.audio.load();
   }
 
   ngOnInit(): void {
-  
+
     //this.routeToChild("one")
     const source = timer(1000, 1000);
- 
-     source.subscribe(n => { this.currenttimer = new Date(n * 1000).toISOString().slice(11, 19)});
-    
-     this.nextslideService.currentIsNextReady.subscribe(isNextReady => this.isnextready = isNextReady);
-     this.nextslideService.changeIsNextReady(true);
-    }
+
+    source.subscribe(n => { this.currenttimer = new Date(n * 1000).toISOString().slice(11, 19) });
+
+    this.nextslideService.currentIsNextReady.subscribe(isNextReady => this.isnextready = isNextReady);
+    this.nextslideService.changeIsNextReady(true);
+  }
 
   prepareRoute(outlet: RouterOutlet) {
     //setTimeout(() => {
-      return outlet && 
-        outlet.activatedRouteData && 
-        outlet.activatedRouteData['animationState'];
-   // }, 110);
-   }
+    return outlet &&
+      outlet.activatedRouteData &&
+      outlet.activatedRouteData['animationState'];
+    // }, 110);
+  }
 
 
-  routeToChild(route:string){
-   this.router.navigate([route], {relativeTo:this.route, skipLocationChange: true});
+  routeToChild(route: string) {
+    this.router.navigate([route], { relativeTo: this.route, skipLocationChange: true });
   }
 
 
 
 
-  Previous(){
+  Previous() {
 
     this.nextslideService.changeIsNextReady(true);
-    if(this.currentslide<=1)return;
+    if (this.currentslide <= 1) return;
 
     this.currentslide--;
 
-    
-    switch(this.currentslide){
+
+    switch (this.currentslide) {
       case 1:
         this.routeToChild("one")
-      break;
+        break;
       case 2:
         this.routeToChild("two")
-      break;
+        break;
       case 3:
         this.routeToChild("three")
-      break;     
+        break;
       case 4:
         this.routeToChild("four")
-      break;
+        break;
       case 5:
         this.routeToChild("five")
-      break;
+        break;
       case 6:
         this.routeToChild("six")
-      break;
+        break;
       case 7:
         this.routeToChild("seven")
-      break;
+        break;
       case 8:
         this.routeToChild("eight")
-      break;
+        break;
       case 9:
         this.routeToChild("nine")
-      break;
+        break;
       case 10:
         this.routeToChild("ten")
-      break;
+        break;
       case 11:
         this.routeToChild("eleven")
-      break;
+        break;
       case 12:
         this.routeToChild("twelve")
-      break;
+        break;
+      case 13:
+        this.routeToChild("thirteen")
+        break;
+      case 14:
+        this.routeToChild("fourteen")
+        break;
+      case 15:
+        this.routeToChild("fifteen")
+        break;
+      case 16:
+        this.routeToChild("sixteen")
+        break;
+      case 17:
+        this.routeToChild("seventeen")
+        break;
+      case 18:
+        this.routeToChild("eighteen")
+        break;
+      case 19:
+        this.routeToChild("nineteen")
+        break;
+      case 20:
+        this.routeToChild("twenty")
+        break;
+      case 21:
+        this.routeToChild("twentyone")
+        break;
+      case 22:
+        this.routeToChild("twentytwo")
+        break;
+      case 23:
+        this.routeToChild("twentythree")
+        break;
     }
 
     //window.scrollTo(0, 0);
     document.getElementById('revbutton')?.scrollIntoView();
 
   }
-  Next(){
+  Next() {
 
-    if(!this.isnextready) {
+    if (!this.isnextready) {
       return;
     }
 
-    if(this.currentslide>=this.maxpage){
-     this.router.navigate(["menumodulo"], { skipLocationChange: true});
+    if (this.currentslide >= this.maxpage) {
+      this.router.navigate(["menumodulo"], { skipLocationChange: true });
       return;
-     };
-   
+    };
+
     this.currentslide++;
     //this.audio.play();
 
-    switch(this.currentslide){
+    switch (this.currentslide) {
       case 1:
         this.routeToChild("one")
-      break;
+        break;
       case 2:
         this.routeToChild("two")
-      break;
+        break;
       case 3:
         this.routeToChild("three")
-      break;
+        break;
       case 4:
         this.routeToChild("four")
-      break;
-      case 4:
-        this.routeToChild("four")
-      break;
+        break;
+
       case 5:
         this.routeToChild("five")
-      break;
+        break;
       case 6:
         this.routeToChild("six")
-      break;
+        break;
       case 7:
         this.routeToChild("seven")
-      break;
+        break;
       case 8:
         this.routeToChild("eight")
-      break;
+        break;
       case 9:
         this.routeToChild("nine")
-      break;
+        break;
       case 10:
         this.routeToChild("ten")
-      break;
+        break;
       case 11:
         this.routeToChild("eleven")
-      break;
+        break;
       case 12:
         this.routeToChild("twelve")
-      break;
+        break;
+      case 13:
+        this.routeToChild("thirteen")
+        break;
+      case 14:
+        this.routeToChild("fourteen")
+        break;
+      case 15:
+        this.routeToChild("fifteen")
+        break;
+      case 16:
+        this.routeToChild("sixteen")
+        break;
+      case 17:
+        this.routeToChild("seventeen")
+        break;
+      case 18:
+        this.routeToChild("eighteen")
+        break;
+      case 19:
+        this.routeToChild("nineteen")
+        break;
+      case 20:
+        this.routeToChild("twenty")
+        break;
+      case 21:
+        this.routeToChild("twentyone")
+        break;
+      case 22:
+        this.routeToChild("twentytwo")
+        break;
+      case 23:
+        this.routeToChild("twentythree")
+        break;
     }
     //window.scrollTo(0, 0);
     document.getElementById('revbutton')?.scrollIntoView();

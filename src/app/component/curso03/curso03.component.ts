@@ -18,7 +18,7 @@ export class Curso03Component implements OnInit {
   currenttimer!: string;
 
   currentslide = 1;
-  maxpage = 10;
+  maxpage = 14;
   audio = new Audio();
 
 
@@ -139,7 +139,7 @@ export class Curso03Component implements OnInit {
     }
 
     //window.scrollTo(0, 0);
-    document.getElementById('revbutton')?.scrollIntoView();
+    //document.getElementById('revbutton')?.scrollIntoView();
 
   }
   Next() {
