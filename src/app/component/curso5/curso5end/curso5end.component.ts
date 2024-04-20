@@ -23,8 +23,8 @@ export class Curso5endComponent implements OnInit {
     this.toastSerive.show('Progreso', "Continua así para completar el curso", 95);
 
     let currentstage = localStorage.getItem('cursos') ? parseInt(localStorage.getItem('cursos')!) : -1;
-    if (currentstage < 10) {
-      localStorage.setItem("cursos", "10");
+    if (currentstage < 8) {
+      localStorage.setItem("cursos", "8");
 
 
       this.timer.currentTimer.pipe(take(1)).subscribe(time => {
@@ -48,7 +48,7 @@ export class Curso5endComponent implements OnInit {
 
   setcurso() {
 
-    let postdata = { time10: this.time1, currentcurso: "10" };
+    let postdata = { time8: this.time1, currentcurso: "8" };
     console.log(postdata);
     this.http.patch(Constants.URL + "curso/" + this.studendid, postdata/*,  { headers: { Authorization:localStorage.getItem('token') } }*/).subscribe({
       next: data => {//console.log(data);

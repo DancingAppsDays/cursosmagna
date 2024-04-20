@@ -890,10 +890,82 @@ const routes: Routes = [
         component: C03descaComponent,
         data: { animationState: '8' }
       },
+
+
+
       {
         path: 'nine',
-        component: C03endComponent,
+        component: C032vidComponent,
         data: { animationState: '9' }
+      },
+      {
+        path: 'ten',
+        component: C03p05Component,
+        data: { animationState: '10' }
+      },
+      {
+        path: 'eleven',
+        component: C03p06Component,
+        data: { animationState: '1' }
+      },
+      {
+        path: 'twelve',
+        component: C03p07Component,
+        data: { animationState: '2' }
+      },
+      {
+        path: 'thirteen',
+        component: C03p08Component,
+        data: { animationState: '3' }
+      },
+
+      {
+        path: 'fourteen',
+        component: C03p09Component,
+        data: { animationState: '4' }
+      },
+      {
+        path: 'fifteen',
+        component: C032f4Component,
+        data: { animationState: '5' }
+      },
+
+      {
+        path: 'sixteen',
+        component: C032f5Component,
+        data: { animationState: '6' }
+      },
+
+
+      {
+        path: 'seventeen',
+        component: C032f6Component,
+        data: { animationState: '7' }
+      },
+      {
+        path: 'eighteen',
+        component: C032f7Component,
+        data: { animationState: '8' }
+      },
+      {
+        path: 'nineteen',
+        component: C032f8Component,
+        data: { animationState: '9' }
+      },
+
+
+
+
+      {
+        path: 'twenty',
+        component: C03cuestComponent,
+        data: { animationState: '10' }
+      },
+
+      {
+        path: 'twentyone',
+        component: C03endComponent,
+        data: { animationState: '1' }
       },
 
 
@@ -1034,10 +1106,46 @@ const routes: Routes = [
         component: C04descarComponent,
         data: { animationState: '8' }
       },
+
+
+
+
       {
         path: 'nine',
-        component: C04endComponent,
+        component: C042vidComponent,
         data: { animationState: '9' }
+      },
+      {
+        path: 'ten',
+        component: C042p01Component,
+        data: { animationState: '10' }
+      },
+      {
+        path: 'eleven',
+        component: C042p02Component,
+        data: { animationState: '1' }
+      },
+      {
+        path: 'twelve',
+        component: C042p03Component,
+        data: { animationState: '2' }
+      },
+
+      {
+        path: 'thirteen',
+        component: C042CComponent,
+        data: { animationState: '3' }
+      },
+
+
+
+
+
+
+      {
+        path: 'fourteen',
+        component: C04endComponent,
+        data: { animationState: '4' }
       },
 
 

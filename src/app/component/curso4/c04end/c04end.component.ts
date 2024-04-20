@@ -22,8 +22,8 @@ export class C04endComponent implements OnInit {
     this.toastSerive.show('Progreso', "Continua así para completar el curso", 80);
 
     let currentstage = localStorage.getItem('cursos') ? parseInt(localStorage.getItem('cursos')!) : -1;
-    if (currentstage < 8) {
-      localStorage.setItem("cursos", "8");
+    if (currentstage < 7) {
+      localStorage.setItem("cursos", "7");
 
       this.timer.currentTimer.pipe(take(1)).subscribe(time => {
         this.time1 = time;
@@ -46,7 +46,7 @@ export class C04endComponent implements OnInit {
 
   setcurso() {
 
-    let postdata = { time8: this.time1, currentcurso: "8" };
+    let postdata = { time7: this.time1, currentcurso: "7" };
     console.log(postdata);
     this.http.patch(Constants.URL + "curso/" + this.studendid, postdata/*,  { headers: { Authorization:localStorage.getItem('token') } }*/).subscribe({
       next: data => {//console.log(data);
