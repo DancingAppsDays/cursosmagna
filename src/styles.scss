@@ -120,13 +120,27 @@ h6 {
 
 .slidesiframe {
     position: absolute;
-    width: 100%; // Or any other value
-    height: 80vh;
+    width: 90%; // Oworks with 100%
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+
+    height: 80vh; //aprently does nothing
     padding-top: 56.25%; // 16:9 aspect ratio
 
     //overflow: hidden;
     // Other styles...
     // border: 2px solid blueviolet;
+}
+
+.slidesiframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    object-fit: cover; // This will maintain the aspect ratio and remove black borders
+    z-index: 200;
 }
 
 
@@ -139,15 +153,7 @@ h6 {
     z-index: 200;
 }
 
-.slidesiframe iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; // This will maintain the aspect ratio and remove black borders
-    z-index: 200;
-}
+
 
 
 .slidesiframeWorking {
@@ -245,8 +251,8 @@ h6 {
     align-items: center; //was center , testing for mobile
     justify-content: center;
 
-    width: 90dvw;
-    width: 90vw;
+    width: 88dvw;
+    width: 88vw;
 
     //height: 90dvh;
     //height: 90vh;
@@ -257,8 +263,8 @@ h6 {
     // float:left;
     justify-self: center;
     display: block;
-    width: 90dvw;
-    width: 90vw;
+    width: 88dvw;
+    width: 88vw;
 }
 
 
@@ -285,7 +291,7 @@ h6 {
 .slideselectorbox {
 
 
-    margin: 1rem;
+    margin: .4rem;
 
     //it gets inside the child component two
 
@@ -307,15 +313,15 @@ h6 {
     align-items: center; //child vertical center
     background-color: rgb(233, 175, 175);
     border-radius: 14%/50%;
-    min-width: 18rem;
-    min-height: 4rem;
-    max-width: 18rem;
+    min-width: 4.4rem;
+    min-height: 2rem;
+    max-width: 4.4rem;
 }
 
-.slideselectorbox>h2 {
+.slideselectorbox>h6 {
 
 
-    margin: .2rem;
+    margin: .18rem;
     color: white;
     font-weight: bold;
 }
@@ -332,23 +338,42 @@ h6 {
 img.roundbut {
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+    transform: scale(.5);
+    border: 3px solid rgba(172, 0, 0, 0.514);
 
     &:hover {
-        transform: scale(1.05);
+        transform: scale(.6); //was 1.05
 
-        border: 2px solid black
+        border: 4px solid rgb(75, 74, 74)
     }
 
     &:active {
-        border: 2px solid black;
-        transform: scale(0.9);
+        border: 4px solid black;
+        transform: scale(0.7);
         filter: brightness(0.8); // sepia(1) hue-rotate(180deg);
         //background-color: #f00; 
     }
 }
 
+.navigationbutslides {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+
+
+
 .roundbut {
     border-radius: 50%;
+
+    // position: absolute;
 
 }
 
@@ -387,7 +412,7 @@ img.roundbut {
 
     margin: 1%;
     text-align: center;
-    font-size: 2.4vw;
+    font-size: 1.1vw;
     //z-index: 9999;
 
 }

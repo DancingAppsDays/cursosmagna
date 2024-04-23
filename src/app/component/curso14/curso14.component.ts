@@ -16,7 +16,7 @@ export class Curso14Component implements OnInit {
   currenttimer!: string;
 
   currentslide = 1;
-  maxpage = 24;
+  maxpage = 17;
   audio = new Audio();
 
   isnextready = true;

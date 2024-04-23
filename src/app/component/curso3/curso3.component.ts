@@ -17,7 +17,7 @@ export class Curso3Component implements OnInit {
   currenttimer!: string;
 
   currentslide = 1;
-  maxpage = 21;
+  maxpage = 22;
   audio = new Audio();
 
 

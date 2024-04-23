@@ -146,7 +146,7 @@ export class Curso13Component implements OnInit {
     }
 
     //window.scrollTo(0, 0);
-    document.getElementById('revbutton')?.scrollIntoView();
+    // document.getElementById('revbutton')?.scrollIntoView();
 
   }
   Next() {

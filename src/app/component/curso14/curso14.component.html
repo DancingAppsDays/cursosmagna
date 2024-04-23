@@ -1,25 +1,32 @@
 <body>
-   
-<p>Tiempo transcurrido : {{currenttimer }}</p>
 
-<div class="slideselectorbox" id="rewbutton">
+    <p style="margin-left: 1rem;">Tiempo transcurrido : {{currenttimer }}</p>
 
-    <img class="roundbut"(click)='Previous()' src="../../../../assets/MAGNA-retroceder.png" alt="rewind">
-    
-    <h2>{{currentslide}}  /  {{maxpage}}</h2>
-    
-        <img class="roundbut"(click)='Next()' [ngClass]="{'disabled': currentslide > maxpage || !isnextready}" src="../../../../assets/MAGNA_avanzar.png" alt="rewind">
-    
-    
+
+    <div class="slideselectorbox" id="rewbutton">
+
+        <h6>{{currentslide}} / {{maxpage}}</h6>
+
+
     </div>
 
 
-<div [@triggerName]="prepareRoute(outlet)"  id="slidecontainer" class="slidescontainer"> <!-- style="margin:1rem; min-height: 90vh;">-->
-    <router-outlet #outlet="outlet"></router-outlet>
-    
-   
-</div>    
-<!--
+
+    <div [@triggerName]="prepareRoute(outlet)" id="slidecontainer" class="slidescontainer">
+        <!-- style="margin:1rem; min-height: 90vh;">-->
+        <router-outlet #outlet="outlet"></router-outlet>
+
+
+    </div>
+
+    <div class="navigationbutslides">
+        <img class="roundbut" (click)='Previous()' src="../../../../assets/MAGNA-retroceder.png" alt="rewind">
+        <img class="roundbut" (click)='Next()' [ngClass]="{'disabled': currentslide > maxpage || !isnextready}"
+            src="../../../../assets/MAGNA_avanzar.png" alt="rewind">
+
+    </div>
+
+    <!--
 @if(currentslide <= maxpage && isnextready== true){
 <div class="slideselectorbox">        
     <h2>{{currentslide}}  /  {{maxpage}}</h2>
@@ -27,6 +34,6 @@
     </div>
 }-->
 
-    
 
-    </body>
+
+</body>

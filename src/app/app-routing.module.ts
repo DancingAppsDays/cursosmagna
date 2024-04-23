@@ -207,6 +207,12 @@ import { C032f7Component } from './component/curso03/c032f7/c032f7.component';
 import { C032f8Component } from './component/curso03/c032f8/c032f8.component';
 import { C03pf1Component } from './component/curso3/c03pf1/c03pf1.component';
 import { C04p05Component } from './component/curso4/c04p05/c04p05.component';
+import { C04f1Component } from './component/curso4/c04f1/c04f1.component';
+import { C04f2Component } from './component/curso4/c04f2/c04f2.component';
+import { C04f3Component } from './component/curso4/c04f3/c04f3.component';
+import { C04f4Component } from './component/curso4/c04f4/c04f4.component';
+import { C032f9Component } from './component/curso03/c032f9/c032f9.component';
+import { C032f3Component } from './component/curso03/c032f3/c032f3.component';
 
 
 const routes: Routes = [
@@ -367,107 +373,59 @@ const routes: Routes = [
         component: Page1Component,
         data: { animationState: '2' }
       },
+
       {
         path: 'three',
-        component: C12p1Component,
+        component: C12f1Component,
         data: { animationState: '3' }
       },
       {
         path: 'four',
-        component: C12p2Component,
+        component: C12f2Component,
         data: { animationState: '4' }
       },
       {
         path: 'five',
-        component: C12p33Component,
+        component: C12f3Component,
         data: { animationState: '5' }
       },
+
+
       {
         path: 'six',
-        component: C12f1Component,
+        component: C12f4Component,
         data: { animationState: '6' }
       },
       {
         path: 'seven',
-        component: C12f2Component,
+        component: C12f5Component,
         data: { animationState: '7' }
       },
+
       {
         path: 'eight',
-        component: C12f3Component,
+        component: C12f15Component,
         data: { animationState: '8' }
       },
 
-
       {
         path: 'nine',
-        component: C12f4Component,
+        component: C12f13Component,
         data: { animationState: '9' }
       },
+
+
+
+
       {
         path: 'ten',
-        component: C12f5Component,
+        component: C12descComponent,
         data: { animationState: '10' }
       },
       {
         path: 'eleven',
-        component: C12f6Component,
-        data: { animationState: '1' }
-      },
-      {
-        path: 'twelve',
-        component: C12f7Component,
-        data: { animationState: '2' }
-      },
-      {
-        path: 'thirteen',
-        component: C12f8Component,
-        data: { animationState: '3' }
-      },
-      {
-        path: 'fourteen',
-        component: C12f9Component,
-        data: { animationState: '4' }
-      },
-      {
-        path: 'fifteen',
-        component: C12f10Component,
-        data: { animationState: '5' }
-      },
-      {
-        path: 'sixteen',
-        component: C12f11Component,
-        data: { animationState: '6' }
-      },
-      {
-        path: 'seventeen',
-        component: C12f12Component,
-        data: { animationState: '7' }
-      },
-      {
-        path: 'eighteen',
-        component: C12f13Component,
-        data: { animationState: '8' }
-      },
-      {
-        path: 'nineteen',
-        component: C12f14Component,
-        data: { animationState: '9' }
-      },
-      {
-        path: 'twenty',
-        component: C12f15Component,
-        data: { animationState: '10' }
-      },
-      {
-        path: 'twentyone',
-        component: C12descComponent,
-        data: { animationState: '1' }
-      },
-      {
-        path: 'twentytwo',
         component: C12p3Component,
-        data: { animationState: '2' }
+        data: { animationState: '1' }
       }
 
       //{path: '**', redirectTo:''}
@@ -490,97 +448,105 @@ const routes: Routes = [
         component: C13p1Component,
         data: { animationState: '2' }
       },
+
       {
         path: 'three',
-        component: C13pp1Component,
+        component: C13pp02Component,
         data: { animationState: '3' }
       },
       {
         path: 'four',
-        component: C13pp02Component,
+        component: C13pp03Component,
         data: { animationState: '4' }
       },
       {
         path: 'five',
-        component: C13pp03Component,
+        component: C13pp04Component,
         data: { animationState: '5' }
       },
+
+
       {
         path: 'six',
-        component: C13pp04Component,
+        component: C13pp07Component,
         data: { animationState: '6' }
       },
       {
         path: 'seven',
-        component: C13pp05Component,
+        component: C13pp09Component,    //cada paso foto new
         data: { animationState: '7' }
       },
+
       {
         path: 'eight',
-        component: C13pp06Component,
+        component: C13pp10Component,    //control foto
         data: { animationState: '8' }
       },
       {
         path: 'nine',
-        component: C13pp07Component,
+        component: C13pp05Component,  //va despues control foto
         data: { animationState: '9' }
       },
+
       {
         path: 'ten',
-        component: C13pp08Component,
+        component: C13pp1Component,   //va antes de piramide
         data: { animationState: '10' }
       },
+
       {
         path: 'eleven',
-        component: C13pp10Component,
+        component: C13pp11Component,    //piramide
         data: { animationState: '1' }
       },
       {
         path: 'twelve',
-        component: C13pp11Component,
+        component: C13pp12Component,
         data: { animationState: '2' }
       },
+
+
+
       {
         path: 'thirteen',
-        component: C13pp12Component,
-        data: { animationState: '4' }
+        component: C13f1Component,
+        data: { animationState: '3' }
       },
       {
         path: 'fourteen',
-        component: C13pp13Component,
-        data: { animationState: '5' }
+        component: C13f2Component,
+        data: { animationState: '4' }
       },
       {
         path: 'fifteen',
-        component: C13pp14Component,
-        data: { animationState: '6' }
+        component: C13f3Component,
+        data: { animationState: '5' }
       },
-
 
       {
         path: 'sixteen',
-        component: C13f1Component,
+        component: C13f4Component,
         data: { animationState: '6' }
       },
       {
         path: 'seventeen',
-        component: C13f2Component,
+        component: C13f5Component,
         data: { animationState: '7' }
-      },
-      {
-        path: 'eighteen',
-        component: C13f3Component,
-        data: { animationState: '8' }
       },
 
       {
+        path: 'eighteen',
+        component: C13pp06Component,
+        data: { animationState: '8' }
+      },
+      {
         path: 'nineteen',
-        component: C13f4Component,  //pdf
+        component: C13pp08Component,
         data: { animationState: '9' }
       },
       {
         path: 'twenty',
-        component: C13f5Component,  //outro
+        component: C13pp13Component,
         data: { animationState: '10' }
       },
 
@@ -614,24 +580,31 @@ const routes: Routes = [
         component: C14p1Component,
         data: { animationState: '2' }
       },
+      /*
       {
         path: 'three',
         component: C14pp1preComponent,
         data: { animationState: '3' }
+      },*/
+      {
+        path: 'three',
+        component: C14pp1Component,
+        data: { animationState: '3' }
       },
       {
         path: 'four',
-        component: C14pp1Component,
+        component: C14pp2Component,
         data: { animationState: '4' }
       },
       {
         path: 'five',
-        component: C14pp2Component,
+        component: C14f1Component,
         data: { animationState: '5' }
       },
+
       {
         path: 'six',
-        component: C14pp22p2Component,
+        component: C14pp22p2Component,    //VA DESPUES DE VEHIHCULLOS
         data: { animationState: '6' }
       },
 
@@ -650,88 +623,52 @@ const routes: Routes = [
         component: C14pp4Component,
         data: { animationState: '9' }
       },
+
+
+
+
+
+
       {
         path: 'ten',
-        component: C14pp5Component,
+        component: C14f4Component,
         data: { animationState: '10' }
       },
       {
         path: 'eleven',
-        component: C14pp6Component,
+        component: C14f5Component,
         data: { animationState: '1' }
       },
       {
         path: 'twelve',
-        component: C14pp7Component,
+        component: C14f6Component,
         data: { animationState: '2' }
       },
       {
         path: 'thirteen',
-        component: C14pp8Component,
+        component: C14f7Component,
         data: { animationState: '3' }
       },
       {
         path: 'fourteen',
-        component: C14pp9Component,
+        component: C14f8Component,
         data: { animationState: '4' }
       },
       {
         path: 'fifteen',
-        component: C14ppaComponent,
+        component: C14p3Component,  //pdf
         data: { animationState: '5' }
       },
-
-
-
-
-
-
       {
         path: 'sixteen',
-        component: C14f1Component,
+        component: C14p4cComponent,
         data: { animationState: '6' }
       },
 
       {
         path: 'seventeen',
-        component: C14f4Component,
-        data: { animationState: '9' }
-      },
-      {
-        path: 'eighteen',
-        component: C14f5Component,
-        data: { animationState: '10' }
-      },
-      {
-        path: 'nineteen',
-        component: C14f6Component,
-        data: { animationState: '1' }
-      },
-      {
-        path: 'twenty',
-        component: C14f7Component,
-        data: { animationState: '2' }
-      },
-      {
-        path: 'twentyone',
-        component: C14f8Component,
-        data: { animationState: '3' }
-      },
-      {
-        path: 'twentytwo',
-        component: C14p3Component,
-        data: { animationState: '6' }
-      },
-      {
-        path: 'twentythree',
-        component: C14p4cComponent,
-        data: { animationState: '7' }
-      },
-
-      {
-        path: 'twentyfour',
         component: C14p5Component,
-        data: { animationState: '8' }
+        data: { animationState: '7' }
       },
 
     ]
@@ -782,62 +719,44 @@ const routes: Routes = [
         component: C02p07Component,
         data: { animationState: '8' }
       },
+
       {
         path: 'nine',
-        component: C02p08Component,
+        component: C02p09Component,
         data: { animationState: '9' }
       },
+
+
       {
         path: 'ten',
-        component: C02p09Component,
+        component: C02f1Component,
         data: { animationState: '10' }
       },
       {
         path: 'eleven',
-        component: C02p10Component,
+        component: C02f2Component,
         data: { animationState: '1' }
       },
       {
         path: 'twelve',
-        component: C02p11Component,
+        component: C02f3Component,
         data: { animationState: '2' }
-      },
-      {
-        path: 'thirteen',
-        component: C02p12Component,
-        data: { animationState: '3' }
       },
 
       {
+        path: 'thirteen',
+        component: C02p4Component,//desc
+        data: { animationState: '3' }
+      },
+      {
         path: 'fourteen',
-        component: C02f1Component,
+        component: C02p5cComponent,
         data: { animationState: '4' }
       },
       {
         path: 'fifteen',
-        component: C02f2Component,
-        data: { animationState: '5' }
-      },
-      {
-        path: 'sixteen',
-        component: C02f3Component,
-        data: { animationState: '6' }
-      },
-
-      {
-        path: 'seventeen',
-        component: C02p4Component,//desc
-        data: { animationState: '4' }
-      },
-      {
-        path: 'eighteen',
-        component: C02p5cComponent,
-        data: { animationState: '5' }
-      },
-      {
-        path: 'nineteen',
         component: C02p6endComponent,
-        data: { animationState: '6' }
+        data: { animationState: '5' }
       },
 
 
@@ -858,72 +777,78 @@ const routes: Routes = [
         component: C03vidComponent,
         data: { animationState: '2' }
       },
+
       {
         path: 'three',
-        component: C03p01Component,
+        component: C03p02Component,
         data: { animationState: '3' }
       },
       {
         path: 'four',
-        component: C03p02Component,
+        component: C03p03Component,
         data: { animationState: '4' }
       },
       {
         path: 'five',
-        component: C03p03Component,
+        component: C03p04Component,
         data: { animationState: '5' }
       },
+
+
       {
         path: 'six',
-        component: C03p04Component,
+        component: C032f3Component,
         data: { animationState: '6' }
       },
 
+
+
+
       {
         path: 'seven',
-        component: C03pf1Component,
+        component: C03p06Component,
         data: { animationState: '7' }
       },
-
       {
         path: 'eight',
-        component: C03descaComponent,
+        component: C03p07Component,
         data: { animationState: '8' }
       },
-
-
-
       {
         path: 'nine',
-        component: C032vidComponent,
+        component: C032f9Component,
         data: { animationState: '9' }
       },
+
       {
         path: 'ten',
-        component: C03p05Component,
+        component: C03p08Component,
         data: { animationState: '10' }
       },
+
       {
         path: 'eleven',
-        component: C03p06Component,
+        component: C03p09Component,
         data: { animationState: '1' }
       },
+
       {
         path: 'twelve',
-        component: C03p07Component,
+        component: C03p01Component,
         data: { animationState: '2' }
       },
       {
         path: 'thirteen',
-        component: C03p08Component,
+        component: C03pf1Component,
         data: { animationState: '3' }
       },
 
       {
         path: 'fourteen',
-        component: C03p09Component,
+        component: C03p05Component,
         data: { animationState: '4' }
       },
+
       {
         path: 'fifteen',
         component: C032f4Component,
@@ -956,110 +881,118 @@ const routes: Routes = [
 
 
 
+
       {
         path: 'twenty',
-        component: C03cuestComponent,
+        component: C03descaComponent,
         data: { animationState: '10' }
       },
+
 
       {
         path: 'twentyone',
-        component: C03endComponent,
-        data: { animationState: '1' }
-      },
-
-
-    ]
-  },
-
-
-
-
-  {
-    path: 'curso3.2', component: Curso03Component,
-    children: [
-      {
-        path: 'one',
-        component: C032titleComponent,
-        data: { animationState: '1' }
-      },
-      {
-        path: 'two',
-        component: C032vidComponent,
-        data: { animationState: '2' }
-      },
-      {
-        path: 'three',
-        component: C03p05Component,
-        data: { animationState: '3' }
-      },
-      {
-        path: 'four',
-        component: C03p06Component,
-        data: { animationState: '4' }
-      },
-      {
-        path: 'five',
-        component: C03p07Component,
-        data: { animationState: '5' }
-      },
-      {
-        path: 'six',
-        component: C03p08Component,
-        data: { animationState: '6' }
-      },
-
-      {
-        path: 'seven',
-        component: C03p09Component,
-        data: { animationState: '7' }
-      },
-      {
-        path: 'eight',
-        component: C032f4Component,
-        data: { animationState: '8' }
-      },
-
-      {
-        path: 'nine',
-        component: C032f5Component,
-        data: { animationState: '9' }
-      },
-
-
-      {
-        path: 'ten',
-        component: C032f6Component,
-        data: { animationState: '10' }
-      },
-      {
-        path: 'eleven',
-        component: C032f7Component,
-        data: { animationState: '1' }
-      },
-      {
-        path: 'twelve',
-        component: C032f8Component,
-        data: { animationState: '2' }
-      },
-
-
-
-
-      {
-        path: 'thirteen',
         component: C03cuestComponent,
-        data: { animationState: '3' }
+        data: { animationState: '1' }
       },
+
       {
-        path: 'fourteen',
-        component: C032endComponent,
-        data: { animationState: '4' }
+        path: 'twentytwo',
+        component: C03endComponent,
+        data: { animationState: '2' }
       },
+
 
     ]
   },
 
+
+
+  /*
+    {
+      path: 'curso3.2', component: Curso03Component,
+      children: [
+        {
+          path: 'one',
+          component: C032titleComponent,
+          data: { animationState: '1' }
+        },
+        {
+          path: 'two',
+          component: C032vidComponent,
+          data: { animationState: '2' }
+        },
+        {
+          path: 'three',
+          component: C03p05Component,
+          data: { animationState: '3' }
+        },
+        {
+          path: 'four',
+          component: C03p06Component,
+          data: { animationState: '4' }
+        },
+        {
+          path: 'five',
+          component: C03p07Component,
+          data: { animationState: '5' }
+        },
+        {
+          path: 'six',
+          component: C03p08Component,
+          data: { animationState: '6' }
+        },
+  
+        {
+          path: 'seven',
+          component: C03p09Component,
+          data: { animationState: '7' }
+        },
+        {
+          path: 'eight',
+          component: C032f4Component,
+          data: { animationState: '8' }
+        },
+  
+        {
+          path: 'nine',
+          component: C032f5Component,
+          data: { animationState: '9' }
+        },
+  
+  
+        {
+          path: 'ten',
+          component: C032f6Component,
+          data: { animationState: '10' }
+        },
+        {
+          path: 'eleven',
+          component: C032f7Component,
+          data: { animationState: '1' }
+        },
+        {
+          path: 'twelve',
+          component: C032f8Component,
+          data: { animationState: '2' }
+        },
+  
+  
+  
+  
+        {
+          path: 'thirteen',
+          component: C03cuestComponent,
+          data: { animationState: '3' }
+        },
+        {
+          path: 'fourteen',
+          component: C032endComponent,
+          data: { animationState: '4' }
+        },
+  
+      ]
+    },
+  */
 
   {
     path: 'curso4.1', component: Curso4Component,
@@ -1095,57 +1028,72 @@ const routes: Routes = [
         data: { animationState: '6' }
       },
 
+
+
+
+
+
+
+
       {
         path: 'seven',
-        component: C04p05Component,
+        component: C042p01Component,
         data: { animationState: '7' }
       },
-
       {
         path: 'eight',
-        component: C04descarComponent,
+        component: C042p02Component,
         data: { animationState: '8' }
       },
-
-
-
-
       {
         path: 'nine',
-        component: C042vidComponent,
+        component: C042p03Component,
         data: { animationState: '9' }
       },
+
       {
         path: 'ten',
-        component: C042p01Component,
+        component: C04p05Component,
         data: { animationState: '10' }
       },
+
       {
         path: 'eleven',
-        component: C042p02Component,
+        component: C04f1Component,
         data: { animationState: '1' }
       },
       {
         path: 'twelve',
-        component: C042p03Component,
+        component: C04f2Component,
         data: { animationState: '2' }
       },
-
       {
         path: 'thirteen',
-        component: C042CComponent,
+        component: C04f3Component,
         data: { animationState: '3' }
+      },
+      {
+        path: 'fourteen',
+        component: C04f4Component,
+        data: { animationState: '4' }
+      },
+
+      {
+        path: 'fifteen',
+        component: C04descarComponent,
+        data: { animationState: '5' }
+      },
+      {
+        path: 'sixteen',
+        component: C042CComponent,
+        data: { animationState: '6' }
       },
 
 
-
-
-
-
       {
-        path: 'fourteen',
+        path: 'seventeen',
         component: C04endComponent,
-        data: { animationState: '4' }
+        data: { animationState: '7' }
       },
 
 
