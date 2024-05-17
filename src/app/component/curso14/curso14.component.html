@@ -20,8 +20,8 @@
     </div>
 
     <div class="navigationbutslides">
-        <img class="roundbut" (click)='Previous()' src="../../../../assets/MAGNA-retroceder.png" alt="rewind">
-        <img class="roundbut" (click)='Next()' [ngClass]="{'disabled': currentslide > maxpage || !isnextready}"
+        <img class="roundbut minbut" (click)='Previous()' src="../../../../assets/MAGNA-retroceder.png" alt="rewind">
+        <img class="roundbut minbut" (click)='Next()' [ngClass]="{'disabled': currentslide > maxpage || !isnextready}"
             src="../../../../assets/MAGNA_avanzar.png" alt="rewind">
 
     </div>

@@ -145,7 +145,7 @@ export class Curso6Component implements OnInit {
     }
     if (this.currentslide >= this.maxpage) {
       // this.router.navigate(['../curso1.2'], {relativeTo:this.route, skipLocationChange: true});
-      this.router.navigate(["menumodulo"], { skipLocationChange: true });
+      this.router.navigate(["diploma"], { skipLocationChange: true });
       return;
     };
 

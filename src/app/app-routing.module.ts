@@ -213,6 +213,8 @@ import { C04f3Component } from './component/curso4/c04f3/c04f3.component';
 import { C04f4Component } from './component/curso4/c04f4/c04f4.component';
 import { C032f9Component } from './component/curso03/c032f9/c032f9.component';
 import { C032f3Component } from './component/curso03/c032f3/c032f3.component';
+import { C1test7Component } from './component/cursotest1/c1test7/c1test7.component';
+import { DiplomaComponent } from './diploma/diploma.component';
 
 
 const routes: Routes = [
@@ -238,6 +240,8 @@ const routes: Routes = [
     path: 'resetpass/:token',
     component: ResetpassComponent
   },
+
+  { path: 'diploma', component: DiplomaComponent },
 
 
 
@@ -631,12 +635,12 @@ const routes: Routes = [
 
       {
         path: 'ten',
-        component: C14f4Component,
+        component: C14f5Component,
         data: { animationState: '10' }
       },
       {
         path: 'eleven',
-        component: C14f5Component,
+        component: C14f4Component,
         data: { animationState: '1' }
       },
       {

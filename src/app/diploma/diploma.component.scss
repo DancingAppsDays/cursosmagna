@@ -1,0 +1,59 @@
+.diploma {
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;*/
+}
+
+.containerdpast {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(80vh - 60px);
+    max-height: 600px; // Set a maximum height
+
+    text-align: center;
+    // background-image: url('../../assets/Felicitaciones/MAGNA-felicitacion6-2.png');
+    background-image: url('../../assets/files/DIPLOMAMagna01_pages-to-jpg-0001.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.containerd {
+    position: relative;
+    height: 100vh; // Set the height to the viewport height
+    background-image: url('../../assets/files/DIPLOMAMagna01_pages-to-jpg-0001.jpg');
+    background-size: 100vw 100vh; // Set the background size to the viewport width and height
+    background-size: cover;
+    background-position: center;
+}
+
+.containerd .diploma {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.containerd .diploma #name {
+    font-size: 2vw; // Set the font size to 2% of the viewport width
+    // margin-top: -10%;
+    transform: translateY(70%);
+}
+
+.containerd .diploma #date {
+    position: relative;
+    font-size: 1.5vw; // Set the font size to 1.5% of the viewport width
+    //transform: translateY(+50%);
+    // top: 10%;
+}
+
+#download {
+    position: absolute;
+    bottom: 10px; // Position the button 10px from the bottom
+    left: 50%; // Position the left edge of the button at the center
+    transform: translateX(-50%); // Shift the button to the left by half its width
+}

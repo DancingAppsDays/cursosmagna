@@ -254,7 +254,7 @@ h6 {
     width: 88dvw;
     width: 88vw;
 
-    //height: 90dvh;
+    height: 80vh;
     //height: 90vh;
 
 }
@@ -263,9 +263,48 @@ h6 {
     // float:left;
     justify-self: center;
     display: block;
+    //  width: 88dvw;
+    //  width: 88vw;
+    max-width: 100%;
+    height: auto;
+
+
+}
+
+
+//newstyle check
+
+.slidesFIX {
+
+
+    position: relative; //im using this because i want to use absolute positioning teh stack of imgaes, stilldidntwork tou, maybe clearfix
+
+    display: block; // //worked, flex messes up in mobile but had eerie leftmargin.
+    align-items: center; //was center , testing for mobile
+    justify-content: center;
+
     width: 88dvw;
     width: 88vw;
+
+    height: 80vh;
+    //height: 90vh;
+
 }
+
+.slidesFIX img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+
+
+
+
+
+
 
 
 .slide {
@@ -338,22 +377,26 @@ h6 {
 img.roundbut {
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
-    transform: scale(.5);
+    width: 5%; // Adjust to match the scaled size
+    height: 5%; // Adjust to match the scaled size
+    //transform: scale(.5);
     border: 3px solid rgba(172, 0, 0, 0.514);
 
     &:hover {
-        transform: scale(.6); //was 1.05
+        transform: scale(1.1); //was 1.05
 
         border: 4px solid rgb(75, 74, 74)
     }
 
     &:active {
         border: 4px solid black;
-        transform: scale(0.7);
+        transform: scale(1.22);
         filter: brightness(0.8); // sepia(1) hue-rotate(180deg);
         //background-color: #f00; 
     }
 }
+
+.minbut {}
 
 .navigationbutslides {
     position: absolute;
@@ -440,6 +483,8 @@ img.roundbut {
     opacity: 0;
     /* Set initial opacity */
     // animation-play-state: paused;
+
+
 
 }
 
@@ -569,6 +614,48 @@ img.roundbut {
 
 }
 
+.bordered-boxTESATING {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+/*
+div>.bordered-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}*/
+
+.bordered-boxnewfail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 20px; // Adjust this value to offset the box from the center
+    z-index: 5;
+    width: 40%;
+    height: 40%;
+}
+
+.bordered-boxasdfasdf {
+    padding-top: 10px;
+    z-index: 5;
+    width: 40%;
+    height: 40%;
+
+    border: 1px solid black;
+}
 
 .bordered-box {
     z-index: 5; // 
@@ -580,7 +667,7 @@ img.roundbut {
     left: 10%;
     //left: 10vw; // use vw here
     transform: translateY(-50%);
-    //border: 1px solid black;
+    // border: 1px solid black;
     width: 40%;
     /* adjust as needed */
     height: 40%;
@@ -891,4 +978,24 @@ img.roundbut {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+
+
+.form-container {
+    width: 90%;
+    /* Adjust as needed */
+    min-height: 50%;
+    /* Adjust as needed */
+    max-height: 80vh;
+    overflow: auto;
+    /* Add scrollbars if necessary */
+    z-index: 1001;
+}
+
+.form-container>p,
+.form-container>h3,
+.form-container>h5 {
+    font-size: 1.5em;
+    color: red;
 }

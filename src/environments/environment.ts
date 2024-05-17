@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  // databaseURL: 'http://localhost:8000/api/',
+  //databaseURL: 'http://localhost:8000/api/',
   databaseURL: 'https://website-a573c3cf.dancingapps.org/public/api/',
 
   //faulty php8.2 register api

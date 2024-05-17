@@ -1,39 +1,47 @@
 form {
-    position: absolute;
-    margin-top: 11vh;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -20%);
-    /* Set a width and height for the form */
-   // width: 80%;
-   // min-height: 50%; 
-    //max-height: 70%; 
-    //overflow: auto; 
-  }
-  .form-container {
-   width: 90%; /* Adjust as needed */
-    min-height: 50%; /* Adjust as needed */
-    max-height: 80vh;
-    overflow: auto; /* Add scrollbars if necessary */
-  }
-  .form-container>p, .form-container>h3, .form-container>h5 {
-    font-size: 1.5em;
-    color:red;
-  }
+  position: absolute;
+  margin-top: 11vh;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  /* Set a width and height for the form */
+  // width: 80%;
+  // min-height: 50%; 
+  //max-height: 70%; 
+  //overflow: auto; 
+}
 
-  .btn.btn-primary {
-   // color:var(--button-color);
-   // background-color: var(--button-background-color);
-   // border-radius: var(--border-radius);
-   
-  }
-  
+.form-container {
+  width: 90%;
+  /* Adjust as needed */
+  min-height: 50%;
+  /* Adjust as needed */
+  max-height: 80vh;
+  overflow: auto;
+  /* Add scrollbars if necessary */
+  z-index: 1001;
+}
 
-  .btn.btn-primary:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
+.form-container>p,
+.form-container>h3,
+.form-container>h5 {
+  font-size: 1.5em;
+  color: red;
+}
 
-  .btn.btn-primary:disabled,
+.btn.btn-primary {
+  // color:var(--button-color);
+  // background-color: var(--button-background-color);
+  // border-radius: var(--border-radius);
+
+}
+
+
+.btn.btn-primary:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn.btn-primary:disabled,
 .btn.btn-primary.is-disabled {
   background-color: grey;
   //opacity: .3;
