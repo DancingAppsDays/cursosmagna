@@ -12,19 +12,25 @@ import { NextslideService } from 'src/app/service/nextslide.service';
 })
 export class C02p5cComponent implements OnInit {
 
-  q1: string = "1. Es regla de 0 tolerancia realizar trabajos peligrosos sin Elaborar AST.";
-  q2: string = "2. Es valido entregar únicamente una copia de comprobante de incapacidad";
-  q3: string = "3. Realizar trabajos en Espacios Confinados y de Mantenimiento a Instalaciones Eléctricas requiere de Capacitación y AST.";
-  q4: string = "4. Es la acción u omisión del trabajador que crea un riesgo contra su seguridad y/o la de sus compañero.";
-  q5: string = "5. Es el estado de algo que no brinda seguridad o que supone un peligro para la gente.";
+  q1: string = "1. En caso de emergencia y activación de alarma, puedes continuar tus labores hasta que tu supervisor te pida evacuar.";
+  q2: string = "2. Los 3 puntos de Reunión en caso de evacuación son : Avenida Mexico/Japón detrás de calderas,  Estacionamiento de terracería y:";
+  q3: string = "3. El fuego de Líquidos inflamables como pinturas, gasolina, aceites.. es un fuego de:";
+  q4: string = "4. Los apagones son una situación en la cual debes evacuar.";
+  q5: string = "5. Cualquier persona puede iniciar acciones de combate contra incendio aunque no sea brigadista";
+
+  //questions = [this.q1, this.q2, this.q3, this.q4, this.q5];
   questions = [this.q1, this.q2, this.q3, this.q4, this.q5];
 
   a1 = ["Verdadero", "Falso"];
-  a2 = ["Verdadero", "Falso"];
-  a3 = ["Verdadero", "Falso"];
-  a4 = ["Acto inseguro", "Condición Insegura"];
-  a5 = ["Acto inseguro", "Condición Insegura"];
+  a2 = ["Comedor", "Campo de fultbol", "Caseta de acceso"];
+  a3 = ["Tipo C", "Tipo D", "Tipo B"];
+  a4 = ["Verdadero", "Falso"];
+  a5 = ["Verdadero", "Falso"];
+
   answers = [this.a1, this.a2, this.a3, this.a4, this.a5];
+
+
+  correctAnswers = ["2", "2", "3", "1", "2"];
 
 
   formu: FormGroup;
@@ -34,38 +40,29 @@ export class C02p5cComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private router: Router, private http: HttpClient, private nextslide: NextslideService) {
 
     this.formu = this.formBuilder.group({});
-    for (let i = 1; i <= this.questions.length; i++) {
-      this.formu.addControl(`a${i}`, new FormControl('', Validators.required));
+    for (let i = 0; i < this.questions.length; i++) {
+      this.formu.addControl(`a${i + 1}`, new FormControl('', Validators.required));
+
+      /*this.formu.get(`a${i + 1}`)?.valueChanges.subscribe(value => {
+        console.log(`Control Name: ${`a${i + 1}`}, Value: ${value}`);
+      });*/
+
     }
 
     if (sessionStorage.getItem("quiz2") != "1") {
       this.nextslide.changeIsNextReady(false);
     }
+
   }
 
   ngOnInit(): void {
 
 
-    /*
-    this.formu = this.formBuilder.group({
-      //id:'',
-      a1:['',[Validators.required,]],
-      a2:['',[Validators.required,]],
-      a3:['',[Validators.required,]],
-      a4:['',[Validators.required,]],
-      a5:['',[Validators.required,]],
-      */
-
-    //this.nextslide.changeIsNextReady(false);//cause error expresion changed after it was checked
-
-    //todo check with id in quiz1 is already done
-
-    /*
-          if(this.isdone){
-            setTimeout(() => {
-              this.nextslide.changeIsNextReady(true);
-            });
-          }*/
+    if (this.isdone) {
+      setTimeout(() => {
+        this.nextslide.changeIsNextReady(true);
+      });
+    }
 
   }
 
@@ -76,27 +73,49 @@ export class C02p5cComponent implements OnInit {
   getScore(formu: any): number {
 
     //TODO compare with actual right answers istead of to 1;
+    //console.log(formu);
 
     let score = 0;
-    for (let i = 1; i <= this.questions.length; i++) {
-      if (formu[`a${i}`] == "1") {
+    for (let i = 0; i < this.questions.length; i++) {
+
+      // console.log("a" + (i + 1) + " : " + formu.get(`a${i + 1}`).value + " == " + this.correctAnswers[i]);
+      // console.log(formu.get(`a${i + 1}`).value);
+
+      if (formu.get(`a${i + 1}`).value == this.correctAnswers[i]) {
         score += 1;
       }
     }
+
+    console.log("Score: " + score);
     return score;
 
   }
 
-  onSubmit(formu: any) {
+  validateScore() {
 
-    console.log("Submitted");
-    console.log(formu);
+    console.log(this.formu);
+    var score = this.getScore(this.formu);
+
+    if (score < 4) {
+      window.alert("No has aprobado el quiz, intentalo de nuevo.");
+      //this.formu.reset();
+      return;
+    } else {
+      this.onSubmit(this.formu);
+    }
+  }
+
+  onSubmit(formg: any) {
+
+    console.log('formg:', formg);
+    let formu = formg.value;
+    console.log('formu:', formu);
 
     //formu.value.idalumno = Constants.userId;
     formu['idalumno'] = Constants.userId;
     formu['nombrealumno'] = sessionStorage.getItem("name");// "erasefromodel";
 
-    formu['score'] = this.getScore(formu);
+    formu['score'] = this.getScore(formg);
 
 
     this.http.post(Constants.URL + "quiz2", formu).subscribe({
@@ -104,7 +123,7 @@ export class C02p5cComponent implements OnInit {
         console.log(res);
         this.successdata = res;
         this.successdata = this.successdata['data'];
-        console.log(this.successdata);
+        //console.log(this.successdata);
 
         window.alert("Quiz completado");
         this.nextslide.changeIsNextReady(true);

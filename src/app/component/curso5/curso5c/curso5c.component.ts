@@ -12,20 +12,28 @@ import { NextslideService } from 'src/app/service/nextslide.service';
 })
 export class Curso5cComponent implements OnInit {
 
+  q1: string = "1. ¿Que Norma de la STPS establece lo que debe contener la hoja de datos de seguridad de una sustancia quimica?";
+  q2: string = "2. El siguiente pictograma indica una sustancia:";
+  q3: string = "3. El siguiente pictograma indica una sustancia:";
+  q4: string = "4. El siguiente pictograma indica una sustancia:";
 
-  q1: string = "1. Es regla de 0 tolerancia realizar trabajos peligrosos sin Elaborar AST.";
-  q2: string = "2. Es valido entregar únicamente una copia de comprobante de incapacidad";
-  q3: string = "3. Realizar trabajos en Espacios Confinados y de Mantenimiento a Instalaciones Eléctricas requiere de Capacitación y AST.";
-  q4: string = "4. Es la acción u omisión del trabajador que crea un riesgo contra su seguridad y/o la de sus compañero.";
-  q5: string = "5. Es el estado de algo que no brinda seguridad o que supone un peligro para la gente.";
-  questions = [this.q1, this.q2, this.q3, this.q4, this.q5];
 
-  a1 = ["Verdadero", "Falso"];
-  a2 = ["Verdadero", "Falso"];
-  a3 = ["Verdadero", "Falso"];
-  a4 = ["Acto inseguro", "Condición Insegura"];
-  a5 = ["Acto inseguro", "Condición Insegura"];
-  answers = [this.a1, this.a2, this.a3, this.a4, this.a5];
+  //questions = [this.q1, this.q2, this.q3, this.q4, this.q5];
+  questions = [this.q1, this.q2, this.q3, this.q4];
+
+  a1 = ["NOM 005 STPS Manejo transporte almacenamiento de sustancias quimicas", "NOM 018 STPS Sistema Globalmente Armonizado", "NOM 010 STPS Agentes químicos contaminantes"];
+  a2 = ["Inflamable", "Carcinogénica", "Explosiva"];
+  a3 = ["Inflamable", "Carcinogénica", "Explosiva"];
+  a4 = ["Inflamable", "Carcinogénica", "Explosiva"];
+
+
+  answers = [this.a1, this.a2, this.a3, this.a4];
+
+
+  correctAnswers = ["2", "2", "1", "3"];
+  imagePaths = ['../../../../assets/newslides3/cancerigenas.jpg',
+    '../../../../assets/newslides3/inflamable.jpg',
+    '../../../../assets/newslides3/explosiva.jpg'];
 
 
   formu: FormGroup;
@@ -35,18 +43,29 @@ export class Curso5cComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private router: Router, private http: HttpClient, private nextslide: NextslideService) {
 
     this.formu = this.formBuilder.group({});
-    for (let i = 1; i <= this.questions.length; i++) {
-      this.formu.addControl(`a${i}`, new FormControl('', Validators.required));
+    for (let i = 0; i < this.questions.length; i++) {
+      this.formu.addControl(`a${i + 1}`, new FormControl('', Validators.required));
+
+      /*this.formu.get(`a${i + 1}`)?.valueChanges.subscribe(value => {
+        console.log(`Control Name: ${`a${i + 1}`}, Value: ${value}`);
+      });*/
+
     }
 
     if (sessionStorage.getItem("quiz5") != "1") {
       this.nextslide.changeIsNextReady(false);
     }
+
   }
 
   ngOnInit(): void {
 
 
+    if (this.isdone) {
+      setTimeout(() => {
+        this.nextslide.changeIsNextReady(true);
+      });
+    }
 
   }
 
@@ -57,27 +76,51 @@ export class Curso5cComponent implements OnInit {
   getScore(formu: any): number {
 
     //TODO compare with actual right answers istead of to 1;
+    //console.log(formu);
 
     let score = 0;
-    for (let i = 1; i <= this.questions.length; i++) {
-      if (formu[`a${i}`] == "1") {
+    for (let i = 0; i < this.questions.length; i++) {
+
+      //console.log("a" + (i + 1) + " : " + formu.get(`a${i + 1}`).value + " == " + this.correctAnswers[i]);
+      // console.log(formu.get(`a${i + 1}`).value);
+
+      if (formu.get(`a${i + 1}`).value == this.correctAnswers[i]) {
         score += 1;
       }
     }
+
+    //console.log("Score: " + score);
     return score;
 
   }
 
-  onSubmit(formu: any) {
+  validateScore() {
+
+    console.log(this.formu);
+    var score = this.getScore(this.formu);
+
+    if (score < 4) {
+      window.alert("No has aprobado el quiz, intentalo de nuevo.");
+      //this.formu.reset();
+      return;
+    } else {
+      this.onSubmit(this.formu);
+    }
+  }
+
+
+
+  onSubmit(formg: any) {
 
     console.log("Submitted");
-    console.log(formu);
+    let formu = formg.value;
+    //console.log(formu);
 
     //formu.value.idalumno = Constants.userId;
     formu['idalumno'] = Constants.userId;
     formu['nombrealumno'] = sessionStorage.getItem("name");// "erasefromodel";
 
-    formu['score'] = this.getScore(formu);
+    formu['score'] = this.getScore(formg);
 
 
     this.http.post(Constants.URL + "quiz5", formu).subscribe({

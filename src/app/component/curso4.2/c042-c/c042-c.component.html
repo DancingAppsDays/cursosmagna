@@ -26,15 +26,16 @@
 
         <div *ngFor="let question of questions; let i = index">
           <p>{{question}}</p>
-          <input formControlName="a{{incrementIndex(i) }}" type="radio" id="true{{i}}" value="1">
-          <label for="true{{i}}">{{answers[i][0]}}</label>
-          <br>
-          <input formControlName="a{{incrementIndex(i) }}" type="radio" id="false{{i}}" value="2">
-          <label for="false{{i}}">{{answers[i][1]}}</label>
+          <div *ngFor="let answer of answers[i]; let j = index">
+            <input formControlName="a{{incrementIndex(i) }}" type="radio" id="option{{i}}{{j}}" value="{{j+1}}">
+            <label for="option{{i}}{{j}}">{{answer}}</label>
+            <br>
+          </div>
           <br><br>
         </div>
 
-        <button *ngIf="!isdone" [disabled]="formu.invalid" type="submit" class="btn btn-primary">Enviar</button>
+        <button *ngIf="!isdone" [disabled]="formu.invalid" type="button" (click)="validateScore()"
+          class="btn btn-primary">Enviar</button>
 
       </form>
 

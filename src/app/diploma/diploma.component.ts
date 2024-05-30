@@ -123,7 +123,7 @@ export class DiplomaComponent implements OnInit {
       console.log("print");
       const img = new Image();
       img.crossOrigin = "anonymous"; // This enables CORS
-      img.src = '../../assets/files/DIPLOMAMagna01_pages-to-jpg-0001.jpg'; // Replace with the path to your image
+      img.src = '../../assets/newslides3/DIPLOMA Magna Final_page-0001.jpg'; // Replace with the path to your image
       console.log("printafterimg");
 
       img.onload = () => {
@@ -166,12 +166,12 @@ export class DiplomaComponent implements OnInit {
 
 
         pdf.setFont('Times', 'bold');
-        pdf.text(component.name, pdfPageWidth / 2, pdfPageHeight / 2.2, { align: 'center' }); // Add the text
+        pdf.text(component.name, pdfPageWidth / 2, pdfPageHeight / 2, { align: 'center' }); // Add the text
 
         pdf.setFontSize(14);
         pdf.setFont('Montserrat', 'bold');
         pdf.setTextColor(255, 0, 0);
-        pdf.text(component.datestring, pdfPageWidth / 2, pdfPageHeight / 1.3, { align: 'center' }); // Add the text
+        pdf.text(component.datestring, pdfPageWidth / 2, pdfPageHeight / 1.2, { align: 'center' }); // Add the text
 
         pdf.save("diplomacursoseguridadMagna.pdf");
       };
