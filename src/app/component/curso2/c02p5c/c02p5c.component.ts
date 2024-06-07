@@ -37,6 +37,8 @@ export class C02p5cComponent implements OnInit {
   successdata: any;
   isdone: boolean = false;
 
+
+
   constructor(private formBuilder: FormBuilder, private router: Router, private http: HttpClient, private nextslide: NextslideService) {
 
     this.formu = this.formBuilder.group({});

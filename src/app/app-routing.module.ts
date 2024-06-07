@@ -218,6 +218,8 @@ import { DiplomaComponent } from './diploma/diploma.component';
 import { C14g1Component } from './component/curso14/c14g1/c14g1.component';
 import { C14g2Component } from './component/curso14/c14g2/c14g2.component';
 import { C14g3Component } from './component/curso14/c14g3/c14g3.component';
+import { C14g4Component } from './component/curso14/c14g4/c14g4.component';
+import { C02f222Component } from './component/curso2/c02f222/c02f222.component';
 
 
 const routes: Routes = [
@@ -636,51 +638,57 @@ const routes: Routes = [
         data: { animationState: '2' }
       },
 
-
-
-
-
-
       {
         path: 'thirteen',
-        component: C14f5Component,
+        component: C14g4Component,
         data: { animationState: '3' }
       },
+
+
+
+
+
+
       {
         path: 'fourteen',
-        component: C14f4Component,
+        component: C14f5Component,
         data: { animationState: '4' }
       },
       {
         path: 'fifteen',
-        component: C14f6Component,
+        component: C14f4Component,
         data: { animationState: '5' }
       },
       {
         path: 'sixteen',
-        component: C14f7Component,
+        component: C14f6Component,
         data: { animationState: '6' }
       },
       {
         path: 'seventeen',
-        component: C14f8Component,
+        component: C14f7Component,
         data: { animationState: '7' }
       },
       {
         path: 'eighteen',
-        component: C14p3Component,  //pdf
+        component: C14f8Component,
         data: { animationState: '8' }
       },
-      {/////////
+      {
         path: 'nineteen',
-        component: C14p4cComponent,
+        component: C14p3Component,  //pdf
         data: { animationState: '9' }
+      },
+      {/////////
+        path: 'twenty',
+        component: C14p4cComponent,
+        data: { animationState: '10' }
       },
 
       {
-        path: 'twenty',
+        path: 'twentyone',
         component: C14p5Component,
-        data: { animationState: '10' }
+        data: { animationState: '1' }
       },
 
     ]
@@ -728,7 +736,7 @@ const routes: Routes = [
       },
       {
         path: 'seven',
-        component: C02p07Component,
+        component: C02p07Component, //situacion a evacuar
         data: { animationState: '7' }
       },
 
@@ -749,26 +757,33 @@ const routes: Routes = [
         component: C02f2Component,
         data: { animationState: '10' }
       },
+
+
       {
         path: 'eleven',
-        component: C02f3Component,
+        component: C02f222Component,
         data: { animationState: '1' }
+      },
+      {
+        path: 'twelve',
+        component: C02f3Component,
+        data: { animationState: '2' }
       },
 
       {
-        path: 'twelve',
-        component: C02p4Component,//desc
-        data: { animationState: '2' }
-      },
-      {
         path: 'thirteen',
-        component: C02p5cComponent,
+        component: C02p4Component,//desc
         data: { animationState: '3' }
       },
       {
         path: 'fourteen',
-        component: C02p6endComponent,
+        component: C02p5cComponent,
         data: { animationState: '4' }
+      },
+      {
+        path: 'fifteen',
+        component: C02p6endComponent,
+        data: { animationState: '5' }
       },
 
 
@@ -795,65 +810,74 @@ const routes: Routes = [
         component: C03p02Component,
         data: { animationState: '3' }
       },
+
       {
         path: 'four',
-        component: C03p03Component,
+        component: C03p01Component,
         data: { animationState: '4' }
       },
       {
         path: 'five',
-        component: C03p04Component,
+        component: C03pf1Component,
         data: { animationState: '5' }
       },
 
 
+
+
+
+
+
       {
         path: 'six',
-        component: C032f3Component,
+        component: C03p03Component,
         data: { animationState: '6' }
       },
-
-
-
-
       {
         path: 'seven',
-        component: C03p06Component,
+        component: C03p04Component,
         data: { animationState: '7' }
       },
+
+
       {
         path: 'eight',
-        component: C03p07Component,
+        component: C032f3Component,
         data: { animationState: '8' }
       },
+
+
+
+
       {
         path: 'nine',
-        component: C032f9Component,
+        component: C03p06Component,
         data: { animationState: '9' }
       },
-
       {
         path: 'ten',
-        component: C03p08Component,
+        component: C03p07Component,
         data: { animationState: '10' }
       },
-
       {
         path: 'eleven',
-        component: C03p09Component,
+        component: C032f9Component,
         data: { animationState: '1' }
       },
 
       {
         path: 'twelve',
-        component: C03p01Component,
+        component: C03p08Component,
         data: { animationState: '2' }
       },
+
       {
         path: 'thirteen',
-        component: C03pf1Component,
+        component: C03p09Component,
         data: { animationState: '3' }
       },
+
+
 
       {
         path: 'fourteen',

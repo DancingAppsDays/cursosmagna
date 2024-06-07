@@ -100,7 +100,7 @@ export class AppComponent {
       else if (Constants.usertype == "user") {
         this.router.navigate(['/menumodulo'], { skipLocationChange: true });
       } else
-        this.router.navigate(['/login1'], { skipLocationChange: true });
+        this.router.navigate(['/registrarse'], { skipLocationChange: true });
       // The user is not a guest
     }
   }

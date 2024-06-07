@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import jsPDF from 'jspdf';
+
 import html2canvas from 'html2canvas';
 import { Constants } from '../constants';
 import { HttpClient } from '@angular/common/http';
@@ -123,12 +124,15 @@ export class DiplomaComponent implements OnInit {
       console.log("print");
       const img = new Image();
       img.crossOrigin = "anonymous"; // This enables CORS
-      img.src = '../../assets/newslides3/DIPLOMA Magna Final_page-0001.jpg'; // Replace with the path to your image
+      img.src = '../../assets/newslides3/DIPLOMA Magna FinalF (150ppp).jpg'; // Replace with the path to your image
       console.log("printafterimg");
 
       img.onload = () => {
+
+
+
         console.log("onloadimage");
-        const pdf = new jsPDF('l', 'mm', [210 / 2, 297 / 2]); // A4 size page of PDF in landscape mode
+        const pdf = new jsPDF('l', 'mm', [210, 297]); // A4 size page of PDF in landscape mode
         const pdfPageHeight = pdf.internal.pageSize.getHeight();
         const pdfPageWidth = pdf.internal.pageSize.getWidth();
 
@@ -156,22 +160,23 @@ export class DiplomaComponent implements OnInit {
         canvas.height = img.height;
         const ctx = canvas.getContext('2d');
         ctx!.drawImage(img, 0, 0, img.width, img.height);
-        const imgData = canvas.toDataURL('image/jpg');
+        const imgData = canvas.toDataURL('image/jpg', 0.4);
 
         // Add the image to the PDF
         pdf.addImage(imgData, 'jpg', x, y, width, height);
 
         // Add the text on top of the image
-        pdf.setFontSize(15);
+        pdf.setFontSize(25);
 
 
-        pdf.setFont('Times', 'bold');
-        pdf.text(component.name, pdfPageWidth / 2, pdfPageHeight / 2, { align: 'center' }); // Add the text
+        pdf.setFont('Helvetica', 'bold');
 
-        pdf.setFontSize(14);
-        pdf.setFont('Montserrat', 'bold');
-        pdf.setTextColor(255, 0, 0);
-        pdf.text(component.datestring, pdfPageWidth / 2, pdfPageHeight / 1.2, { align: 'center' }); // Add the text
+        pdf.text(component.name, pdfPageWidth / 2, pdfPageHeight / 1.88, { align: 'center' }); // Add the text
+
+        pdf.setFontSize(18);
+        pdf.setFont('Helvetica', 'bold');
+        pdf.setTextColor(226, 46, 47);
+        pdf.text(component.datestring, pdfPageWidth / 1.6, pdfPageHeight / 1.33, { align: 'center' }); // Add the text
 
         pdf.save("diplomacursoseguridadMagna.pdf");
       };
@@ -195,7 +200,9 @@ export class DiplomaComponent implements OnInit {
 
           // this.date = this.successdata['updated_at'];
           this.date = new Date(this.successdata['updated_at']);
-          let formattedDate = `${this.date.getDate()}-${this.date.getMonth() + 1}-${this.date.getFullYear().toString().substr(-2)}`;
+          let monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+          let formattedDate = `${this.date.getDate()} de ${monthNames[this.date.getMonth()]} ${this.date.getFullYear()}`;
           console.log(formattedDate);
           this.datestring = formattedDate;
 

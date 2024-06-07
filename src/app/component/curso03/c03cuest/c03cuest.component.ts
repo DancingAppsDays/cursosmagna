@@ -12,11 +12,11 @@ import { NextslideService } from 'src/app/service/nextslide.service';
 })
 export class C03cuestComponent implements OnInit {
 
-  q1: string = "1. En caso de emergencia y activación de alarma, puedes continuar tus labores hasta que tu supervisor te pida evacuar.";
-  q2: string = "2. Los 3 puntos de Reunión en caso de evacuación son : Avenida Mexico/Japón detrás de calderas,  Estacionamiento de terracería y:";
-  q3: string = "3. El fuego de Líquidos inflamables como pinturas, gasolina, aceites.. es un fuego de:";
-  q4: string = "4. Los apagones son una situación en la cual debes evacuar.";
-  q5: string = "5. Cualquier persona puede iniciar acciones de combate contra incendio aunque no sea brigadista";
+  q1: string = "1. Son elementos que se deben instalara para impedir el desarrollo de una fase peligrosa en cuanto se detecta dentro de la zona de riesgo de la maquinaria y equipo, la presencia de un trabajador o parte de su cuerpo";
+  q2: string = "2. Es un procedimiento de seguridad utilizado en instalaciones industriales para garantizar que la maquinaria peligrosa se encuentre debidamente apagada durante los trabajos de mantenimiento, limpieza, ajustes etc.";
+  q3: string = "3. Los candados y etiquetas para el bloqueo de energía son intercambiables y pueden prestarse entre el personal de la planta siempre y cuando se les da un uso correcto.";
+  q4: string = "4. Es tu responsabilidad como trabajador realizar check list antes de operar tu maquina al inicio de turno.";
+  q5: string = "5. ¿Cuál es el orden correcto de los 4 primeros pasos del procedimiento de bloqueo de energía LOTO?";
 
   //questions = [this.q1, this.q2, this.q3, this.q4, this.q5];
   questions = [this.q1, this.q2, this.q3, this.q4, this.q5];
