@@ -127,7 +127,7 @@ export class C02p5cComponent implements OnInit {
         this.successdata = this.successdata['data'];
         //console.log(this.successdata);
 
-        window.alert("Quiz completado");
+        window.alert("Quiz completado, Calificación: " + formu['score'] + "/5");
         this.nextslide.changeIsNextReady(true);
 
         sessionStorage.setItem("quiz2", "1");

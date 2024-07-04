@@ -31,7 +31,7 @@ export class Curso5cComponent implements OnInit {
 
 
   correctAnswers = ["2", "2", "1", "3"];
-  imagePaths = ['../../../../assets/newslides3/cancerigenas.jpg',
+  imagePaths = ['../../../../assets/newslides4/cancerigenas2.jpg',
     '../../../../assets/newslides3/inflamable.jpg',
     '../../../../assets/newslides3/explosiva.jpg'];
 
@@ -130,7 +130,7 @@ export class Curso5cComponent implements OnInit {
         this.successdata = this.successdata['data'];
         console.log(this.successdata);
 
-        window.alert("Quiz completado");
+        window.alert("Quiz completado, Calificación: " + formu['score'] + "/4");
         this.nextslide.changeIsNextReady(true);
 
         sessionStorage.setItem("quiz5", "1");

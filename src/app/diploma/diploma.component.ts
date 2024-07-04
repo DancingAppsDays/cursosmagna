@@ -5,6 +5,8 @@ import html2canvas from 'html2canvas';
 import { Constants } from '../constants';
 import { HttpClient } from '@angular/common/http';
 
+import { concatMap, of } from 'rxjs';
+
 @Component({
   selector: 'app-diploma',
   templateUrl: './diploma.component.html',
@@ -14,13 +16,65 @@ export class DiplomaComponent implements OnInit {
 
   name: string = '';
   successdata: any;
+  scoredata: any;
   studendid = Constants.userId;
   date: Date;
   datestring: string = "";
 
+  sumascores: number = 0;
+  sumascoredone: boolean = false;
+
   constructor(private httpclient: HttpClient) { }
 
-  printdiploma() {
+  
+  getCali() {
+
+    /*
+    this.httpclient.get(Constants.URL + "quiz1").subscribe({
+      next: res => {
+        console.log(res);
+        this.scoredata = res;
+        this.scoredata = this.scoredata['data'];
+        console.log(this.scoredata);
+        this.sumascores += this.scoredata['score'];
+      },
+      error: error => {
+        window.alert("Error al recuprardatos, intente de nuevo.");
+        console.log(error)
+      }
+    });*/
+
+
+    
+of(Constants.URL + "quiz1/"+ Constants.userId, Constants.URL + "quiz2/"+ Constants.userId,Constants.URL + "quiz3/"+ Constants.userId,Constants.URL + "quiz4/"+ Constants.userId,Constants.URL + "quiz5/"+ Constants.userId,Constants.URL + "quiz6/"+ Constants.userId).pipe(
+  concatMap(url => this.httpclient.get(url)),
+  // Assuming each response has a 'data' object with a 'score' property
+).subscribe({
+  next: (res:any) => {
+    console.log(res);
+    const scoredata = res['data'];
+    console.log(scoredata);
+    this.sumascores += scoredata['score'];
+  },
+  error: error => {
+    window.alert("Error al recuperar datos, intente de nuevo.");
+    console.log(error);
+  },
+  complete: () => {
+    console.log("Total Score: ", this.sumascores);
+    this.sumascores = (this.sumascores / 32) * 10;
+    this.sumascores = parseFloat(this.sumascores.toFixed(1));
+    this.sumascoredone = true;
+    // You can handle the final sumascores here
+  }
+});
+
+
+  
+
+  }
+
+  printdiplomaUNUSED() {
 
     (document.getElementById('download') as HTMLElement).addEventListener('click', function () {
       const diploma = document.querySelector('.diploma') as HTMLElement;
@@ -71,7 +125,7 @@ export class DiplomaComponent implements OnInit {
   }
 
 
-  printimagetext() {
+  printimagetextUNUES() {
     (document.getElementById('download') as HTMLElement).addEventListener('click', function () {
       const img = new Image();
       img.crossOrigin = "anonymous"; // This enables CORS
@@ -124,7 +178,7 @@ export class DiplomaComponent implements OnInit {
       console.log("print");
       const img = new Image();
       img.crossOrigin = "anonymous"; // This enables CORS
-      img.src = '../../assets/newslides3/DIPLOMA Magna FinalF (150ppp).jpg'; // Replace with the path to your image
+      img.src = '../../assets/newslides4/DIPLOMA Magna Final (150ppp).jpg'; // Replace with the path to your image
       console.log("printafterimg");
 
       img.onload = () => {
@@ -228,5 +282,7 @@ export class DiplomaComponent implements OnInit {
     //this.printdiploma();
     // this.printimagetext();
     this.printtest2();
+
+    this.getCali();
   }
 }

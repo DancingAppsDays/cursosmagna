@@ -59,7 +59,7 @@ export class LoginComponent implements OnInit {
       console.log(res);
 
       if (this.successdata['status'] == "success") {
-        window.alert("Bienvenido " + this.successdata['data']['name'] + " a la plataforma CIET");
+        window.alert("Bienvenido " + this.successdata['data']['name'] + " a la plataforma MAGNA");
 
         let token = this.successdata['data']['access_token'];  //was res but cant be used like this anymopre
         localStorage.setItem("access_token", token);//already set on authintercept//'Bearer ' +token);

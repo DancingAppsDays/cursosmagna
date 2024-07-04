@@ -13,7 +13,7 @@ import { NextslideService } from 'src/app/service/nextslide.service';
 export class Curso6cComponent implements OnInit {
 
   q1: string = "1. Se recomienda el uso de aire comprimido para una perfecta limpieza de su área de trabajo.";
-  q2: string = "2. E aire comprimido es de uso exclusivo de las actividades de sopleteo de moldes y piezas y de las actividades de aplicación de desmoldante";
+  q2: string = "2. E aire comprimido es de uso exclusivo de las actividades de sopleteo de moldes y piezas y de las actividades de aplicación";
   q3: string = "3. Soplar aire comprimido hacia su cuerpo con el riesgo de que ingrese al torrente sanguíneo puede provocar aeroembolismo.";
 
 
@@ -126,7 +126,7 @@ export class Curso6cComponent implements OnInit {
         this.successdata = this.successdata['data'];
         console.log(this.successdata);
 
-        window.alert("Quiz completado");
+        window.alert("Quiz completado, Calificación: " + formu['score'] + "/3");
         this.nextslide.changeIsNextReady(true);
 
         sessionStorage.setItem("quiz6", "1");

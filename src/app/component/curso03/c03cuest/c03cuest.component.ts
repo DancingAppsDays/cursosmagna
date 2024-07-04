@@ -12,7 +12,7 @@ import { NextslideService } from 'src/app/service/nextslide.service';
 })
 export class C03cuestComponent implements OnInit {
 
-  q1: string = "1. Son elementos que se deben instalara para impedir el desarrollo de una fase peligrosa en cuanto se detecta dentro de la zona de riesgo de la maquinaria y equipo, la presencia de un trabajador o parte de su cuerpo";
+  q1: string = "1. Son elementos que se deben instalarse en la zona de riesgo de las maquinas para detener su funcionamiento al detectar la presencia de un trabajador o parte de su cuerpo";
   q2: string = "2. Es un procedimiento de seguridad utilizado en instalaciones industriales para garantizar que la maquinaria peligrosa se encuentre debidamente apagada durante los trabajos de mantenimiento, limpieza, ajustes etc.";
   q3: string = "3. Los candados y etiquetas para el bloqueo de energía son intercambiables y pueden prestarse entre el personal de la planta siempre y cuando se les da un uso correcto.";
   q4: string = "4. Es tu responsabilidad como trabajador realizar check list antes de operar tu maquina al inicio de turno.";
@@ -21,7 +21,7 @@ export class C03cuestComponent implements OnInit {
   //questions = [this.q1, this.q2, this.q3, this.q4, this.q5];
   questions = [this.q1, this.q2, this.q3, this.q4, this.q5];
 
-  a1 = ["Dispositivo de bloqueo (Candado Loto)", "Dispositivo de Seguridad"];
+  a1 = ["Candados de seguridad para bloquear energía", "Dispositivo de Seguridad: sensores, paros de emergencia, cortinas de seguridad"];
   a2 = ["Procedimiento Lock Out / Tag Out (LOTO)", "Guardia de seguridad"];
   a3 = ["Verdadero", "Falso"];
   a4 = ["Falso", "Verdadero"];
@@ -120,12 +120,12 @@ export class C03cuestComponent implements OnInit {
 
     this.http.post(Constants.URL + "quiz3", formu).subscribe({
       next: res => {
-        console.log(res);
+       // console.log(res);
         this.successdata = res;
         this.successdata = this.successdata['data'];
-        console.log(this.successdata);
+       // console.log(this.successdata);
 
-        window.alert("Quiz completado");
+        window.alert("Quiz completado. Calificación: " + formu['score'] + "/5");
         this.nextslide.changeIsNextReady(true);
 
         sessionStorage.setItem("quiz3", "1");

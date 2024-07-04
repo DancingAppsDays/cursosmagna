@@ -140,7 +140,7 @@ export class C14p4cComponent implements OnInit {
         this.successdata = this.successdata['data'];
         console.log(this.successdata);
 
-        window.alert("Quiz completado");
+        window.alert("Quiz completado, Calificación: " + formu['score'] + "/10");
         this.nextslide.changeIsNextReady(true);
         sessionStorage.setItem("quiz1", "1");
 

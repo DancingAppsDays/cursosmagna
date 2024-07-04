@@ -1212,12 +1212,12 @@ const routes: Routes = [
       },
       {
         path: 'five',
-        component: Curso5f1Component,
+        component: Curso5f2Component,
         data: { animationState: '5' }
       },
       {
-        path: 'six',
-        component: Curso5f2Component,
+        path: 'six',                   
+        component: Curso5f1Component,
         data: { animationState: '6' }
       },
       {
