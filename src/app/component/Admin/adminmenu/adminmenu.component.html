@@ -1,18 +1,17 @@
 <div class="container">
-   
-    <div class="col-sm text-center">
-      <h4  class="d-block" style="background-color: #f09697; color:#fff; margin: 15px;">Menu administrador</h4>
-     
-    </div>
 
-    <ul>
-        <li><a routerLink="/adduser">Registrar Alumno</a></li>
-        <li *ngIf="usertype == 'superadmin'"><a routerLink="/addadmin">Registrar Administrador</a></li>
-        <li><a routerLink="/listusers">Ver estudiantes</a></li>
-        <li><a routerLink="/vergraf">Estadística (Demo)</a></li>
+  <div class="col-sm text-center">
+    <h4 class="d-block" style="background-color: #f09697; color:#fff; margin: 15px;">Menu administrador</h4>
 
-    </ul>
+  </div>
+
+  <ul>
+    <!--<li><a routerLink="/adduser">Registrar Alumno</a></li>-->
+    <li *ngIf="usertype == 'superadmin'"><a routerLink="/addadmin">Registrar Administrador</a></li>
+    <li><a routerLink="/listusers">Ver estudiantes</a></li>
+    <li><a routerLink="/vergraf">Estadística (Demo)</a></li>
+
+  </ul>
 
 
-    </div>
-  
+</div>

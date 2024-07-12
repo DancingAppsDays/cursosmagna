@@ -999,3 +999,24 @@ div>.bordered-box {
     font-size: 1.5em;
     color: red;
 }
+
+
+.download-pdf-button {
+    display: flex;
+    width: 20%;
+    margin: 0 auto; // Centers the button horizontally within its parent container
+
+    /* Adjust this value as needed to scale the image */
+    position: relative;
+    z-index: 100;
+    /* Ensure this is higher than the PDF viewer's z-index */
+}
+
+
+
+.download-pdf-button img {
+    width: 100%;
+    /* This makes the image scale within the <a> tag */
+    height: auto;
+    /* Maintain aspect ratio */
+}
