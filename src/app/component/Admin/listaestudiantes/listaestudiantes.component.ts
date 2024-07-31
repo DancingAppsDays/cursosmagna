@@ -15,6 +15,7 @@ import { saveAs } from 'file-saver'; //install types ??
 export class ListaestudiantesComponent implements OnInit {
 
   data:any;
+  cursodata:any;
 
   page: number=1;
   searchterm:string='';
@@ -50,6 +51,28 @@ export class ListaestudiantesComponent implements OnInit {
       
     }
     });
+
+    this._http.get(Constants.URL+"curso").subscribe({
+      
+      next: res=> {
+        //console.log(res);       
+        this.cursodata= res ;
+        if(this.cursodata['status'] == "success"){
+
+          this.cursodata = this.cursodata['data'];
+          //console.log(this.cursodata);  
+
+          this.cursodata.forEach((item:any) => {
+            item.created_at = item.created_at.substring(0, 16).replace('T', ' ');
+          });
+        }
+    },
+    error:error=>{
+      console.log(error);
+      window.alert("Falla de conexión: ");// + error.error.name);
+      
+    }
+    });
    
   }
 
@@ -67,12 +90,18 @@ export class ListaestudiantesComponent implements OnInit {
 
 
   exportToExcel(): void {
-    // Create a new workbook and a worksheet
-    const ws: XLSX.WorkSheet = XLSX.utils.json_to_sheet(this.data);
-    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    // Create a new workbook
+  const wb: XLSX.WorkBook = XLSX.utils.book_new();
+
+  // Create the first worksheet from this.data
+  const ws1: XLSX.WorkSheet = XLSX.utils.json_to_sheet(this.data);
+  XLSX.utils.book_append_sheet(wb, ws1, 'Students');
+
+  // Create the second worksheet from this.cursodata
+  const ws2: XLSX.WorkSheet = XLSX.utils.json_to_sheet(this.cursodata);
+  XLSX.utils.book_append_sheet(wb, ws2, 'CoursesTimes');
+
   
-    // Add the worksheet to the workbook
-    XLSX.utils.book_append_sheet(wb, ws, 'Students');
   
     // Write the workbook and save it
     const wbout: Blob = new Blob([XLSX.write(wb, {bookType: 'xlsx', type: 'array'})], {type: 'application/octet-stream'});
