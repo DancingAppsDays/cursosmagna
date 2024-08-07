@@ -101,7 +101,39 @@ export class ListaestudiantesComponent implements OnInit {
   const ws2: XLSX.WorkSheet = XLSX.utils.json_to_sheet(this.cursodata);
   XLSX.utils.book_append_sheet(wb, ws2, 'CoursesTimes');
 
+  console.log(this.data);
+  console.log(this.cursodata);
   
+    // Filter this.data based on currentcurso = 9 in this.cursodata
+    /*
+    const filteredData = this.data.filter((user:any) => {
+      const curso = this.cursodata.find((curso:any) => curso.idalumno === user.id);
+      return curso && curso.currentcurso === 9;
+    });*/
+    const filteredData = this.data.map((user: any) => {
+      const curso = this.cursodata.find((curso: any) => curso.idalumno === user.id && curso.currentcurso === 9);
+      if (curso) {
+        return {
+          ...user,
+          currentcurso: curso.currentcurso,
+          time1: curso.time1,
+          time2: curso.time2,
+          time3: curso.time3,
+          time4: curso.time4,
+          time5: curso.time5,
+          time6: curso.time6,
+          time7: curso.time7,
+          time8: curso.time8,
+          time9: curso.time9,
+          updated_at: curso.updated_at
+        };
+      }
+      return null;
+    }).filter((user: any) => user !== null);
+
+     // Create the third worksheet from filteredData
+  const ws3: XLSX.WorkSheet = XLSX.utils.json_to_sheet(filteredData);
+  XLSX.utils.book_append_sheet(wb, ws3, 'Pasantes');
   
     // Write the workbook and save it
     const wbout: Blob = new Blob([XLSX.write(wb, {bookType: 'xlsx', type: 'array'})], {type: 'application/octet-stream'});
