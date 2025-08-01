@@ -325,26 +325,26 @@ const routes: Routes = [
         data: { animationState: '9' }
       },
 
-      {
-        path: 'ten',
-        component: C1pp02Component,
-        data: { animationState: '10' }
-      },
+      /* {
+         path: 'ten',
+         component: C1pp02Component,
+         data: { animationState: '10' }
+       },*/
 
       {
-        path: 'eleven',
+        path: 'ten',
         component: C1pp05Component,
+        data: { animationState: '10' }
+      },
+      {
+        path: 'eleven',
+        component: p4,
         data: { animationState: '1' }
       },
       {
         path: 'twelve',
-        component: p4,
-        data: { animationState: '2' }
-      },
-      {
-        path: 'thirteen',
         component: p5,
-        data: { animationState: '3' }
+        data: { animationState: '2' }
       },
 
 
@@ -1216,7 +1216,7 @@ const routes: Routes = [
         data: { animationState: '5' }
       },
       {
-        path: 'six',                   
+        path: 'six',
         component: Curso5f1Component,
         data: { animationState: '6' }
       },

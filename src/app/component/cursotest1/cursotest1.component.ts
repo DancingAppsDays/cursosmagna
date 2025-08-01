@@ -21,7 +21,7 @@ export class Cursotest1Component implements OnInit {
   currenttimer!: string;
 
   currentslide = 1;
-  maxpage = 13;
+  maxpage = 12;
   audio = new Audio();
 
   isnextready = true;
